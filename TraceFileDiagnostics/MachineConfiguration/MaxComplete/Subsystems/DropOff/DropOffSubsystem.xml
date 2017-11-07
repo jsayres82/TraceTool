@@ -1,0 +1,36 @@
+<DropOffSubsystem>
+  <ExceptionFile>
+    <Filename>ExceptionCarouselSubsystem.xml</Filename>
+  </ExceptionFile>
+  <OverflowFile>
+    <Filename>OverflowBinSubsystem.xml</Filename>
+  </OverflowFile>
+  <BinArrayFile>
+    <Filename>BinArraySubsystem.xml</Filename>
+  </BinArrayFile>
+  <ChuteFile>
+    <Filename>DropOffChuteSubsystem.xml</Filename>
+  </ChuteFile>
+  <DropOff>
+    <Type assembly="_MaxChuteAssembly_" namespace="_MaxChuteNamespace_">MaxChuteDropOffManager</Type>
+    <ConfigurationParameters>
+      <Subsystem />
+      <MaxChuteDropOffChooseLocationProcess>
+        <Timeout>0</Timeout>
+        <SetStatusDelayTime>30000</SetStatusDelayTime>
+        <PollSensorTime>5000</PollSensorTime>
+      </MaxChuteDropOffChooseLocationProcess>
+      <MaxChuteDropOffPollSensorsProcess>
+        <Timeout>0</Timeout>
+        <PollSensorTime>200</PollSensorTime>
+      </MaxChuteDropOffPollSensorsProcess>
+      <DropOffNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </DropOffNumericIOHealthTestProcess>
+      <MaxChuteDropOffHomeProcess>
+        <Timeout>60000</Timeout>
+        <ShouldHomeExceptionCarousel>True</ShouldHomeExceptionCarousel>
+      </MaxChuteDropOffHomeProcess>
+    </ConfigurationParameters>
+  </DropOff>
+</DropOffSubsystem>

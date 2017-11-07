@@ -1,0 +1,14 @@
+<DropOffChuteDevices>
+  <ChuteX1VialSensor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIODigitalInput</Type>
+    <Configuration>DigitalInputNoPullUp</Configuration>
+    <Node>CellEPRNode</Node>
+    <IONumber>18</IONumber>
+    <IOCountsPerUnit>1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>0</ActiveThreshold>
+    <InactiveThreshold>1</InactiveThreshold>
+    <MinimumValue>0</MinimumValue>
+    <MaximumValue>1</MaximumValue>
+  </ChuteX1VialSensor>
+</DropOffChuteDevices>

@@ -1,0 +1,17 @@
+<ServoProgramConfiguration>
+  <Filename>SystemConfiguration.xml</Filename>
+   <Node1>
+      <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANOpenNode</Type>
+      <Id>1</Id>
+      <HeartbeatTime>1000</HeartbeatTime>
+      <HeartbeatTimeoutTolerance>1000</HeartbeatTimeoutTolerance>
+      <SDORetryLimit>2</SDORetryLimit>
+      <SDOResponseTimeout>1000</SDOResponseTimeout>
+      <CANBusInterface>ServoCANBusInterface</CANBusInterface>
+      <MinimumFirmwareVersion>0</MinimumFirmwareVersion>
+      <SRecordFile>Unknown.elf.S</SRecordFile>
+      <RequiredProtocolVersion>0</RequiredProtocolVersion>
+      <FirstFirmwareVersionWithProtocol>0</FirstFirmwareVersionWithProtocol>
+      <FirmwareAutoUpdate>False</FirmwareAutoUpdate>
+   </Node1>
+</ServoProgramConfiguration>

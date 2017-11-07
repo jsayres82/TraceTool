@@ -1,0 +1,23 @@
+﻿<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="urn:MaxConfiguration-schema"
+            elementFormDefault="qualified"
+            targetNamespace="urn:MaxConfiguration-schema">
+  
+  <xsd:element name="MaxConfiguration" type="MaxConfigurationType" />
+  <xsd:complexType name="MaxConfigurationType">
+    <xsd:sequence>
+      <xsd:element name="LeftVialType" type="vialType" default="KERR30"/>
+      <xsd:element name="RightVialType" type="vialType" default="KERR13"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="vialType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="KERR13"/>
+      <xsd:enumeration value="KERR30"/>
+      <xsd:enumeration value="PT13"/>
+      <xsd:enumeration value="PT30"/>
+      <xsd:enumeration value="RC20"/>
+      <xsd:enumeration value="RC40"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

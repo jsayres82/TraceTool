@@ -1,0 +1,42 @@
+﻿<HoodSubsystemInstalled>
+  <Filename>HoodDevices.xml</Filename>
+  <Hood>
+    <Type assembly="_MaxAssembly_" namespace="_MaxNamespace_">Hood</Type>
+    <ConfigurationParameters>
+      <Subsystem>
+        <SensorAutoZeroEnabled>True</SensorAutoZeroEnabled>
+        <HoodCalibration>
+          <TemplateFile>HoodCalibrationDatabaseTemplate.xml</TemplateFile>
+          <DynamicFile>HoodCalibrationDatabase.xml</DynamicFile>
+          <StaticFile>HoodCalibrationDatabase.xml</StaticFile>
+          <ArchiveDirectory>CalibrationArchive</ArchiveDirectory>
+        </HoodCalibration>
+      </Subsystem>
+      <HoodCalibrationProcess>
+        <Timeout>60000</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+        <BlowerStoppedWaitTime>50000</BlowerStoppedWaitTime>
+      </HoodCalibrationProcess>
+      <HoodHealthTestProcess>
+        <Timeout>60000</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+        <PressureIOStateStableWaitTime>20000</PressureIOStateStableWaitTime>
+        <MaxPermissiblePressureSensorReading>26</MaxPermissiblePressureSensorReading>
+        <MinPermissiblePressureSensorReading>-2</MinPermissiblePressureSensorReading>
+      </HoodHealthTestProcess>
+      <HoodNumericIOHealthTestProcess>
+        <Timeout>30000</Timeout>
+        <TestingThresholds>
+          <IOName>HoodDoorInterlock</IOName>
+          <ActiveThreshold>1</ActiveThreshold>
+          <InactiveThreshold>0</InactiveThreshold>
+        </TestingThresholds>
+        <TestingThresholds>
+          <IOName>HoodPressureSensor</IOName>
+          <ActiveThreshold>Infinity</ActiveThreshold>
+          <InactiveThreshold>-Infinity</InactiveThreshold>
+        </TestingThresholds>
+      </HoodNumericIOHealthTestProcess>
+    </ConfigurationParameters>
+  </Hood>
+</HoodSubsystemInstalled>

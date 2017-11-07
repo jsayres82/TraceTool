@@ -1,0 +1,4 @@
+<CellDeviceConfiguration>
+  <Filename>Subsystems\CANBus\CANBusInterface.xml</Filename>
+  <Filename>Subsystems\Cell\CellDevices.xml</Filename>
+</CellDeviceConfiguration>

@@ -1,0 +1,53 @@
+<LeftVialFeederSubsystem>
+  <Filename>LeftVialFeederDevices.xml</Filename>
+  <LeftVialFeeder>
+    <Type assembly="_MaxAssembly_" namespace="_MaxNamespace_">VialFeeder</Type>
+    <ConfigurationParameters>
+      <Subsystem>
+        <VialType>_LeftVialType_</VialType>
+      </Subsystem>
+      <LeftVialFeederStageProcess>
+        <Timeout>600000</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+        <InterlockDebounceTime>500</InterlockDebounceTime>
+        <MotorErrorDebounceTime>100</MotorErrorDebounceTime>
+        <InterlockOpenTimeout>60000</InterlockOpenTimeout>
+        <InterlockOpenWarningsBeforeError>4</InterlockOpenWarningsBeforeError>
+        <StagingTimeout>120000</StagingTimeout>
+        <StagingJamLimit>10</StagingJamLimit>
+        <StageSensorPollTime>5000</StageSensorPollTime>
+      </LeftVialFeederStageProcess>
+      <LeftVialFeederDropProcess>
+        <Timeout>30000</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+        <VialDroppedToProcessCompleteTime>1000</VialDroppedToProcessCompleteTime>
+        <DropTimeout>2000</DropTimeout>
+        <WaitForDropTimeout>300</WaitForDropTimeout>
+        <ClearJamToggleTime>100</ClearJamToggleTime>
+        <JamLimit>3</JamLimit>
+        <StageSensorPollTime>1000</StageSensorPollTime>
+      </LeftVialFeederDropProcess>
+      <LeftVialFeederFeedProcess>
+        <Timeout>30000</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+      </LeftVialFeederFeedProcess>
+      <LeftVialFeederMotorHealthTestProcess>
+        <Timeout>90000</Timeout>
+        <!--These targets are velocity targets.-->
+        <FirstMoveTarget>5.64e-3</FirstMoveTarget>
+        <SecondMoveTarget>-5.64e-3</SecondMoveTarget>
+        <FirstMoveDuration>20000</FirstMoveDuration>
+        <SecondMoveDuration>20000</SecondMoveDuration>
+        <MinForceLimit Units="Amps">-1.200</MinForceLimit>
+        <MaxForceLimit Units="Amps">1.200</MaxForceLimit>
+      </LeftVialFeederMotorHealthTestProcess>
+      <LeftVialFeederNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </LeftVialFeederNumericIOHealthTestProcess>
+      <LeftVialFeederHealthTestProcess>
+        <Timeout>0</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+      </LeftVialFeederHealthTestProcess>
+    </ConfigurationParameters>
+  </LeftVialFeeder>
+</LeftVialFeederSubsystem>

@@ -1,0 +1,9 @@
+<VacuumCalibration>
+  <Revision>1</Revision>
+  <VacuumFilterPressureDifferential>
+    <ZeroOffset>NaN</ZeroOffset>
+  </VacuumFilterPressureDifferential>
+  <VacuumFlowMeterPressureDifferential>
+    <ZeroOffset>NaN</ZeroOffset>
+  </VacuumFlowMeterPressureDifferential>
+</VacuumCalibration>

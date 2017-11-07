@@ -1,0 +1,13 @@
+<PollingManager>
+  <FMPollingManager>
+    <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">PollingManager</Type>
+    <ConfigurationParameters>
+      <Priority>Lowest</Priority>
+      <UpdatePeriod>60000</UpdatePeriod>
+      <IOToPoll>
+      </IOToPoll>
+      <PerfDataToPoll>
+      </PerfDataToPoll>
+    </ConfigurationParameters>
+  </FMPollingManager>
+</PollingManager>

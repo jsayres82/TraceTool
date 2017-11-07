@@ -1,0 +1,75 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup>
+
+    <VialFeederMotorConfigurationOptions Include="Globe,Dunker">
+
+      <DependentTarget>Vial Feeder Configuration</DependentTarget>
+      <DependentProperty>SelectedMotorConfiguration</DependentProperty>
+      
+    </VialFeederMotorConfigurationOptions>
+
+  </ItemGroup>
+
+  <PropertyGroup>
+
+    <SelectedMotorConfiguration Condition=" '$(SelectedMotorConfiguration)' == '' ">Dunker</SelectedMotorConfiguration>
+
+  </PropertyGroup>
+
+  <Choose>
+
+    <When Condition=" '$(SelectedMotorConfiguration)'=='Globe' ">
+
+      <PropertyGroup>
+
+        <LeftMotorConfigurationPath>LeftVialFeederMotor_Globe.xml</LeftMotorConfigurationPath>
+        <RightMotorConfigurationPath>RightVialFeederMotor_Globe.xml</RightMotorConfigurationPath>
+
+      </PropertyGroup>
+
+    </When>
+
+    <When Condition=" '$(SelectedMotorConfiguration)'=='Dunker' ">
+
+      <PropertyGroup>
+
+        <LeftMotorConfigurationPath>LeftVialFeederMotor_Dunker.xml</LeftMotorConfigurationPath>
+        <RightMotorConfigurationPath>RightVialFeederMotor_Dunker.xml</RightMotorConfigurationPath>
+
+      </PropertyGroup>
+
+    </When>
+
+  </Choose>
+
+  <Target Name="Dump Options">
+
+    <Message Text = "Motor Options: @(VialFeederMotorConfigurationOptions)"/>
+
+  </Target>
+  
+  <Target Name="Vial Feeder Configuration">
+
+    <Message Importance="normal" Text="Configuring Vial Feeders with $(SelectedMotorConfiguration)" />
+
+    <Xml.ModifyFile Path="Subsystems/LeftVialFeeder/LeftVialFeederDevices.xml"
+      XPath="/LeftVialFeederDevices/LeftVialFeederMotor/Filename"
+      Force="true"
+      NewValue="$(LeftMotorConfigurationPath)"
+      ShowMatches="Yes">
+    </Xml.ModifyFile>
+
+    <Xml.ModifyFile Path="Subsystems/RightVialFeeder/RightVialFeederDevices.xml"
+      XPath="/RightVialFeederDevices/RightVialFeederMotor/Filename"
+      Force="true"
+      NewValue="$(RightMotorConfigurationPath)"
+      ShowMatches="Yes">
+    </Xml.ModifyFile>
+
+  </Target>
+
+  <Import Project="CapAndVialConfiguration.msbuild"/>
+  <Import Project="Microsoft.Sdc.Common.tasks"/>
+  
+</Project>

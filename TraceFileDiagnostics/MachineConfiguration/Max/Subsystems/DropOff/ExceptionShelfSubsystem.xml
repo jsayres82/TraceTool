@@ -1,0 +1,16 @@
+<ExceptionShelfSubsystem>
+  <ExceptionShelf>
+    <Type assembly="_MaxAssembly_" namespace="_MaxNamespace_">ExceptionShelfManager</Type>
+    <ConfigurationParameters>
+      <Subsystem>
+        <DropOffLocation>S1</DropOffLocation>
+        <DropOffLocation>S2</DropOffLocation>
+        <DropOffLocation>S3</DropOffLocation>
+        <DropOffLocation>S4</DropOffLocation>
+      </Subsystem>
+      <ExceptionShelfNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </ExceptionShelfNumericIOHealthTestProcess>
+    </ConfigurationParameters>
+  </ExceptionShelf>
+</ExceptionShelfSubsystem>

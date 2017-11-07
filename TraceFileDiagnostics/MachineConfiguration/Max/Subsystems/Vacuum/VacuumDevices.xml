@@ -1,0 +1,224 @@
+<VacuumDevices>
+  <!--The VacuumDumpValve is shown as the "Unloader solenoid" on the wiring diagram-->
+  <VacuumDumpValve>
+    <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">LockingSolenoid</Type>
+    <OutputToControl>VacuumDumpValveOutput</OutputToControl>
+    <PeakValue>24</PeakValue>
+    <PeakTime>250</PeakTime>
+    <MaximumPeakTime>2000</MaximumPeakTime>
+  </VacuumDumpValve>
+  <VacuumDumpValveOutput>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogOutput</Type>
+    <Configuration>AnalogOutput</Configuration>
+    <Node>CellEPRNode</Node>
+    <IONumber>1</IONumber>
+    <IOCountsPerUnit Units="Volts">1364.7916667</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>4.0</ActiveThreshold>
+    <InactiveThreshold>0.0</InactiveThreshold>
+    <MinimumValue>0</MinimumValue>
+    <MaximumValue>24</MaximumValue>
+  </VacuumDumpValveOutput>
+
+  <!--The VacuumFilterPressureDifferential is shown as the "HEPA filter clog sensor" on the wiring diagram-->
+  <VacuumFilterPressureDifferential>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOFilteredAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>CellEPRNode</Node>
+    <IONumber>8</IONumber>
+    <IOCountsPerUnit Units="inHg">33625.80823</IOCountsPerUnit>
+    <IOCountZeroOffset>24824.24242</IOCountZeroOffset>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>-Infinity</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <FilterUpdateRate>2</FilterUpdateRate>
+    <FilterBumpSize>0.002</FilterBumpSize>
+  </VacuumFilterPressureDifferential>
+
+  <!--The VacuumManifoldPressure is shown as the "Vacuum Gauge Feedback" on the wiring diagram-->
+  <!--<VacuumManifoldPressureUnfiltered>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>CellEPRNode</Node>
+    <IONumber>22</IONumber>
+    <IOCountsPerUnit Units="inHg">399.4746018</IOCountsPerUnit>
+    <IOCountZeroOffset>10591.60064</IOCountZeroOffset>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>-Infinity</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </VacuumManifoldPressureUnfiltered>-->
+
+  <VacuumManifoldPressure>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOFilteredAnalogInput</Type>
+    <Node>CellEPRNode</Node>
+    <IONumber>6</IONumber>
+    <IOCountsPerUnit Units="inHg">399.4746018</IOCountsPerUnit>
+    <IOCountZeroOffset>10591.60064</IOCountZeroOffset>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>-Infinity</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <FilterUpdateRate>2</FilterUpdateRate>
+    <FilterBumpSize>0.005</FilterBumpSize>
+  </VacuumManifoldPressure>
+
+  <!--The VacuumFlowMeterPressureDifferential is shown as the "Venture Sensor DRM" on the wiring diagram-->
+  <VacuumFlowMeterPressureDifferential>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOFilteredAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>CellDRMNode</Node>
+    <IONumber>7</IONumber>
+    <IOCountsPerUnit Units="inHg">33625.80823</IOCountsPerUnit>
+    <IOCountZeroOffset>24824.24242</IOCountZeroOffset>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>-Infinity</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <FilterUpdateRate>2</FilterUpdateRate>
+    <FilterBumpSize>0.00025</FilterBumpSize>
+  </VacuumFlowMeterPressureDifferential>
+
+  <!--The VacuumBlowerTemperature sensor is shown as the "Vacuum Temp DRM" on the wiring diagram-->
+  <VacuumBlowerTemperature>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>CellDRMNode</Node>
+    <IONumber>24</IONumber>
+    <IOCountsPerUnit Units="Degrees F">55.165</IOCountsPerUnit>
+    <IOCountZeroOffset>3200</IOCountZeroOffset>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>-Infinity</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <DataSamplingStyle>Periodic</DataSamplingStyle>
+    <DataSamplingPeriod>60000</DataSamplingPeriod>
+  </VacuumBlowerTemperature>
+
+  <!--The VacuumBlower is shown as the "Vacuum Motor Control" on the wiring diagram-->
+  <VacuumBlower>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogOutput</Type>
+    <Configuration>AnalogOutput</Configuration>
+    <Node>CellDRMNode</Node>
+    <IONumber>2</IONumber>
+    <IOCountsPerUnit Units="Percent" Range="0..100">327.55</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>1</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>0</MinimumValue>
+    <MaximumValue>100</MaximumValue>
+  </VacuumBlower>
+
+  <VacuumFlowMeter>
+    <Type assembly="_BreakawayAssembly_" namespace="_BreakawayNamespace_">VenturiFlowMeter</Type>
+    <!--I/O to read-->
+    <DifferentialPressureName>VacuumFlowMeterPressureDifferential</DifferentialPressureName>
+    <AbsolutePressureName>VacuumManifoldPressure</AbsolutePressureName>
+
+    <!--The conversion from absolute pressure units to Pa.-->
+    <AbsolutePressureConversion units="inHg / Pa">3386.388158</AbsolutePressureConversion>
+    <!--The conversion from the absolute ambient temperature to the absolute temperature in K.-->
+    <AbsoluteTemperatureConversion units="K / degrees R">0.55555555555555555555555555555556</AbsoluteTemperatureConversion>
+    <!--The offset from ambient temperature to an absolute temperature scale-->
+    <AbsoluteTemperatureOffset units="degrees F">459.67</AbsoluteTemperatureOffset>
+    <!--The ambient temperature.  Perhaps this could be read from the sensor.-->
+    <AmbientTemperature units="degrees F">72</AmbientTemperature>
+    <!--The conversion from area units to area units of m^2.-->
+    <AreaConversion units="in^2 / m^2">0.00064516</AreaConversion>
+    <!--The cross-sectional area of the Venturi flow meter at location 1.-->
+    <CrossSectionalArea1 units="in^2">1.76715</CrossSectionalArea1>
+    <!--The cross-sectional area of the Venturi flow meter at location 2.-->
+    <CrossSectionalArea2 units="in^2">0.44179</CrossSectionalArea2>
+    <!--The conversion from differential pressure units to Pa.
+        The sign negation is to provide a positive output for the negative pressure of the vacuum.-->-->
+    <DifferentialPressureConversion units="inHg / Pa">-3386.388158</DifferentialPressureConversion>
+    <!--The discharge coefficient used to scale flow rate due to physical losses.-->
+    <DischargeCoefficient units="unitless">0.94</DischargeCoefficient>
+    <!--The conversion from flow units of m^3 / s to flow units of choice.-->
+    <FlowConversion units="(m^3/s)/cfm">2118.8799728</FlowConversion>
+    <!--Standard pressure in Pa.  This is equal to 29.92" Hg-->
+    <StandardPressure units="Pa">101039.84</StandardPressure>
+    <!--Standard temperature in K.  This is equal to 70 degrees F.-->
+    <StandardTemperature units="K">294.2611111</StandardTemperature>
+    <!--The Universal Gas Constant, R.-->
+    <UniversalGasConstant units="J / (kg * K)">287.05</UniversalGasConstant>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>-Infinity</InactiveThreshold>
+  </VacuumFlowMeter>
+
+  <VacuumFlowController>
+    <Type assembly="_BreakawayAssembly_" namespace="_BreakawayNamespace_">IOController</Type>
+    <Output>VacuumBlower</Output>
+    <Input>VacuumFlowMeter</Input>
+    <UpdatePeriod>100</UpdatePeriod>
+    <MaxTargetingTime>15000</MaxTargetingTime>
+    <MaxTrajectoryTime>15000</MaxTrajectoryTime>
+    <Tolerance>1</Tolerance>
+    <InWindowTime>100</InWindowTime>
+    <ErrorTolerance>2</ErrorTolerance>
+    <ShouldSaveCSVFile>False</ShouldSaveCSVFile>
+    <Model>
+      <Gain>1</Gain>
+      <TimeConstant>1000</TimeConstant>
+    </Model>
+    <PlantInverse>
+      <Gain>0.2297</Gain>
+      <TimeConstant>1000</TimeConstant>
+      <ZeroOffset>9.5343</ZeroOffset>
+    </PlantInverse>
+    <PIDController>
+      <ProportionalGain>5</ProportionalGain>
+      <IntegralGain>0.1</IntegralGain>
+      <DerivativeGain>0</DerivativeGain>
+      <IntegralSummationLimit>120</IntegralSummationLimit>
+      <IntegralContributionLimit>Infinity</IntegralContributionLimit>
+      <DerivativeSampleCount>1</DerivativeSampleCount>
+      <DerivativeContributionLimit>Infinity</DerivativeContributionLimit>
+      <ProportionalContributionLimit>10</ProportionalContributionLimit>
+      <OutputLimit>Infinity</OutputLimit>
+    </PIDController>
+  </VacuumFlowController>
+
+  <SimulatedVacuumBlower>
+    <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">NumericIO</Type>
+    <IOCountsPerUnit Units="Percent" Range="0..100">1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>100</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>0</MinimumValue>
+    <MaximumValue>100</MaximumValue>
+  </SimulatedVacuumBlower>
+
+  <SimulatedVacuumManifoldPressure>
+    <Type assembly="_BreakawayAssembly_" namespace="_BreakawayNamespace_">PlantSimulation</Type>
+    <IOCountsPerUnit Units="Percent" Range="0..100">1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>100</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>0</MinimumValue>
+    <MaximumValue>100</MaximumValue>
+    <BlowerName>SimulatedVacuumBlower</BlowerName>
+    <Period>100</Period>
+    <FlowModel>
+      <Gain>1</Gain>
+      <TimeConstant>1000</TimeConstant>
+    </FlowModel>
+  </SimulatedVacuumManifoldPressure>
+
+  <SimulatedFlowMeter>
+    <Type assembly="_BreakawayAssembly_" namespace="_BreakawayNamespace_">PlantSimulation</Type>
+    <IOCountsPerUnit Units="Percent" Range="0..100">1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>100</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>0</MinimumValue>
+    <MaximumValue>100</MaximumValue>
+    <BlowerName>SimulatedVacuumBlower</BlowerName>
+    <Period>50</Period>
+    <FlowModel>
+      <Gain>1</Gain>
+      <TimeConstant>1000</TimeConstant>
+    </FlowModel>
+  </SimulatedFlowMeter>
+</VacuumDevices>

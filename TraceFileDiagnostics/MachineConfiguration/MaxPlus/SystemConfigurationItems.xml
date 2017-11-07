@@ -1,0 +1,11 @@
+<SystemConfigurationItems>
+  <ConfigurationItemsFiles>
+    <ConfigurationItemsTemplateFile>ConfigurationItemsTemplate.xml</ConfigurationItemsTemplateFile>
+    <ConfigurationItemsFile>ConfigurationItems.xml</ConfigurationItemsFile>
+  </ConfigurationItemsFiles>
+  <VariablesDefinitions>
+    <Filename>ConfigurationItems.xml</Filename>
+    <!--Uncomment this to make CellType a variable, rather than a configuration item-->
+    <!--<CellType Options="HPAC,VCell">HPAC</CellType>-->
+  </VariablesDefinitions>
+</SystemConfigurationItems>

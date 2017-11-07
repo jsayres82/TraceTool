@@ -1,0 +1,4 @@
+<DropOffDeviceConfiguration>
+   <Filename>Subsystems\CANBus\CANBusInterface.xml</Filename>
+   <Filename>Subsystems\DropOff\DropOffDevices.xml</Filename>
+</DropOffDeviceConfiguration>

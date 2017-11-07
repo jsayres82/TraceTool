@@ -1,0 +1,14 @@
+<PerformanceDataMonitor>
+   <PersistentData>
+      <Object>ExpressMXFillProcess</Object>
+      <PerformanceData>LifetimeFillCount</PerformanceData>
+      <State>Uninitialized</State>
+      <Value>0</Value>
+   </PersistentData>
+   <PersistentData>
+      <Object>ExpressMXFillProcess</Object>
+      <PerformanceData>LifetimeFillSuccessCount</PerformanceData>
+      <State>Uninitialized</State>
+      <Value>0</Value>
+   </PersistentData>
+</PerformanceDataMonitor>

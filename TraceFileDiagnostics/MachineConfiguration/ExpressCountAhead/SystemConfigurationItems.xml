@@ -1,0 +1,9 @@
+<SystemConfigurationItems>
+  <ConfigurationItemsFiles>
+    <ConfigurationItemsTemplateFile>ConfigurationItemsTemplate.xml</ConfigurationItemsTemplateFile>
+    <ConfigurationItemsFile>ConfigurationItems.xml</ConfigurationItemsFile>
+  </ConfigurationItemsFiles>
+  <VariablesDefinitions>
+    <Filename>ConfigurationItems.xml</Filename>
+  </VariablesDefinitions>
+</SystemConfigurationItems>

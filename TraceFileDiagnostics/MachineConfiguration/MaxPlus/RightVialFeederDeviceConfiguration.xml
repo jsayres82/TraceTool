@@ -1,0 +1,4 @@
+<RightVialFeederDeviceConfiguration>
+  <Filename>Subsystems\CANBus\CANBusInterface.xml</Filename>
+  <Filename>Subsystems\RightVialFeeder\RightVialFeederDevices.xml</Filename>
+</RightVialFeederDeviceConfiguration>

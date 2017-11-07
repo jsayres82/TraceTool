@@ -1,0 +1,12 @@
+<RobotDefinition_VialGripper>
+  <VariablesDefinitions>
+    <RobotGeometryDatabase>RobotGeometryDatabase_VialGripper.xml</RobotGeometryDatabase>
+    <RobotKinematicsGripperType>RobotVialGripper</RobotKinematicsGripperType>
+    <PuckGripLocation_PT30>0.455</PuckGripLocation_PT30>
+    <GripperOpenTarget>1.0</GripperOpenTarget>          <!--Target position for gripper open moves-->
+    <GripperOpenWideTarget>1.2</GripperOpenWideTarget>  <!--Target position for gripper open wide moves-->
+    <HomeGripperMinTravel>1.27</HomeGripperMinTravel>   <!--Minimum acceptable travel during homing-->
+    <HomeGripperMaxTravel>1.70</HomeGripperMaxTravel>   <!--Maximum acceptable travel during homing-->
+    <DockingZOffset>0.000</DockingZOffset>
+  </VariablesDefinitions>
+</RobotDefinition_VialGripper>

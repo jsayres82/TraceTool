@@ -1,0 +1,30 @@
+<DropOffSubsystem>
+  <ExceptionFile>
+    <Filename>ExceptionCarouselSubsystem.xml</Filename>
+  </ExceptionFile>
+  <DropOffChuteFile>
+    <Filename>DropOffChuteSubsystem.xml</Filename>
+  </DropOffChuteFile>
+  <DropOff>
+    <Type assembly="_ExpressMXAssembly_" namespace="_ExpressMXNamespace_">ExpressMXDropOffManager</Type>
+    <ConfigurationParameters>
+      <Subsystem />
+      <ExpressMXDropOffChooseLocationProcess>
+        <Timeout>0</Timeout>
+        <SetStatusDelayTime>30000</SetStatusDelayTime>
+        <PollSensorTime>5000</PollSensorTime>
+      </ExpressMXDropOffChooseLocationProcess>
+      <DropOffPollSensorsProcess>
+        <Timeout>0</Timeout>
+        <PollSensorTime>200</PollSensorTime>
+      </DropOffPollSensorsProcess>
+      <DropOffNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </DropOffNumericIOHealthTestProcess>
+      <ExpressMXDropOffHomeProcess>
+        <Timeout>60000</Timeout>
+        <ShouldHomeExceptionCarousel>True</ShouldHomeExceptionCarousel>
+      </ExpressMXDropOffHomeProcess>
+    </ConfigurationParameters>
+  </DropOff>
+</DropOffSubsystem>

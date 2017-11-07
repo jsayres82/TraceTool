@@ -1,0 +1,9 @@
+<MaxCalibration_VCell>
+  <Calibration>
+    <Calibratable>Vacuum</Calibratable>
+    <ErrorCode>
+      <ErrorName>VacuumCalibrationError</ErrorName>
+      <ErrorType assembly="Parata.Controls.Enumerations.CellNetwork" namespace="Parata.Controls.Enumerations.ErrorCodes">VacuumErrorCode</ErrorType>
+    </ErrorCode>
+  </Calibration>
+</MaxCalibration_VCell>

@@ -1,0 +1,135 @@
+<SimulatedSystemFillSequence>
+  <SimulatedFillResult>
+    <ErrorState Values="PickUpVialFromPuckShelf,MoveVialToCell,MoveVialFromCell,DropOff,PrepareCount,Count">None</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>NoError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.Core" namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="PickUpVialFromPuckShelf,MoveVialToCell,MoveVialFromCell,DropOff,PrepareCount,Count">Count</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>CountNotCompleted</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.CellNetwork" namespace="Parata.Controls.Enumerations.ErrorCodes">CellNetworkErrorCode</ErrorType>
+      </ErrorCode>
+      <ErrorStatus>
+        <ErrorCode>
+          <ErrorName>PillUndercount</ErrorName>
+          <ErrorType assembly="Parata.Controls.Enumerations.CellNetwork" namespace="Parata.Controls.Enumerations.ErrorCodes">CellNetworkErrorCode</ErrorType>
+        </ErrorCode>
+      </ErrorStatus>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="PickUpVialFromPuckShelf,MoveVialToCell,MoveVialFromCell,DropOff,PrepareCount,Count">Count</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>PillOvercount</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.CellNetwork" namespace="Parata.Controls.Enumerations.ErrorCodes">CellNetworkErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="PickUpVialFromPuckShelf,MoveVialToCell,MoveVialFromCell,DropOff,PrepareCount,Count">Count</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>CellCommunicationsError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.CellNetwork" namespace="Parata.Controls.Enumerations.ErrorCodes">CellNetworkErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="PickUpVialFromPuckShelf,MoveVialToCell,MoveVialFromCell,DropOff,PrepareCount,Count">None</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>NoError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.Core" namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="PickUpVialFromPuckShelf,MoveVialToCell,MoveVialFromCell,DropOff,PrepareCount,Count">MoveVialFromCell</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>MoveVialFromCellError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.System" namespace="Parata.Controls.Enumerations.ErrorCodes">SystemErrorCode</ErrorType>
+      </ErrorCode>
+      <ErrorCode></ErrorCode>
+      <ErrorStatus>
+        <ErrorCode>
+          <ErrorName>ThetaMotorError</ErrorName>
+          <ErrorType assembly="Parata.Controls.Enumerations.Robot" namespace="Parata.Controls.Enumerations.ErrorCodes">RobotErrorCode</ErrorType>
+        </ErrorCode>
+        <ErrorStatus>
+          <ErrorCode>
+            <ErrorName>FollowingError</ErrorName>
+            <ErrorType assembly="Parata.Controls.Enumerations.Core" namespace="Parata.Controls.Enumerations.ErrorCodes">DeviceErrorCode</ErrorType>
+          </ErrorCode>
+        </ErrorStatus>
+      </ErrorStatus>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="PickUpVialFromPuckShelf,MoveVialToCell,MoveVialFromCell,DropOff,PrepareCount,Count">None</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>NoError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.Core" namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="PickUpVialFromPuckShelf,MoveVialToCell,MoveVialFromCell,DropOff,PrepareCount,Count">PickUpVialFromPuckShelf</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>PickUpVialFromPuckShelfError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.System" namespace="Parata.Controls.Enumerations.ErrorCodes">SystemErrorCode</ErrorType>
+      </ErrorCode>
+      <ErrorStatus>
+        <ErrorCode>
+          <ErrorName>VialMissing</ErrorName>
+          <ErrorType assembly="Parata.Controls.Enumerations.Robot" namespace="Parata.Controls.Enumerations.ErrorCodes">RobotErrorCode</ErrorType>
+        </ErrorCode>
+      </ErrorStatus>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="PickUpVialFromPuckShelf,MoveVialToCell,MoveVialFromCell,DropOff,PrepareCount,Count">None</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>NoError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.Core" namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="PickUpVialFromPuckShelf,MoveVialToCell,MoveVialFromCell,DropOff,PrepareCount,Count">None</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>NoError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.Core" namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="PickUpVialFromPuckShelf,MoveVialToCell,MoveVialFromCell,DropOff,PrepareCount,Count">None</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>NoError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.Core" namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="PickUpVialFromPuckShelf,MoveVialToCell,MoveVialFromCell,DropOff,PrepareCount,Count">None</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>NoError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.Core" namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+</SimulatedSystemFillSequence>

@@ -1,0 +1,396 @@
+<RobotThetaDevices>
+  <RobotThetaNode>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANOpenNode</Type>
+    <Id>12</Id>
+    <HeartbeatTime>1000</HeartbeatTime>
+    <HeartbeatTimeoutTolerance>1000</HeartbeatTimeoutTolerance>
+    <SDORetryLimit>2</SDORetryLimit>
+    <SDOResponseTimeout>1000</SDOResponseTimeout>
+    <CANBusInterface>ServoCANBusInterface</CANBusInterface>
+    <Filename>..\CANBus\LP_FirmwareRequirement.xml</Filename>
+  </RobotThetaNode>
+  <RobotThetaHomeSensor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIODigitalInput</Type>
+    <Configuration>DigitalInputNoPullUp</Configuration>
+    <Node>RobotThetaNode</Node>
+    <IONumber>18</IONumber>
+    <IOCountsPerUnit>1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>0</ActiveThreshold>
+    <InactiveThreshold>1</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </RobotThetaHomeSensor>
+  <RobotThetaTurnSensor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOFilteredAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>RobotThetaNode</Node>
+    <IONumber>23</IONumber>
+    <IOCountsPerUnit Units="Degrees">43.8</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>1</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <FilterUpdateRate>1</FilterUpdateRate>
+    <FilterBumpSize>10</FilterBumpSize>
+  </RobotThetaTurnSensor>
+  <RobotThetaPositionErrorInput>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>RobotThetaNode</Node>
+    <IONumber>27</IONumber>
+    <IOCountsPerUnit>32.14</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>Infinity</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </RobotThetaPositionErrorInput>
+  <RobotThetaMotor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOServoMotor</Type>
+    <Node>RobotThetaNode</Node>
+    <Filename>RobotThetaMotor_Maxon.xml</Filename>
+    <MaxAbsolutePositionMoveTarget>250</MaxAbsolutePositionMoveTarget>
+    <MinAbsolutePositionMoveTarget>-60</MinAbsolutePositionMoveTarget>
+    <MaxRelativePositionMoveTarget>310</MaxRelativePositionMoveTarget>
+    <InitializationTimeout>10000</InitializationTimeout>
+    <TrajectoryControlParameters>
+      <Default>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.3111</MaxVelocity>
+        <MaxAcceleration>1.5557e-3</MaxAcceleration>
+        <MaxDeceleration>1.5557e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>5.0</PositionErrorWindow>
+        <InPositionWindow>0.50</InPositionWindow>
+        <InPositionTime>50</InPositionTime>
+      </Default>
+      <Gentle>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.060</MaxVelocity>
+        <MaxAcceleration>0.25e-3</MaxAcceleration>
+        <MaxDeceleration>3.1114e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>0</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </Gentle>
+      <GentlePrecise>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.045</MaxVelocity>
+        <MaxAcceleration>1.5557e-3</MaxAcceleration>
+        <MaxDeceleration>0.25e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>1.0</InPositionWindow>
+        <InPositionTime>50</InPositionTime>
+      </GentlePrecise>
+      <SlowFinal>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.15557</MaxVelocity>
+        <MaxAcceleration>1.5557e-3</MaxAcceleration>
+        <MaxDeceleration>1.5557e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>5.0</PositionErrorWindow>
+        <InPositionWindow>1.0</InPositionWindow>
+        <InPositionTime>50</InPositionTime>
+      </SlowFinal>
+      <SlowIntermediate>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.15557</MaxVelocity>
+        <MaxAcceleration>1.5557e-3</MaxAcceleration>
+        <MaxDeceleration>1.5557e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>5.0</PositionErrorWindow>
+        <InPositionWindow>1.0</InPositionWindow>
+        <InPositionTime>1</InPositionTime>
+      </SlowIntermediate>
+      <SlowCenter>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.0778</MaxVelocity>
+        <MaxAcceleration>1.5557e-3</MaxAcceleration>
+        <MaxDeceleration>1.5557e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>1.0</InPositionWindow>
+        <InPositionTime>50</InPositionTime>
+      </SlowCenter>
+      <Creep>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>3.1114E-03</MaxVelocity>
+        <MaxAcceleration>1.5557e-3</MaxAcceleration>
+        <MaxDeceleration>1.5557e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>5.0</PositionErrorWindow>
+        <InPositionWindow>1.0</InPositionWindow>
+        <InPositionTime>50</InPositionTime>
+      </Creep>
+      <SyncX>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.270</MaxVelocity>
+        <MaxAcceleration>0.450e-3</MaxAcceleration>
+        <MaxDeceleration>0.450e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>5.0</PositionErrorWindow>
+        <InPositionWindow>1</InPositionWindow>
+        <InPositionTime>50</InPositionTime>
+      </SyncX>
+      <SlowSyncX>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.110</MaxVelocity>
+        <MaxAcceleration>0.200e-3</MaxAcceleration>
+        <MaxDeceleration>0.200e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>5.0</PositionErrorWindow>
+        <InPositionWindow>1</InPositionWindow>
+        <InPositionTime>50</InPositionTime>
+      </SlowSyncX>
+      <Fastest>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.4667</MaxVelocity>
+        <MaxAcceleration>1.5557e-3</MaxAcceleration>
+        <MaxDeceleration>1.5557e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>0</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </Fastest>
+      <ShelfTheta>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.119</MaxVelocity>
+        <MaxAcceleration>0.200e-3</MaxAcceleration>
+        <MaxDeceleration>0.200e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>5.0</PositionErrorWindow>
+        <InPositionWindow>1</InPositionWindow>
+        <InPositionTime>50</InPositionTime>
+      </ShelfTheta>
+      <CapperDock_PT13>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.99</MaxVelocity>
+        <MaxAcceleration>0.650e-3</MaxAcceleration>
+        <MaxDeceleration>0.350e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>5.0</PositionErrorWindow>
+        <InPositionWindow>1</InPositionWindow>
+        <InPositionTime>50</InPositionTime>
+      </CapperDock_PT13>
+      <CapperDock_PT30>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.112</MaxVelocity>
+        <MaxAcceleration>0.650e-3</MaxAcceleration>
+        <MaxDeceleration>0.375e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>5.0</PositionErrorWindow>
+        <InPositionWindow>1</InPositionWindow>
+        <InPositionTime>50</InPositionTime>
+      </CapperDock_PT30>
+      <VerySlow>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>1.0e-03</MaxVelocity>
+        <MaxAcceleration>100e-6</MaxAcceleration>
+        <MaxDeceleration>100e-6</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>5.0</PositionErrorWindow>
+        <InPositionWindow>0.50</InPositionWindow>
+        <InPositionTime>50</InPositionTime>
+      </VerySlow>
+      <!--The following four set of TCPs are used in path planning.-->
+      <SpillableIntermediate>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.2</MaxVelocity>
+        <MaxAcceleration>0.500e-3</MaxAcceleration>
+        <MaxDeceleration>0.500e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>5.0</PositionErrorWindow>
+        <InPositionWindow>1.0</InPositionWindow>
+        <InPositionTime>1</InPositionTime>
+      </SpillableIntermediate>
+      <SpillableFinal>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.2</MaxVelocity>
+        <MaxAcceleration>0.500e-3</MaxAcceleration>
+        <MaxDeceleration>0.500e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>5.0</PositionErrorWindow>
+        <InPositionWindow>0.50</InPositionWindow>
+        <InPositionTime>50</InPositionTime>
+      </SpillableFinal>
+      <NonSpillableIntermediate>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.3111</MaxVelocity>
+        <MaxAcceleration>1.5557e-3</MaxAcceleration>
+        <MaxDeceleration>1.5557e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>5.0</PositionErrorWindow>
+        <InPositionWindow>1.0</InPositionWindow>
+        <InPositionTime>1</InPositionTime>
+      </NonSpillableIntermediate>
+      <NonSpillableFinal>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.3111</MaxVelocity>
+        <MaxAcceleration>1.5557e-3</MaxAcceleration>
+        <MaxDeceleration>1.5557e-3</MaxDeceleration>
+        <MaxJerk>1</MaxJerk>
+        <PositionErrorWindow>5.0</PositionErrorWindow>
+        <InPositionWindow>0.5</InPositionWindow>
+        <InPositionTime>50</InPositionTime>
+      </NonSpillableFinal>
+    </TrajectoryControlParameters>
+    <Moves>
+      <TestPositive>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>90e-3</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </TestPositive>
+      <TestNegative>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>-90e-3</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </TestNegative>
+      <Default>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </Default>
+      <RobotHomeThetaProcess-MoveToStartup>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0.0</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>SlowFinal</TrajectoryControlParameters>
+      </RobotHomeThetaProcess-MoveToStartup>
+      <RobotHomeThetaProcess-MoveToSensorFast>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>180.5</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <StopOnInput TriggerType="ActiveLevel">RobotThetaHomeSensor</StopOnInput>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>SlowFinal</TrajectoryControlParameters>
+      </RobotHomeThetaProcess-MoveToSensorFast>
+      <RobotHomeThetaProcess-MoveOffSensor>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>-60</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <StopOnInput TriggerType="InactiveLevel">RobotThetaHomeSensor</StopOnInput>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>SlowFinal</TrajectoryControlParameters>
+      </RobotHomeThetaProcess-MoveOffSensor>
+      <RobotHomeThetaProcess-MoveToSensorApproach>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>-6.25</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </RobotHomeThetaProcess-MoveToSensorApproach>
+      <RobotHomeThetaProcess-MoveToSensorAndLatch>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>60</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <StopOnInput TriggerType="ActiveLevel">RobotThetaHomeSensor</StopOnInput>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Creep</TrajectoryControlParameters>
+      </RobotHomeThetaProcess-MoveToSensorAndLatch>
+      <RobotHomeThetaProcess-Complete>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <!--In the RobotHomeThetaProcess, this target is set to Robot.HomingPosition.Theta-->
+        <Target>0</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </RobotHomeThetaProcess-Complete>
+      <CenterFacingForward>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </CenterFacingForward>
+      <CenterFacingBackward>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>180</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </CenterFacingBackward>
+      <PushGentle>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit>0.700</MaxForceLimit>
+        <MinForceLimit>-0.700</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Gentle</PositionControlParameters>
+        <TrajectoryControlParameters>Gentle</TrajectoryControlParameters>
+      </PushGentle>
+      <WithdrawGentle>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit>0.700</MaxForceLimit>
+        <MinForceLimit>-0.700</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Gentle</PositionControlParameters>
+        <TrajectoryControlParameters>GentlePrecise</TrajectoryControlParameters>
+      </WithdrawGentle>
+      <CenterSafely>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit>0.265</MaxForceLimit>
+        <MinForceLimit>-0.265</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Gentle</PositionControlParameters>
+        <TrajectoryControlParameters>SlowCenter</TrajectoryControlParameters>
+      </CenterSafely>
+      <Quick>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <!--The target is calculated in the code.-->
+        <Target>0</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Fastest</TrajectoryControlParameters>
+      </Quick>
+      <Shake>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <!--The target is calculated in the code.-->
+        <Target>0</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Fastest</TrajectoryControlParameters>
+      </Shake>
+    </Moves>
+  </RobotThetaMotor>
+</RobotThetaDevices>

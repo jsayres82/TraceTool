@@ -1,0 +1,51 @@
+﻿<TeknicXMotor_M3432S>
+  <PWMCountsPerUnit Units="Percent">6</PWMCountsPerUnit>
+  <CurrentCountsPerUnit Units="Amps">2424.8</CurrentCountsPerUnit>
+  <CurrentControlParameters>
+    <Default>
+      <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorCurrentControlParameters</Type>
+      <ProportionalGain>30000</ProportionalGain>
+      <DerivativeGain>0</DerivativeGain>
+      <DerivativeSampleCount>3</DerivativeSampleCount>
+      <IntegralGain>3000</IntegralGain>
+      <IntegrationSummationLimit>0</IntegrationSummationLimit>
+      <IntegrationContributionLimit>0</IntegrationContributionLimit>
+      <ContinuousCurrentLimit>5.5</ContinuousCurrentLimit>
+      <ContinuousCurrentTime>16000</ContinuousCurrentTime>
+    </Default>
+  </CurrentControlParameters>
+  <MotorTemperatureSensorInstalled>FALSE</MotorTemperatureSensorInstalled>
+  <CommutationType>EncoderIndex</CommutationType>
+  <CommutationOffset>0</CommutationOffset>
+  <SteppingPWM>15</SteppingPWM>
+  <LockingPWM>19</LockingPWM>
+  <LockingRampIncrementPWM>1</LockingRampIncrementPWM>
+  <LockingRampIncrementTime>10</LockingRampIncrementTime>
+  <LockingSettlingTime>100</LockingSettlingTime>
+  <SteppingTime>250</SteppingTime>
+  <MinimumFreedom>500</MinimumFreedom>
+  <CommutationHysteresis>10</CommutationHysteresis>
+  <SectorSizeList>
+    <!--8-pole motor = 4 electricalCyclesPerMechnicalRevolution -->
+    <!--4000 countsPerMechnicalRevolution/4 electricalCyclesPerMechnicalRevolution = 1000 countsPerElectricalCycle-->
+    <!--1000 countsPerElectricalCycle/6 sectorsPerElectricalCycle = 166.67 countsPerSector-->
+    <SectorSize>167</SectorSize>
+    <SectorSize>166</SectorSize>
+    <SectorSize>167</SectorSize>
+    <SectorSize>167</SectorSize>
+    <SectorSize>166</SectorSize>
+    <SectorSize>167</SectorSize>
+    <SectorSize>167</SectorSize>
+    <SectorSize>166</SectorSize>
+    <SectorSize>167</SectorSize>
+    <SectorSize>167</SectorSize>
+    <SectorSize>166</SectorSize>
+    <SectorSize>167</SectorSize>
+    <SectorSize>167</SectorSize>
+    <SectorSize>166</SectorSize>
+    <SectorSize>167</SectorSize>
+    <SectorSize>167</SectorSize>
+    <SectorSize>166</SectorSize>
+    <SectorSize>167</SectorSize>
+  </SectorSizeList>
+</TeknicXMotor_M3432S>

@@ -1,0 +1,7 @@
+<LP_FirmwareRequirement>
+   <MinimumFirmwareVersion>5.08</MinimumFirmwareVersion>
+   <SRecordFile>..\..\..\ReleasedFirmware\ServoLP_V5_08.elf.S</SRecordFile>
+   <RequiredProtocolVersion>4</RequiredProtocolVersion>
+   <FirstFirmwareVersionWithProtocol>5</FirstFirmwareVersionWithProtocol>
+   <FirmwareAutoUpdate>True</FirmwareAutoUpdate>
+</LP_FirmwareRequirement>

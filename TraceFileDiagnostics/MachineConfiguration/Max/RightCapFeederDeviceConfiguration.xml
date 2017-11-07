@@ -1,0 +1,4 @@
+<RightCapFeederDeviceConfiguration>
+  <Filename>Subsystems\CANBus\CANBusInterface.xml</Filename>
+  <Filename>Subsystems\RightCapFeeder\RightCapFeederDevices.xml</Filename>
+</RightCapFeederDeviceConfiguration>

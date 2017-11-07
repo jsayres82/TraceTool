@@ -1,0 +1,16 @@
+<CANBusInterface>
+  <ServoCANBusInterface>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CAN232Parata</Type>
+    <BusSpeed units="KBaud" values="10, 20, 50, 100, 125, 250, 500, 1000">125</BusSpeed>
+    <PortNameList>
+      <PortName>COM3</PortName>
+      <PortName>COM1</PortName>
+    </PortNameList>
+    <BaudRate>57600</BaudRate>
+    <DataBits>8</DataBits>
+    <Parity>None</Parity>
+    <StopBits>1</StopBits>
+    <ResetBoardTime>500</ResetBoardTime>
+    <QueryingQueues>False</QueryingQueues>
+  </ServoCANBusInterface>
+</CANBusInterface>

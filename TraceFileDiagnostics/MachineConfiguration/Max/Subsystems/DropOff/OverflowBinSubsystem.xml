@@ -1,0 +1,17 @@
+<DropOffOverflowBinSubsystem>
+  <Filename>OverflowBinDevices.xml</Filename>
+  <DropOffOverflowBin>
+    <Type assembly="_MaxAssembly_" namespace="_MaxNamespace_">DropOffOverflowBinManager</Type>
+    <ConfigurationParameters>
+      <Subsystem>
+        <OverflowBinName>Overflow</OverflowBinName>
+        <OverrideOverflowIO>False</OverrideOverflowIO>
+        <BinAbsentTime>60000</BinAbsentTime>
+        <BinFullTime>5000</BinFullTime>
+      </Subsystem>
+      <DropOffOverflowBinNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </DropOffOverflowBinNumericIOHealthTestProcess>
+    </ConfigurationParameters>
+  </DropOffOverflowBin>
+</DropOffOverflowBinSubsystem>

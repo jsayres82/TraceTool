@@ -1,0 +1,129 @@
+<LeftVialFeederDevices>
+  <LeftVialFeederNode>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANOpenNode</Type>
+    <Id>20</Id>
+    <HeartbeatTime>1000</HeartbeatTime>
+    <HeartbeatTimeoutTolerance>1000</HeartbeatTimeoutTolerance>
+    <SDORetryLimit>2</SDORetryLimit>
+    <SDOResponseTimeout>1000</SDOResponseTimeout>
+    <CANBusInterface>ServoCANBusInterface</CANBusInterface>
+    <Filename>..\CANBus\LP_FirmwareRequirement.xml</Filename>
+  </LeftVialFeederNode>
+  <LeftVialFeederDoorInterlock>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIODigitalInput</Type>
+    <Configuration>DigitalInputPullUp</Configuration>
+    <Node>LeftVialFeederNode</Node>
+    <IONumber>5</IONumber>
+    <IOCountsPerUnit>1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>0</ActiveThreshold>
+    <InactiveThreshold>1</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </LeftVialFeederDoorInterlock>
+  <LeftVialFeederStageSensor1>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>LeftVialFeederNode</Node>
+    <IONumber>23</IONumber>
+    <IOCountsPerUnit Units="Percent">327.68</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>55</ActiveThreshold>
+    <InactiveThreshold>75</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <ReadActiveValueDelay>250</ReadActiveValueDelay>
+    <ReadInactiveValueDelay>250</ReadInactiveValueDelay>
+  </LeftVialFeederStageSensor1>
+  <LeftVialFeederStageSensor2>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>LeftVialFeederNode</Node>
+    <IONumber>24</IONumber>
+    <IOCountsPerUnit Units="Percent">327.68</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>55</ActiveThreshold>
+    <InactiveThreshold>75</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <ReadActiveValueDelay>250</ReadActiveValueDelay>
+    <ReadInactiveValueDelay>250</ReadInactiveValueDelay>
+  </LeftVialFeederStageSensor2>
+  <LeftVialFeederDropSolenoid>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogOutput</Type>
+    <Configuration>AnalogOutput</Configuration>
+    <Node>LeftVialFeederNode</Node>
+    <IONumber>1</IONumber>
+    <IOCountsPerUnit>327.55</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>100</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </LeftVialFeederDropSolenoid>
+  <LeftVialFeederMotor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOServoMotor</Type>
+    <Node>LeftVialFeederNode</Node>
+    <Filename>LeftVialFeederMotor_Dunker.xml</Filename>
+    <MaxAbsolutePositionMoveTarget>Infinity</MaxAbsolutePositionMoveTarget>
+    <MinAbsolutePositionMoveTarget>-Infinity</MinAbsolutePositionMoveTarget>
+    <MaxRelativePositionMoveTarget>Infinity</MaxRelativePositionMoveTarget>
+    <InitializationTimeout>10000</InitializationTimeout>
+    <TrajectoryControlParameters>
+      <Default>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>1.8e-3</MaxVelocity>
+        <MaxAcceleration>3.7e-6</MaxAcceleration>
+        <MaxDeceleration>3.7e-6</MaxDeceleration>
+        <MaxJerk>0</MaxJerk>
+        <PositionErrorWindow>0.5</PositionErrorWindow>
+        <InPositionWindow>0</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </Default>
+    </TrajectoryControlParameters>
+    <Moves>
+      <TestPositive>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>1e-3</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit Units="Amps">Infinity</MaxForceLimit>
+        <MinForceLimit Units="Amps">-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </TestPositive>
+      <TestNegative>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>-1e-3</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit Units="Amps">Infinity</MaxForceLimit>
+        <MinForceLimit Units="Amps">-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </TestNegative>
+      <Staging>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>5.64e-3</Target>
+        <Duration>0</Duration>
+        <MaxForceLimit Units="Amps">1.787</MaxForceLimit>
+        <MinForceLimit Units="Amps">-1.787</MinForceLimit>
+        <StopOnInput TriggerType="ActiveLevel">LeftVialFeederStageSensor1</StopOnInput>
+        <StopOnInput TriggerType="ActiveLevel">LeftVialFeederStageSensor2</StopOnInput>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </Staging>
+      <Reversing>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>-5.64e-3</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit Units="Amps">1.787</MaxForceLimit>
+        <MinForceLimit Units="Amps">-1.787</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </Reversing>
+    </Moves>
+  </LeftVialFeederMotor>
+</LeftVialFeederDevices>

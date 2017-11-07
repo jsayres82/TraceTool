@@ -1,0 +1,10 @@
+<PersistentDataManager>
+   <DataManager>
+      <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">PersistentDataManager</Type>
+      <ConfigurationParameters>
+         <PersistentDataTemplateFilename>PersistentPerformanceDataTemplate.xml</PersistentDataTemplateFilename>
+         <PersistentDataFilename>PersistentPerformanceData.xml</PersistentDataFilename>
+         <SaveFilePeriod>28800000</SaveFilePeriod>
+      </ConfigurationParameters>
+   </DataManager>
+</PersistentDataManager>

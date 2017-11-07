@@ -1,0 +1,15 @@
+<BreakawayConfiguration>
+  <Filename>SystemConfigurationItems.xml</Filename>
+  <Filename>Namespaces.xml</Filename>
+  <Filename>System\TraceManager.xml</Filename>
+  <Filename>System\PersistentDataManager.xml</Filename>
+  <Filename>System\MasterVialList.xml</Filename>
+  <Filename>System\SimulatedMaxSystemManager.xml</Filename>
+  <Filename>Subsystems\Camera\SimulatedCameraSubsystem.xml</Filename>
+  <Filename>Subsystems\Cell\SimulatedCellSubsystem.xml</Filename>
+  <Filename>Subsystems\DropOff\SimulatedDropOffSubsystem.xml</Filename>
+  <Filename>Subsystems\LeftVialFeeder\SimulatedLeftVialFeederSubsystem.xml</Filename>
+  <Filename>Subsystems\RightVialFeeder\SimulatedRightVialFeederSubsystem.xml</Filename>
+  <Filename>Subsystems\Holdback\SimulatedHoldbackSubsystem.xml</Filename>
+  <Filename>System\SimulatedPollingManager.xml</Filename>
+</BreakawayConfiguration>

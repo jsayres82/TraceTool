@@ -1,0 +1,17 @@
+<DropOffChuteSubsystem>
+  <Filename>DropOffChuteDevices.xml</Filename>
+  <DropOffChute>
+    <Type assembly="_MaxChuteAssembly_" namespace="_MaxChuteNamespace_">DropOffChuteManager</Type>
+    <ConfigurationParameters>
+      <Subsystem>
+        <DropOffChuteLocation>X1</DropOffChuteLocation>
+        <OverrideChuteIO>False</OverrideChuteIO>
+        <ChuteEmptyDelay>1000</ChuteEmptyDelay>
+        <MultiVialDropOff>True</MultiVialDropOff>
+      </Subsystem>
+      <DropOffChuteNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </DropOffChuteNumericIOHealthTestProcess>
+    </ConfigurationParameters>
+  </DropOffChute>
+</DropOffChuteSubsystem>

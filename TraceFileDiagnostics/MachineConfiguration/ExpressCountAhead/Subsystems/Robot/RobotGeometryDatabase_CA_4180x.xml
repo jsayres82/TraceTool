@@ -1,0 +1,113 @@
+﻿<RobotStaticGeometry>
+  <Robot>
+    <RobotFrame>
+      <X>0.0</X>
+      <Y>0.0</Y>
+      <Z>0.0</Z>
+    </RobotFrame>
+    <ThetaTurnSensorOffset>235</ThetaTurnSensorOffset>
+    <RobotGripper>
+      <YokeLength>7.0</YokeLength>                <!--Distance from theta center of rotation to the tombstone face-->
+      <YokeRadius>0.4</YokeRadius>                <!--The radius of the curvature at the GT yoke corners-->
+      <YokeHeight>1.700</YokeHeight>              <!--The vertical distance between the bottom surface of the GT yoke and the top plane of the gripper fingers-->
+      <YokeCenterY>0.6</YokeCenterY>              <!--The lateral distance between the center of the yoke's long axis and the center of the GT yoke corner-->
+      <YokeBaseThickness>0.5</YokeBaseThickness>  <!--The vertical thickness of the base of the yoke.-->
+      <TopPlaneZOffset>0.675</TopPlaneZOffset>    <!--The vertical distance that the top plane of the grippers is above the Z zero reference point.-->
+      <GripperCentroidPolynomial>
+        <!--The gripper centroid polynomial relates the distance of an object from the tombstone to the diameter of that object.
+        The equation is a second order of the form y = Ax^2 + Bx + C.  A, B, and C below are the coefficients of that equation.
+        x is the diameter of a cylindrical object, in inches
+        y is the distance from the tombstone to the object center, in inches.-->
+        <A>0.14178</A>
+        <B>-0.27931</B>
+        <C>1.49259</C>
+      </GripperCentroidPolynomial>
+      <GrippedObjectDiameterPolynomial>
+        <!--The gripped object diameter polynomial relates the diameter of an object to the position of the gripper motor, in encoder counts.
+        The equation is a second order of the form y = Ax^2 + Bx + C.  A, B, and C below are the coefficients of that equation.
+        x is the position of the gripper motor, in encoder counts
+        y is the diameter of the object held in the gripper, in inches.-->
+        <A>0.000000372267</A>
+        <B>0.000100514793</B>
+        <C>1.382029156634</C>
+      </GrippedObjectDiameterPolynomial>
+    </RobotGripper>
+    <MaxGripperProtrusion>1.625</MaxGripperProtrusion>
+    <DefaultVialPickupProximity>0.100</DefaultVialPickupProximity>
+    <ThetaBacklashTargetCenter>
+      <X>44.449</X>
+      <Y>3.975</Y>
+      <Z>36.332</Z>
+    </ThetaBacklashTargetCenter>
+    <ThetaBacklashTargetHeight>2.25</ThetaBacklashTargetHeight>
+    <ThetaBacklashTargetRadius>0.75</ThetaBacklashTargetRadius>
+    <BacklashPostToToolPostVector>
+      <X>-3.025</X>
+      <Y>0.00</Y>
+      <Z>0.00</Z>
+    </BacklashPostToToolPostVector>
+    <ToolStoragePostHeight>0.75</ToolStoragePostHeight>
+    <ToolStorageShelfTarget>
+      <X>46.679</X>
+      <Y>2.875</Y>
+      <Z>36.332</Z>
+    </ToolStorageShelfTarget>
+    <TurnaroundXForward>50.0</TurnaroundXForward>
+    <TurnaroundXBackward>54.0</TurnaroundXBackward>
+    <TurnaroundZ>33.4</TurnaroundZ>
+    <RobotCalibrationToolGeometry>
+      <UpperFlangeDiameter>1.5</UpperFlangeDiameter>
+      <LowerFlangeDiameter>2.2</LowerFlangeDiameter>
+      <BodyDiameter>1.5</BodyDiameter>
+      <UpperFlangeThickness>0.200</UpperFlangeThickness>
+      <LowerFlangeThickness>0.200</LowerFlangeThickness>
+      <Height>1.93</Height>
+      <GripHeight>1.368</GripHeight>
+      <GripDiameter>1.100</GripDiameter>
+    </RobotCalibrationToolGeometry>
+    <RobotEndAvoidXDistanceBackward>4.0</RobotEndAvoidXDistanceBackward>
+    <RobotEndAvoidXDistanceForward>4.0</RobotEndAvoidXDistanceForward>
+    <RobotEndAvoidXBuffer>0.25</RobotEndAvoidXBuffer>
+    <RobotEndAvoidDropOffSideTheta>10.0</RobotEndAvoidDropOffSideTheta>
+    <RobotEndAvoidDropOffSideMaxTheta>25.0</RobotEndAvoidDropOffSideMaxTheta>
+    <RobotEndAvoidCellSideTheta>15</RobotEndAvoidCellSideTheta>
+    <RobotThetaPcbAssemblyGeometry>
+      <!--This XProtrustion distance is the CAD spec of 5.061", plus almost 0.200" to account for
+          the pins on the front of the assembly, which are not included in the 5.061" spec.-->
+      <XProtrusion>5.250</XProtrusion>
+      <ZTop>8.920</ZTop>
+      <ZHeight>3.808</ZHeight>
+    </RobotThetaPcbAssemblyGeometry>
+    <ParkPosition>
+      <X>36.0</X>
+      <Y>0.0</Y>
+      <Z>16.0</Z>
+    </ParkPosition>
+
+    <!--Theta calibration targets have been moved from the surface of the pneumatic
+    manifold to the face of the center hopper bracket of each hopper row. As a
+    result the number of targets has chenged from 9 to 3. Units are inches and
+    the reference frame is machine space.-->
+
+    <ThetaCalibrationTarget>
+      <X>10.611</X>
+      <Y>-2.461</Y>
+      <Z>45.883</Z>
+    </ThetaCalibrationTarget>
+    <ThetaCalibrationTarget>
+      <X>10.611</X>
+      <Y>-2.461</Y>
+      <Z>27.283</Z>
+    </ThetaCalibrationTarget>
+    <ThetaCalibrationTarget>
+      <X>10.611</X>
+      <Y>-2.461</Y>
+      <Z>8.581</Z>
+    </ThetaCalibrationTarget>
+    <ExclusionZone>
+      <!--These values come from CAD data and GT specifications, as provided by Brad Smith.-->
+      <DropOffSideY>2.525</DropOffSideY>
+      <CellsSideY>-2.625</CellsSideY>
+    </ExclusionZone>
+  </Robot>
+</RobotStaticGeometry>

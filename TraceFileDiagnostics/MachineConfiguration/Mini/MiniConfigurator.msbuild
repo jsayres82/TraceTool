@@ -1,0 +1,9 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="Microsoft.Sdc.Common.tasks"/>
+    <PropertyGroup>
+        <!-- Put custom properties here -->
+    </PropertyGroup>
+    <Target Name="Mini">
+        <Message Importance="normal" Text="Configuring Parata Mini for beta build" />
+    </Target>
+</Project>

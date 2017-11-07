@@ -1,0 +1,4 @@
+<BreakawayConfiguration>
+   <Filename>Subsystems\CANBus\CANBusInterface.xml</Filename>
+   <Filename>Subsystems\Cell\CellDevices.xml</Filename>
+</BreakawayConfiguration>

@@ -1,0 +1,16 @@
+﻿<HopperSubsystem>
+  <HopperManager>
+    <Type assembly="_ExpressCAAssembly_" namespace="_ExpressCANamespace_">HopperManager</Type>
+    <ConfigurationParameters>
+      <Subsystem>
+        <GateStableTime>1000</GateStableTime>
+      </Subsystem>
+      <HopperManagerNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </HopperManagerNumericIOHealthTestProcess>
+      <HopperUpdateSensorsProcess>
+        <Timeout>3000</Timeout>
+      </HopperUpdateSensorsProcess>
+    </ConfigurationParameters>
+  </HopperManager>
+</HopperSubsystem>

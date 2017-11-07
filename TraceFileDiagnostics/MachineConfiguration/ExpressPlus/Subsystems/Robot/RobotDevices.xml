@@ -1,0 +1,6 @@
+<RobotDevices>
+   <Filename>RobotXDevices.xml</Filename>
+   <Filename>RobotZDevices.xml</Filename>
+   <Filename>RobotThetaDevices.xml</Filename>
+   <Filename>RobotGripperDevices.xml</Filename>
+</RobotDevices>

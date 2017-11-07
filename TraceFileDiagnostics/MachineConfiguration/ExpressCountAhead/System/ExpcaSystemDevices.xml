@@ -1,0 +1,21 @@
+﻿<ExpcaSystemDevices>
+  <AccessDoorSolenoid>
+    <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">LockingSolenoid</Type>
+    <OutputToControl>AccessDoorOutput</OutputToControl>
+    <PeakValue>24</PeakValue>
+    <PeakTime>250</PeakTime>
+    <MaximumPeakTime>2000</MaximumPeakTime>
+  </AccessDoorSolenoid>
+  <AccessDoorOutput>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogOutput</Type>
+    <Configuration>AnalogOutput</Configuration>
+    <Node>CellDRMNode</Node>
+    <IONumber>1</IONumber>
+    <IOCountsPerUnit Units="Volts">1364.792</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>12</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>0</MinimumValue>
+    <MaximumValue>24</MaximumValue>
+  </AccessDoorOutput>
+</ExpcaSystemDevices>

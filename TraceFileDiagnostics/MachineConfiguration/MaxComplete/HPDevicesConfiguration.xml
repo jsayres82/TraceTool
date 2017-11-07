@@ -1,0 +1,5 @@
+<BreakawayConfiguration>
+   <Filename>Subsystems\CANBus\CANBusInterface.xml</Filename>
+   <Filename>Subsystems\Robot\RobotXDevices.xml</Filename>
+   <Filename>Subsystems\Robot\RobotZDevices.xml</Filename>
+</BreakawayConfiguration>

@@ -1,0 +1,22 @@
+<CellSubsystem>
+  <Filename>SimulatedCellDevices.xml</Filename>
+  <Cell>
+    <Type assembly="_BreakawayAssembly_" namespace="_BreakawayNamespace_">SimulatedCellManager</Type>
+    <ConfigurationParameters>
+      <Subsystem/>
+      <CellHealthTestProcess>
+        <Timeout>30000</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+        <TimeBetweenActions>250</TimeBetweenActions>
+        <Error>
+          <ErrorCode>
+            <ErrorName>NoError</ErrorName>
+            <ErrorType
+              assembly="Parata.Controls.Enumerations.Core"
+              namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+          </ErrorCode>
+        </Error>
+      </CellHealthTestProcess>
+    </ConfigurationParameters>
+  </Cell>
+</CellSubsystem>

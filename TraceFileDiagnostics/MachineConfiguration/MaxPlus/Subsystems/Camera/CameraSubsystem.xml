@@ -1,0 +1,16 @@
+<CameraSubsystem>
+  <Filename>CameraDevices.xml</Filename>
+  <Camera>
+    <Type assembly="_ExpressMXAssembly_" namespace="_ExpressMXNamespace_">ExpressMXCameraManager</Type>
+    <ConfigurationParameters>
+      <Subsystem>
+        <CameraSettingsPath>C:\Program Files\Parata Systems\Breakaway\MachineConfiguration\Subsystems\Camera\</CameraSettingsPath>
+        <DefaultCameraSettings>DefaultSettings</DefaultCameraSettings>
+        <DefaultImageFile>ImageNotAvailable.jpg</DefaultImageFile>
+      </Subsystem>
+      <CameraNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </CameraNumericIOHealthTestProcess>
+    </ConfigurationParameters>
+  </Camera>
+</CameraSubsystem>

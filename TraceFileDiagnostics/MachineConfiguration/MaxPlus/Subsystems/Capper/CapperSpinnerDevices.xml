@@ -1,0 +1,168 @@
+<CapperSpinnerDevices>
+  <CapperSpinnerNode>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANOpenNode</Type>
+    <Id>33</Id>
+    <HeartbeatTime>1000</HeartbeatTime>
+    <HeartbeatTimeoutTolerance>1000</HeartbeatTimeoutTolerance>
+    <SDORetryLimit>2</SDORetryLimit>
+    <SDOResponseTimeout>1000</SDOResponseTimeout>
+    <CANBusInterface>ServoCANBusInterface</CANBusInterface>
+    <Filename>..\CANBus\LP_FirmwareRequirement.xml</Filename>
+  </CapperSpinnerNode>
+  <CapperSpinnerPositionErrorInput>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>CapperSpinnerNode</Node>
+    <IONumber>27</IONumber>
+    <IOCountsPerUnit>111.1111111</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>-Infinity</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </CapperSpinnerPositionErrorInput>
+  <CapperSpinnerMotor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOServoMotor</Type>
+    <Node>CapperSpinnerNode</Node>
+    <Filename>CapperSpinnerMotor_Dunker.xml</Filename>
+    <MaxAbsolutePositionMoveTarget>Infinity</MaxAbsolutePositionMoveTarget>
+    <MinAbsolutePositionMoveTarget>-Infinity</MinAbsolutePositionMoveTarget>
+    <MaxRelativePositionMoveTarget>Infinity</MaxRelativePositionMoveTarget>
+    <InitializationTimeout>10000</InitializationTimeout>
+    <TrajectoryControlParameters>
+      <Default>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.500</MaxVelocity>
+        <MaxAcceleration>650e-6</MaxAcceleration>
+        <MaxDeceleration>650e-6</MaxDeceleration>
+        <MaxJerk>Infinity</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>0</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </Default>
+      <ApplyCap>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.500</MaxVelocity>
+        <MaxAcceleration>325e-6</MaxAcceleration>
+        <MaxDeceleration>2.6e-3</MaxDeceleration>
+        <MaxJerk>Infinity</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>0</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </ApplyCap>
+      <Relax>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.500</MaxVelocity>
+        <MaxAcceleration>2.6e-3</MaxAcceleration>
+        <MaxDeceleration>1.3e-3</MaxDeceleration>
+        <MaxJerk>Infinity</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>0.5</InPositionWindow>
+        <InPositionTime>1</InPositionTime>
+      </Relax>
+    </TrajectoryControlParameters>
+    <Moves>
+      <TestPositive>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>90e-3</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit Units="Amps">Infinity</MaxForceLimit>
+        <MinForceLimit Units="Amps">-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </TestPositive>
+      <TestNegative>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>-90e-3</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit Units="Amps">Infinity</MaxForceLimit>
+        <MinForceLimit Units="Amps">-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </TestNegative>
+      <Open>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>250</Target>
+        <MaxForceLimit Units="Amps">Infinity</MaxForceLimit>
+        <MinForceLimit Units="Amps">-Infinity</MinForceLimit>
+        <StopOnInput TriggerType="None">Null</StopOnInput>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </Open>
+      <Close>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>-250</Target>
+        <MaxForceLimit Units="Amps">Infinity</MaxForceLimit>
+        <MinForceLimit Units="Amps">-Infinity</MinForceLimit>
+        <StopOnInput TriggerType="None">Null</StopOnInput>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </Close>
+      <MeasureForce>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>-360</Target>
+        <MaxForceLimit Units="Amps">Infinity</MaxForceLimit>
+        <MinForceLimit Units="Amps">-Infinity</MinForceLimit>
+        <StopOnInput TriggerType="None">Null</StopOnInput>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </MeasureForce>
+      <Loosen>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>60</Target>
+        <MaxForceLimit Units="Amps">Infinity</MaxForceLimit>
+        <MinForceLimit Units="Amps">-Infinity</MinForceLimit>
+        <StopOnInput TriggerType="None">Null</StopOnInput>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </Loosen>
+      <AlignCap>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>-250</Target>
+        <MaxForceLimit Units="Amps">Infinity</MaxForceLimit>
+        <MinForceLimit Units="Amps">-Infinity</MinForceLimit>
+        <StopOnInput TriggerType="None">Null</StopOnInput>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </AlignCap>
+      <ApplyCap>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>-250</Target>
+        <MaxForceLimit Units="Amps">Infinity</MaxForceLimit>
+        <MinForceLimit Units="Amps">-Infinity</MinForceLimit>
+        <StopOnInput TriggerType="None">Null</StopOnInput>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>ApplyCap</TrajectoryControlParameters>
+      </ApplyCap>
+      <SpinCap>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>720</Target>
+        <MaxForceLimit Units="Amps">Infinity</MaxForceLimit>
+        <MinForceLimit Units="Amps">-Infinity</MinForceLimit>
+        <StopOnInput TriggerType="None">Null</StopOnInput>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </SpinCap>
+      <Relax>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>40e-3</Target>
+        <Duration>10000</Duration>
+        <MaxForceLimit Units="Amps">0.438</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.438</MinForceLimit>
+        <StopOnInput TriggerType="None">Null</StopOnInput>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Relax</TrajectoryControlParameters>
+      </Relax>
+    </Moves>
+  </CapperSpinnerMotor>
+</CapperSpinnerDevices>

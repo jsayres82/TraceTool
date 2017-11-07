@@ -1,0 +1,12 @@
+<DropOffDevices>
+  <ExceptionFile>
+    <Filename>ExceptionCarouselDevices.xml</Filename>
+  </ExceptionFile>
+  <OverflowFile>
+   <Filename>OverflowBinDevices.xml</Filename>
+  </OverflowFile>
+  <BinArrayFile>
+    <Filename>LeftDropoffBinDevices.xml</Filename>
+    <Filename>RightDropoffBinDevices.xml</Filename>
+  </BinArrayFile>
+</DropOffDevices>

@@ -1,0 +1,28 @@
+﻿<HoodDevices>
+  <HoodDoorInterlock>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIODigitalInput</Type>
+    <Configuration>DigitalInputNoPullUp</Configuration>
+    <Node>RobotZNode</Node>
+    <IONumber>24</IONumber>
+    <IOCountsPerUnit>1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>1</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>0</MinimumValue>
+    <MaximumValue>1</MaximumValue>
+  </HoodDoorInterlock>
+  <HoodPressureSensor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOFilteredAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>RobotZNode</Node>
+    <IONumber>8</IONumber>
+    <IOCountsPerUnit Units="mm H2O">98.0665</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>6.0</ActiveThreshold>
+    <InactiveThreshold>3.0</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <FilterUpdateRate>13</FilterUpdateRate>
+    <FilterBumpSize>0.0102</FilterBumpSize>
+  </HoodPressureSensor>
+</HoodDevices>

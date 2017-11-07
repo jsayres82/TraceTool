@@ -1,0 +1,21 @@
+<ChuteSubsystem>
+  <ChuteManager>
+    <Type assembly="_MiniAssembly_" namespace="_MiniNamespace_">SimulatedChuteManager</Type>
+    <ConfigurationParameters>
+      <Subsystem/>
+      <ChuteHealthTestProcess>
+        <Timeout>30000</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+        <TimeBetweenActions>250</TimeBetweenActions>
+        <Error>
+          <ErrorCode>
+            <ErrorName>NoError</ErrorName>
+            <ErrorType
+              assembly="Parata.Controls.Enumerations.Core"
+              namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+          </ErrorCode>
+        </Error>
+      </ChuteHealthTestProcess>
+    </ConfigurationParameters>
+  </ChuteManager>
+</ChuteSubsystem>

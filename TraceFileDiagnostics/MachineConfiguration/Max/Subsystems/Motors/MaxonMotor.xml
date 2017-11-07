@@ -1,0 +1,19 @@
+<MaxonMotor>
+  <PWMCountsPerUnit Units="Percent">12</PWMCountsPerUnit>
+  <CurrentCountsPerUnit Units="Amps">9929.7</CurrentCountsPerUnit>
+  <CurrentControlParameters>
+    <Default>
+      <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorCurrentControlParameters</Type>
+      <ProportionalGain>300</ProportionalGain>
+      <DerivativeGain>0</DerivativeGain>
+      <DerivativeSampleCount>1</DerivativeSampleCount>
+      <IntegralGain>90</IntegralGain>
+      <IntegrationSummationLimit>400000</IntegrationSummationLimit>
+      <IntegrationContributionLimit>0</IntegrationContributionLimit>
+      <ContinuousCurrentLimit>0.3</ContinuousCurrentLimit>
+      <ContinuousCurrentTime>16000</ContinuousCurrentTime>
+    </Default>
+  </CurrentControlParameters>
+  <MotorTemperatureSensorInstalled>FALSE</MotorTemperatureSensorInstalled>
+  <CommutationType>Mechanical</CommutationType>
+</MaxonMotor>

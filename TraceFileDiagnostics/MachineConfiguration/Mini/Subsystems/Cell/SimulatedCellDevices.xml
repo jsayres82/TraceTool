@@ -1,0 +1,22 @@
+<SimulatedCellDevices>
+  <CompressorHighTemperatureAlarm>
+    <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">NumericIO</Type>
+    <NumericIOType>Input</NumericIOType>
+    <IOCountsPerUnit>1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>-Infinity</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </CompressorHighTemperatureAlarm>
+  <CompressorHighTemperatureWarning>
+    <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">NumericIO</Type>
+    <NumericIOType>Input</NumericIOType>
+    <IOCountsPerUnit>1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>-Infinity</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </CompressorHighTemperatureWarning>
+</SimulatedCellDevices>

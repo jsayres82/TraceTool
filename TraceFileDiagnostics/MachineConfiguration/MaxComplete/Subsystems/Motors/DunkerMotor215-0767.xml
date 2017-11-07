@@ -1,0 +1,19 @@
+<DunkerMotor215-0767>
+  <PWMCountsPerUnit Units="Percent">12</PWMCountsPerUnit>
+  <CurrentCountsPerUnit Units="Counts/Amp">9929.7</CurrentCountsPerUnit>
+  <CurrentControlParameters>
+    <Default>
+      <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorCurrentControlParameters</Type>
+      <ProportionalGain>9000</ProportionalGain>
+      <DerivativeGain>0</DerivativeGain>
+      <DerivativeSampleCount>1</DerivativeSampleCount>
+      <IntegralGain>100</IntegralGain>
+      <IntegrationSummationLimit>200000</IntegrationSummationLimit>
+      <IntegrationContributionLimit>0</IntegrationContributionLimit>
+      <ContinuousCurrentLimit>1.1</ContinuousCurrentLimit>
+      <ContinuousCurrentTime>16000</ContinuousCurrentTime>
+    </Default>
+  </CurrentControlParameters>
+  <MotorTemperatureSensorInstalled>FALSE</MotorTemperatureSensorInstalled>
+  <CommutationType>Mechanical</CommutationType>
+</DunkerMotor215-0767>

@@ -1,0 +1,21 @@
+<RightCapFeederMotor_Globe>
+  <InvertDirection>False</InvertDirection>
+  <Filename>../Motors/GlobeMotor.xml</Filename>
+  <PositionCountsPerUnit Units="Counts/Degree">307.2222</PositionCountsPerUnit>
+  <CurrentUnitsPerForceUnit Units="Amps/Amps">1</CurrentUnitsPerForceUnit>
+  <CurrentUnitsZeroOffset Units="Amps">0</CurrentUnitsZeroOffset>
+  <PositionControlParameters>
+    <Default>
+      <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorPositionControlParameters</Type>
+      <ProportionalGain>50000</ProportionalGain>
+      <DerivativeGain>1500000</DerivativeGain>
+      <DerivativeSampleCount>1</DerivativeSampleCount>
+      <IntegralGain>0</IntegralGain>
+      <IntegrationSummationLimit>0</IntegrationSummationLimit>
+      <IntegrationContributionLimit>0</IntegrationContributionLimit>
+      <VelocityFeedForward>0</VelocityFeedForward>
+      <AccelerationFeedForward>0</AccelerationFeedForward>
+      <GravityFeedForward>0</GravityFeedForward>
+    </Default>
+  </PositionControlParameters>
+</RightCapFeederMotor_Globe>

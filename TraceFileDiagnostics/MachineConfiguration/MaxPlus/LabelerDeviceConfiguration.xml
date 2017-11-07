@@ -1,0 +1,4 @@
+<RightVialFeederDeviceConfiguration>
+  <Filename>Subsystems\CANBus\CANBusInterface.xml</Filename>
+  <Filename>Subsystems\Labeler\LabelerDevices.xml</Filename>
+</RightVialFeederDeviceConfiguration>

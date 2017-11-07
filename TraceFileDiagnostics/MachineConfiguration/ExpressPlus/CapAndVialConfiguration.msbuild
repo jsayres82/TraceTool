@@ -1,0 +1,66 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup>
+
+    <RightVialFeederConfigurationOptions Include="PT30, PT13, KERR">
+
+      <DependentProperty>RightFeederConfiguration</DependentProperty>
+      <DependentTarget>ConfigureVialsAndCaps</DependentTarget>
+
+    </RightVialFeederConfigurationOptions>
+
+  <LeftVialFeederConfigurationOptions Include="PT30, PT13, KERR">
+
+    <DependentProperty>LeftFeederConfiguration</DependentProperty>
+    <DependentTarget>ConfigureVialsAndCaps</DependentTarget>
+
+  </LeftVialFeederConfigurationOptions>
+
+  </ItemGroup>
+
+  <PropertyGroup>
+
+    <RightFeederConfiguration Condition=" '$(RightFeederConfiguration)' == '' ">PT13</RightFeederConfiguration>
+    <LeftFeederConfiguration Condition=" '$(LeftFeederConfiguration)' == '' ">PT30</LeftFeederConfiguration>
+    <SubsystemsDirectory>Subsystems\</SubsystemsDirectory>
+
+  </PropertyGroup>
+
+
+  <Target Name="ConfigureVialsAndCaps">
+
+    <Message Importance="normal" Text="Update cap/vial configurations" />
+
+    <Xml.ModifyFile Path="$(SubsystemsDirectory)LeftCapFeeder\LeftCapFeederSubsystem.xml"
+      XPath="/LeftCapFeederSubsystem/LeftCapFeeder/ConfigurationParameters/Subsystem/CapType"
+      Force="true"
+      NewValue="$(LeftFeederConfiguration)"
+      ShowMatches="Yes">
+    </Xml.ModifyFile>
+
+    <Xml.ModifyFile Path="$(SubsystemsDirectory)RightCapFeeder\RightCapFeederSubsystem.xml"
+      XPath="/RightCapFeederSubsystem/RightCapFeeder/ConfigurationParameters/Subsystem/CapType"
+      Force="true"
+      NewValue="$(RightFeederConfiguration)"
+      ShowMatches="Yes">
+    </Xml.ModifyFile>
+
+    <Xml.ModifyFile Path="$(SubsystemsDirectory)LeftVialFeeder\LeftVialFeederSubsystem.xml"
+      XPath="/LeftVialFeederSubsystem/LeftVialFeeder/ConfigurationParameters/VialType"
+      Force="true"
+      NewValue="$(LeftFeederConfiguration)"
+      ShowMatches="Yes">
+    </Xml.ModifyFile>
+
+    <Xml.ModifyFile Path="$(SubsystemsDirectory)RightVialFeeder\RightVialFeederSubsystem.xml"
+      XPath="/RightVialFeederSubsystem/RightVialFeeder/ConfigurationParameters/VialType"
+      Force="true"
+      NewValue="$(RightFeederConfiguration)"
+      ShowMatches="Yes">
+    </Xml.ModifyFile>
+
+  </Target>
+
+  <Import Project="Microsoft.Sdc.Common.tasks"/>
+
+</Project>

@@ -1,0 +1,11 @@
+<DropOffBinIODefinition>
+  <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANDBIOAnalogInput</Type>
+  <IOCountsPerUnit>655.35</IOCountsPerUnit>
+  <IOCountZeroOffset>0</IOCountZeroOffset>
+  <ActiveThreshold>2.441</ActiveThreshold>
+  <InactiveThreshold>1.831</InactiveThreshold>
+  <MinimumValue>-Infinity</MinimumValue>
+  <MaximumValue>Infinity</MaximumValue>
+  <ReadActiveValueDelay>5000</ReadActiveValueDelay>
+  <ReadInactiveValueDelay>5000</ReadInactiveValueDelay>
+</DropOffBinIODefinition>

@@ -1,0 +1,92 @@
+<SimulatedSystemFillSequence>
+  <SimulatedFillResult>
+    <ErrorState Values="LabelVial, PickUpVialFromLabeler, PrepareCount, MoveVialToCell, Count, MoveVialFromCell, PrepareCap, PlaceVialInCapper, PickUpVialFromCapper, ApplyCap, ChooseDropoff, DropOffVial">None</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>NoError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.Core" namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="LabelVial, PickUpVialFromLabeler, PrepareCount, MoveVialToCell, Count, MoveVialFromCell, PrepareCap, PlaceVialInCapper, PickUpVialFromCapper, ApplyCap, ChooseDropoff, DropOffVial">None</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>NoError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.Core" namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="LabelVial, PickUpVialFromLabeler, PrepareCount, MoveVialToCell, Count, MoveVialFromCell, PrepareCap, PlaceVialInCapper, PickUpVialFromCapper, ApplyCap, ChooseDropoff, DropOffVial">None</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>NoError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.Core" namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+      <ErrorState Values="LabelVial, PickUpVialFromLabeler, PrepareCount, MoveVialToCell, Count, MoveVialFromCell, PrepareCap, PlaceVialInCapper, PickUpVialFromCapper, ApplyCap, ChooseDropoff, DropOffVial">PickUpVialFromLabeler</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>RobotMoveError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.System" namespace="Parata.Controls.Enumerations.ErrorCodes">SystemErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="LabelVial, PickUpVialFromLabeler, PrepareCount, MoveVialToCell, Count, MoveVialFromCell, PrepareCap, PlaceVialInCapper, PickUpVialFromCapper, ApplyCap, ChooseDropoff, DropOffVial">None</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>NoError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.Core" namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+      <ErrorState Values="LabelVial, PickUpVialFromLabeler, PrepareCount, MoveVialToCell, Count, MoveVialFromCell, PrepareCap, PlaceVialInCapper, PickUpVialFromCapper, ApplyCap, ChooseDropoff, DropOffVial">ApplyCap</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>ApplyCapError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.Capper" namespace="Parata.Controls.Enumerations.ErrorCodes">CapperErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="LabelVial, PickUpVialFromLabeler, PrepareCount, MoveVialToCell, Count, MoveVialFromCell, PrepareCap, PlaceVialInCapper, PickUpVialFromCapper, ApplyCap, ChooseDropoff, DropOffVial">None</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>NoError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.Core" namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="LabelVial, PickUpVialFromLabeler, PrepareCount, MoveVialToCell, Count, MoveVialFromCell, PrepareCap, PlaceVialInCapper, PickUpVialFromCapper, ApplyCap, ChooseDropoff, DropOffVial">None</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>NoError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.Core" namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="LabelVial, PickUpVialFromLabeler, PrepareCount, MoveVialToCell, Count, MoveVialFromCell, PrepareCap, PlaceVialInCapper, PickUpVialFromCapper, ApplyCap, ChooseDropoff, DropOffVial">None</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>NoError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.Core" namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+  <SimulatedFillResult>
+    <ErrorState Values="LabelVial, PickUpVialFromLabeler, PrepareCount, MoveVialToCell, Count, MoveVialFromCell, PrepareCap, PlaceVialInCapper, PickUpVialFromCapper, ApplyCap, ChooseDropoff, DropOffVial">None</ErrorState>
+    <ErrorStatus>
+      <ErrorCode>
+        <ErrorName>NoError</ErrorName>
+        <ErrorType assembly="Parata.Controls.Enumerations.Core" namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+      </ErrorCode>
+    </ErrorStatus>
+  </SimulatedFillResult>
+</SimulatedSystemFillSequence>

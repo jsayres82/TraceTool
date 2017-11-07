@@ -1,0 +1,14 @@
+<PerformanceDataMonitor>
+   <PersistentData>
+      <Object>MiniFillProcess</Object>
+      <PerformanceData>LifetimeFillCount</PerformanceData>
+      <State>Uninitialized</State>
+      <Value>0</Value>
+   </PersistentData>
+  <PersistentData>
+    <Object>MiniFillProcess</Object>
+    <PerformanceData>LifetimeFillSuccessCount</PerformanceData>
+    <State>Uninitialized</State>
+    <Value>0</Value>
+  </PersistentData>
+</PerformanceDataMonitor>

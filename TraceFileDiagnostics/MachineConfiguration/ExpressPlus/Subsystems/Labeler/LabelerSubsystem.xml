@@ -1,0 +1,94 @@
+<LabelerSubsystem>
+  <Filename>LabelerAPSPrinter.xml</Filename>
+  <Filename>LabelerDevices.xml</Filename>
+  <Labeler>
+    <Type assembly="_ExpressPlusAssembly_" namespace="_ExpressPlusNamespace_">ExpressPlusLabeler</Type>
+    <ConfigurationParameters>
+      <Subsystem>
+        <VialFeeder>
+          <Name>LeftVialFeeder</Name>
+          <Location>27</Location>
+        </VialFeeder>
+        <VialFeeder>
+          <Name>RightVialFeeder</Name>
+          <Location>137</Location>
+        </VialFeeder>
+        <Cup>
+          <Name>LeftCup</Name>
+          <Location>27</Location>
+          <Diameter>2.15</Diameter>
+        </Cup>
+        <Cup>
+          <Name>RightCup</Name>
+          <Location>137</Location>
+          <Diameter>1.7</Diameter>
+        </Cup>
+        <DriveRollerToPrinterSpeedRatio>1.3</DriveRollerToPrinterSpeedRatio>
+      </Subsystem>
+      <LabelerHomingProcess>
+        <Timeout>30000</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+        <Offset>-17</Offset>
+      </LabelerHomingProcess>
+      <LabelerAlignCupProcess>
+        <Timeout>30000</Timeout>
+      </LabelerAlignCupProcess>
+      <LabelerMoveToPrinterProcess>
+        <Timeout>30000</Timeout>
+        <VialSettleTime>250</VialSettleTime>
+        <PrinterLocation>186</PrinterLocation>
+        <SwingArmMaximumActiveTime>30000</SwingArmMaximumActiveTime>
+      </LabelerMoveToPrinterProcess>
+      <LabelerPrintLabelProcess>
+        <Timeout>30000</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+        <PrinterSpeed>82</PrinterSpeed>
+        <SwingArmDisengageTime>250</SwingArmDisengageTime>
+        <SmoothingRevolutions>1.5</SmoothingRevolutions>
+      </LabelerPrintLabelProcess>
+      <LabelerDeliverVialProcess>
+        <Timeout>30000</Timeout>
+        <VialMissingPercentage>80</VialMissingPercentage>
+        <VialLabeledPercentage>30</VialLabeledPercentage>
+      </LabelerDeliverVialProcess>
+      <LabelerLabelVialProcess>
+        <Timeout>0</Timeout>
+        <FeedVialTimeout>5000</FeedVialTimeout>
+        <VialFeedSettleTime>250</VialFeedSettleTime>
+        <StartingVialFeeder>LeftVialFeeder</StartingVialFeeder>
+        <FeederSelectionStrategy>SwapOnEmpty</FeederSelectionStrategy>
+      </LabelerLabelVialProcess>
+      <LabelerIndexWheelMotorHealthTestProcess>
+        <Timeout>30000</Timeout>
+        <!--These targets are relative position targets-->
+        <FirstMoveTarget units="Degrees">360</FirstMoveTarget>
+        <SecondMoveTarget units="Degrees">-360</SecondMoveTarget>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <TrajectoryControlParametersName>Slow</TrajectoryControlParametersName>
+        <MaxHealthyAverageCurrent>0.075</MaxHealthyAverageCurrent>
+        <MaxHealthyPositionError>1.10</MaxHealthyPositionError>
+      </LabelerIndexWheelMotorHealthTestProcess>
+      <LabelerDriveRollerMotorHealthTestProcess>
+        <Timeout>30000</Timeout>
+        <!--This is a relative position target-->
+        <SecondMoveTarget units="Inches">18</SecondMoveTarget>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MaxHealthyAverageCurrent>0.110</MaxHealthyAverageCurrent>
+        <MaxHealthyPositionError>0.050</MaxHealthyPositionError>
+      </LabelerDriveRollerMotorHealthTestProcess>
+      <LabelerHealthTestProcess>
+        <Timeout>30000</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+        <PrinterConnected>False</PrinterConnected>
+      </LabelerHealthTestProcess>
+      <LabelerStartUpProcess>
+        <Timeout>0</Timeout>
+      </LabelerStartUpProcess>
+      <LabelerNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </LabelerNumericIOHealthTestProcess>
+    </ConfigurationParameters>
+  </Labeler>
+</LabelerSubsystem>

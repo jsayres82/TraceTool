@@ -1,0 +1,14 @@
+<MaxNamespaces>
+  <VariablesDefinitions>
+    <ControlsAssembly>Controls.Framework</ControlsAssembly>
+    <ControlsNamespace>Parata.Controls</ControlsNamespace>
+    <CANBusAssembly>Controls.CANBus</CANBusAssembly>
+    <CANBusNamespace>Parata.Controls.CANBus</CANBusNamespace>
+    <BreakawayAssembly>Controls.Breakaway</BreakawayAssembly>
+    <BreakawayNamespace>Parata.Controls.Breakaway</BreakawayNamespace>
+    <MaxAssembly>Controls.Breakaway.Max</MaxAssembly>
+    <MaxNamespace>Parata.Controls.Breakaway.Max</MaxNamespace>
+    <ExpressMXAssembly>Controls.Breakaway.ExpressMX</ExpressMXAssembly>
+    <ExpressMXNamespace>Parata.Controls.Breakaway.ExpressMX</ExpressMXNamespace>
+  </VariablesDefinitions>
+</MaxNamespaces>

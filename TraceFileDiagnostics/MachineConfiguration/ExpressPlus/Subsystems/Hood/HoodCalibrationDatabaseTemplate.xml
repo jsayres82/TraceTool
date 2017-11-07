@@ -1,0 +1,7 @@
+﻿<HoodCalibration>
+  <Revision>1</Revision>
+  <DifferentialPressureSensor>
+    <ZeroPressureOffset>NaN</ZeroPressureOffset>
+  </DifferentialPressureSensor>
+</HoodCalibration>
+

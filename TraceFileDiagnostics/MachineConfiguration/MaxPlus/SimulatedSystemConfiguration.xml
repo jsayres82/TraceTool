@@ -1,0 +1,13 @@
+<BreakawayConfiguration>
+  <Filename>SystemConfigurationItems.xml</Filename>
+  <Filename>Namespaces.xml</Filename>
+  <Filename>System\TraceManager.xml</Filename>
+  <Filename>System\PersistentDataManager.xml</Filename>
+  <Filename>System\MasterVialList.xml</Filename>
+  <Filename>System\SimulatedExpressMXSystemManager.xml</Filename>
+  <Filename>Subsystems\Cell\SimulatedCellSubsystem.xml</Filename>
+  <Filename>Subsystems\DropOff\SimulatedDropOffSubsystem.xml</Filename>
+  <Filename>Subsystems\LeftVialFeeder\SimulatedLeftVialFeederSubsystem.xml</Filename>
+  <Filename>Subsystems\RightVialFeeder\SimulatedRightVialFeederSubsystem.xml</Filename>
+  <Filename>System\SimulatedPollingManager.xml</Filename>
+</BreakawayConfiguration>

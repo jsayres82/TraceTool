@@ -1,0 +1,23 @@
+<SystemConfiguration>
+  <Filename>SystemConfigurationItems.xml</Filename>
+  <Filename>Namespaces.xml</Filename>
+  <Filename>System\TraceManager.xml</Filename>
+  <Filename>System\PersistentDataManager.xml</Filename>
+  <Filename>Subsystems\CANBus\CANBusInterface.xml</Filename>
+  <Filename>System\MasterVialList.xml</Filename>
+  <Filename>System\MaxSystemManager.xml</Filename>
+  <Filename>Subsystems\Capper\CapperSubsystem.xml</Filename>
+  <Filename>Subsystems\Camera\CameraSubsystem.xml</Filename>
+  <Filename>Subsystems\LeftCapFeeder\LeftCapFeederSubsystem.xml</Filename>
+  <Filename>Subsystems\RightCapFeeder\RightCapFeederSubsystem.xml</Filename>
+  <Filename>Subsystems\Labeler\LabelerSubsystem.xml</Filename>
+  <Filename>Subsystems\LeftVialFeeder\LeftVialFeederSubsystem.xml</Filename>
+  <Filename>Subsystems\RightVialFeeder\RightVialFeederSubsystem.xml</Filename>
+  <Filename>Subsystems\Cell\CellSubsystem.xml</Filename>
+  <Filename>Subsystems\DropOff\DropOffSubsystem.xml</Filename>
+  <Filename>Subsystems\Robot\RobotSubsystem.xml</Filename>
+  <Filename>Subsystems\CANBus\CANBusSubsystem.xml</Filename>
+  <Filename>Subsystems\Hood\HoodSubsystem.xml</Filename>
+  <Filename>Subsystems\Holdback\HoldbackSubsystem.xml</Filename>
+  <Filename>System\PollingManager.xml</Filename>
+</SystemConfiguration>

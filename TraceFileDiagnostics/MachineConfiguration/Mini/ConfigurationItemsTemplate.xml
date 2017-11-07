@@ -1,0 +1,7 @@
+<ConfigurationItems>
+  <!--To make this a variable rather than a configuration item, 
+      remove this and uncomment the CellType variable from SystemConfigurationItems.xml-->
+  <CellType
+    Options="HPAC,VCell"
+    >HPAC</CellType>
+</ConfigurationItems>

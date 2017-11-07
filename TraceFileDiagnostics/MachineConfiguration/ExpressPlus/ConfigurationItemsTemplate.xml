@@ -1,0 +1,8 @@
+<ConfigurationItems>
+  <Hood Options="Installed,NotInstalled">NotInstalled</Hood>
+  <LeftVialType Options="KERR13,KERR16,KERR30,KERR40,PT13,PT16,PT30,PT40,TriState_PRX13,TriState_PRX16,TriState_PRX30,TriState_PRX40,RC13,RC16,RC20,RC30,RC40">KERR30</LeftVialType>
+  <RightVialType Options="KERR13,KERR16,KERR30,KERR40,PT13,PT16,PT30,PT40,TriState_PRX13,TriState_PRX16,TriState_PRX30,TriState_PRX40,RC13,RC16,RC20,RC30,RC40">KERR13</RightVialType>
+  <RobotType Options="GenI,GenII">GenII</RobotType>
+  <RobotGripperType Options="VialGripper,BottleGripper,Rexam_A-4180x">BottleGripper</RobotGripperType>
+  <DropOffLocationConfigOption Options="Diverter_5.00,Diverter_6.00">Diverter_5.00</DropOffLocationConfigOption>
+</ConfigurationItems>

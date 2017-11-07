@@ -1,0 +1,284 @@
+<LabelerDevices>
+  <LabelerIndexWheelNode>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANOpenNode</Type>
+    <Id>40</Id>
+    <HeartbeatTime>1000</HeartbeatTime>
+    <HeartbeatTimeoutTolerance>1000</HeartbeatTimeoutTolerance>
+    <SDORetryLimit>2</SDORetryLimit>
+    <SDOResponseTimeout>1000</SDOResponseTimeout>
+    <CANBusInterface>ServoCANBusInterface</CANBusInterface>
+    <Filename>..\CANBus\LP_FirmwareRequirement.xml</Filename>
+  </LabelerIndexWheelNode>
+  <LabelerDriveRollerNode>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANOpenNode</Type>
+    <Id>41</Id>
+    <HeartbeatTime>1000</HeartbeatTime>
+    <HeartbeatTimeoutTolerance>1000</HeartbeatTimeoutTolerance>
+    <SDORetryLimit>2</SDORetryLimit>
+    <SDOResponseTimeout>1000</SDOResponseTimeout>
+    <CANBusInterface>ServoCANBusInterface</CANBusInterface>
+    <Filename>..\CANBus\LP_FirmwareRequirement.xml</Filename>
+  </LabelerDriveRollerNode>
+  <LabelerDrawerInterlock>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIODigitalInput</Type>
+    <Configuration>DigitalInputNoPullUp</Configuration>
+    <Node>LabelerDriveRollerNode</Node>
+    <IONumber>18</IONumber>
+    <IOCountsPerUnit>1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>1</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </LabelerDrawerInterlock>
+  <LabelerDrawerSolenoid>
+    <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">LockingSolenoid</Type>
+    <OutputToControl>LabelerDrawerOutput</OutputToControl>
+    <PeakValue>24</PeakValue>
+    <PeakTime>250</PeakTime>
+    <MaximumPeakTime>2000</MaximumPeakTime>
+  </LabelerDrawerSolenoid>
+  <LabelerDrawerOutput>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogOutput</Type>
+    <Configuration>AnalogOutput</Configuration>
+    <Node>LabelerDriveRollerNode</Node>
+    <IONumber>1</IONumber>
+    <IOCountsPerUnit Units="Volts">1364.792</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>12</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>0</MinimumValue>
+    <MaximumValue>24</MaximumValue>
+  </LabelerDrawerOutput>
+  <LabelerHomeSensor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIODigitalInput</Type>
+    <Configuration>DigitalInputNoPullUp</Configuration>
+    <Node>LabelerIndexWheelNode</Node>
+    <IONumber>19</IONumber>
+    <IOCountsPerUnit>1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>1</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </LabelerHomeSensor>
+  <LabelerSwingArmSolenoid>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogOutput</Type>
+    <Configuration>AnalogOutput</Configuration>
+    <Node>LabelerIndexWheelNode</Node>
+    <IONumber>1</IONumber>
+    <IOCountsPerUnit Units="Percent">327.55</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>100</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </LabelerSwingArmSolenoid>
+  <LabelerVialDropSensor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>LabelerDriveRollerNode</Node>
+    <IONumber>23</IONumber>
+    <IOCountsPerUnit Units="Percent">327.68</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>9</ActiveThreshold>
+    <InactiveThreshold>10</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <ReadActiveValueDelay>250</ReadActiveValueDelay>
+    <ReadInactiveValueDelay>250</ReadInactiveValueDelay>
+  </LabelerVialDropSensor>
+  <LabelerVialExitSensor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>LabelerIndexWheelNode</Node>
+    <IONumber>23</IONumber>
+    <IOCountsPerUnit Units="Percent">327.68</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>10</ActiveThreshold>
+    <InactiveThreshold>20</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <ReadActiveValueDelay>250</ReadActiveValueDelay>
+    <ReadInactiveValueDelay>250</ReadInactiveValueDelay>
+  </LabelerVialExitSensor>
+  <LabelerIndexWheelMotor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOServoMotor</Type>
+    <Node>LabelerIndexWheelNode</Node>
+    <Filename>LabelerIndexWheelMotor_Maxon.xml</Filename>
+    <MaxAbsolutePositionMoveTarget>Infinity</MaxAbsolutePositionMoveTarget>
+    <MinAbsolutePositionMoveTarget>-Infinity</MinAbsolutePositionMoveTarget>
+    <MaxRelativePositionMoveTarget>Infinity</MaxRelativePositionMoveTarget>
+    <InitializationTimeout>10000</InitializationTimeout>
+    <TrajectoryControlParameters>
+      <Default>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>120e-3</MaxVelocity>
+        <MaxAcceleration>1.20e-3</MaxAcceleration>
+        <MaxDeceleration>1.20e-3</MaxDeceleration>
+        <MaxJerk>Infinity</MaxJerk>
+        <PositionErrorWindow>5</PositionErrorWindow>
+        <InPositionWindow>1</InPositionWindow>
+        <InPositionTime>1</InPositionTime>
+      </Default>
+      <Slow>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>60e-3</MaxVelocity>
+        <MaxAcceleration>600e-6</MaxAcceleration>
+        <MaxDeceleration>600e-6</MaxDeceleration>
+        <MaxJerk>Infinity</MaxJerk>
+        <PositionErrorWindow>5</PositionErrorWindow>
+        <InPositionWindow>1</InPositionWindow>
+        <InPositionTime>1</InPositionTime>
+      </Slow>
+      <Medium>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>300e-3</MaxVelocity>
+        <MaxAcceleration>1.20e-3</MaxAcceleration>
+        <MaxDeceleration>1.20e-3</MaxDeceleration>
+        <MaxJerk>Infinity</MaxJerk>
+        <PositionErrorWindow>5</PositionErrorWindow>
+        <InPositionWindow>1</InPositionWindow>
+        <InPositionTime>1</InPositionTime>
+      </Medium>
+      <Fast>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>500e-3</MaxVelocity>
+        <MaxAcceleration>2.50e-3</MaxAcceleration>
+        <MaxDeceleration>2.50e-3</MaxDeceleration>
+        <MaxJerk>Infinity</MaxJerk>
+        <PositionErrorWindow>5</PositionErrorWindow>
+        <InPositionWindow>1</InPositionWindow>
+        <InPositionTime>1</InPositionTime>
+      </Fast>
+    </TrajectoryControlParameters>
+    <Moves>
+      <TestPositive>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>90e-3</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </TestPositive>
+      <TestNegative>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>-90e-3</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </TestNegative>
+      <MoveToHomeSensor>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>360</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Slow</TrajectoryControlParameters>
+      </MoveToHomeSensor>
+      <MoveOffHomeSensor>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>-20</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </MoveOffHomeSensor>
+      <MoveToHome>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Fast</TrajectoryControlParameters>
+      </MoveToHome>
+      <MoveToFeeder>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Fast</TrajectoryControlParameters>
+      </MoveToFeeder>
+      <MoveToPrinter>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Medium</TrajectoryControlParameters>
+      </MoveToPrinter>
+      <MoveToCheckPoint>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>60</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Slow</TrajectoryControlParameters>
+      </MoveToCheckPoint>
+      <MoveToExit>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>315</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Slow</TrajectoryControlParameters>
+      </MoveToExit>
+    </Moves>
+  </LabelerIndexWheelMotor>
+  <LabelerDriveRollerMotor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOServoMotor</Type>
+    <Node>LabelerDriveRollerNode</Node>
+    <Filename>LabelerDriveRollerMotor_Maxon.xml</Filename>
+    <MaxAbsolutePositionMoveTarget>Infinity</MaxAbsolutePositionMoveTarget>
+    <MinAbsolutePositionMoveTarget>-Infinity</MinAbsolutePositionMoveTarget>
+    <MaxRelativePositionMoveTarget>Infinity</MaxRelativePositionMoveTarget>
+    <InitializationTimeout>10000</InitializationTimeout>
+    <TrajectoryControlParameters>
+      <Default>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>4e-3</MaxVelocity>
+        <MaxAcceleration>4e-5</MaxAcceleration>
+        <MaxDeceleration>4e-5</MaxDeceleration>
+        <MaxJerk>Infinity</MaxJerk>
+        <PositionErrorWindow>0.25</PositionErrorWindow>
+        <InPositionWindow>0</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </Default>
+    </TrajectoryControlParameters>
+    <Moves>
+      <TestPositive>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>2e-3</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </TestPositive>
+      <TestNegative>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>-2e-3</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </TestNegative>
+    </Moves>
+  </LabelerDriveRollerMotor>
+</LabelerDevices>

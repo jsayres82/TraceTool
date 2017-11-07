@@ -1,0 +1,7 @@
+<LabelerSimulatedPrinter>
+   <LabelerPrintEngine>
+      <Type assembly="_MaxAssembly_" namespace="_MaxNamespace_">SimulatedPrinter</Type>
+      <PrintSpeed>0.003418</PrintSpeed>
+      <PrintTime>4350</PrintTime>
+   </LabelerPrintEngine>
+</LabelerSimulatedPrinter>

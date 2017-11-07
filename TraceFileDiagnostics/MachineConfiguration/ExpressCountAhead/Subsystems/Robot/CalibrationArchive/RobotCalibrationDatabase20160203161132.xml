@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RobotDynamicGeometry>
+  <Revision>1</Revision>
+  <Robot>
+    <ToolStorageShelfHeight>36.4299490168752</ToolStorageShelfHeight>
+    <ThetaBacklashTargetCenter>
+      <X>44.5266359973982</X>
+      <Y>4.03097217109526</Y>
+      <Z>36.4299490168752</Z>
+    </ThetaBacklashTargetCenter>
+    <ThetaBacklash>0.264467952706909</ThetaBacklash>
+    <ThetaOffset>6.22277535780958</ThetaOffset>
+    <ThetaTurnSensorOffset>230.489553409314</ThetaTurnSensorOffset>
+    <XLength>58.877559037733</XLength>
+    <ZLength>58.2994586442029</ZLength>
+    <ZCorrection>
+      <!--Z Correction is estimated using a planar fit to 3-D data points.  That plane takes the form z = Ax + By + C.  These parameters are those coefficients.-->
+      <A>NaN</A>
+      <B>NaN</B>
+      <C>NaN</C>
+    </ZCorrection>
+    <ThetaCalibration>
+      <Z>45.883</Z>
+      <Theta>0.189794648413198</Theta>
+    </ThetaCalibration>
+    <ThetaCalibration>
+      <Z>27.283</Z>
+      <Theta>0.127566894835098</Theta>
+    </ThetaCalibration>
+    <ThetaCalibration>
+      <Z>8.581</Z>
+      <Theta>0.283136278780347</Theta>
+    </ThetaCalibration>
+  </Robot>
+</RobotDynamicGeometry>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CellDeviceDefinition>
+  <Node>_CellNumber_</Node>
+  <Location>_CellLocation_</Location>
+  <Cell_CellLocation__DamperDoorSolenoid>
+    <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">LockingSolenoid</Type>
+    <OutputToControl>Cell_CellLocation__DamperDoorOutput</OutputToControl>
+    <PeakValue>100</PeakValue>
+    <PeakTime>100</PeakTime>
+    <MaximumPeakTime>1000</MaximumPeakTime>
+  </Cell_CellLocation__DamperDoorSolenoid>
+  <Cell_CellLocation__DamperDoorOutput>
+    <Type assembly="_BreakawayAssembly_" namespace="_BreakawayNamespace_">CellSolenoid</Type>
+    <SolenoidType>DamperDoor</SolenoidType>
+    <PwmParameter>DamperDoorDutyCycle</PwmParameter>
+    <!--Set the active time to 65535 to allow the solenoid to stay on indefinitely.-->
+    <ActiveTime>65535</ActiveTime>
+    <CellLocation>_CellLocation_</CellLocation>
+    <IOCountsPerUnit Units="Percent">2.5</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>7</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>0</MinimumValue>
+    <MaximumValue>100</MaximumValue>
+  </Cell_CellLocation__DamperDoorOutput>
+  <Cell_CellLocation__ForwardReverseOutput>
+    <Type assembly="_BreakawayAssembly_" namespace="_BreakawayNamespace_">CellSolenoid</Type>
+    <SolenoidType>ForwardValve</SolenoidType>
+    <PwmParameter>AirSolenoidDutyCycle</PwmParameter>
+    <!--Set the active time to 65535 to allow the solenoid to stay on indefinitely.-->
+    <ActiveTime>65535</ActiveTime>
+    <CellLocation>_CellLocation_</CellLocation>
+    <IOCountsPerUnit Units="Percent">2.5</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>10</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>0</MinimumValue>
+    <MaximumValue>13.2</MaximumValue>
+  </Cell_CellLocation__ForwardReverseOutput>
+</CellDeviceDefinition>

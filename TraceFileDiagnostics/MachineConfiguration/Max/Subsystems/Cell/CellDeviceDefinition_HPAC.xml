@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CellDeviceDefinition>
+  <Node>_CellNumber_</Node>
+  <Location>_CellLocation_</Location>
+</CellDeviceDefinition>

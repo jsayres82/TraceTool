@@ -1,0 +1,288 @@
+<CapperElevatorDevices>
+  <CapperElevatorNode>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANOpenNode</Type>
+    <Id>32</Id>
+    <HeartbeatTime>1000</HeartbeatTime>
+    <HeartbeatTimeoutTolerance>1000</HeartbeatTimeoutTolerance>
+    <SDORetryLimit>2</SDORetryLimit>
+    <SDOResponseTimeout>1000</SDOResponseTimeout>
+    <CANBusInterface>ServoCANBusInterface</CANBusInterface>
+    <Filename>..\CANBus\LP_FirmwareRequirement.xml</Filename>
+  </CapperElevatorNode>
+  <!--Because the CapperDoorSolenoid is attached to the CellDRMNode, it can be found in CellDevices.xml.-->
+  <CapperVacuumSolenoid>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIODigitalOutput</Type>
+    <Configuration>DigitalOutputPushPull</Configuration>
+    <Node>CapperElevatorNode</Node>
+    <IONumber>1</IONumber>
+    <IOCountsPerUnit>1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>1</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </CapperVacuumSolenoid>
+  <CapperVacuumSensor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIODigitalInput</Type>
+    <Configuration>DigitalInputNoPullUp</Configuration>
+    <Node>CapperElevatorNode</Node>
+    <IONumber>18</IONumber>
+    <IOCountsPerUnit>1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>0</ActiveThreshold>
+    <InactiveThreshold>1</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </CapperVacuumSensor>
+  <CapperElevatorPositionErrorInput>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>CapperElevatorNode</Node>
+    <IONumber>27</IONumber>
+    <IOCountsPerUnit>12732.39545</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>-Infinity</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </CapperElevatorPositionErrorInput>
+  <CapperElevatorMotor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOServoMotor</Type>
+    <Node>CapperElevatorNode</Node>
+    <Filename>CapperElevatorMotor_Dunker.xml</Filename>
+    <MaxAbsolutePositionMoveTarget>7.75</MaxAbsolutePositionMoveTarget>
+    <MinAbsolutePositionMoveTarget>-0.01</MinAbsolutePositionMoveTarget>
+    <MaxRelativePositionMoveTarget>Infinity</MaxRelativePositionMoveTarget>
+    <InitializationTimeout>10000</InitializationTimeout>
+    <TrajectoryControlParameters>
+      <Default>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>4e-3</MaxVelocity>
+        <MaxAcceleration>6.8E-05</MaxAcceleration>
+        <MaxDeceleration>6.8E-05</MaxDeceleration>
+        <MaxJerk>0</MaxJerk>
+        <PositionErrorWindow>250e-3</PositionErrorWindow>
+        <InPositionWindow>3e-3</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </Default>
+      <Slow>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>2e-3</MaxVelocity>
+        <MaxAcceleration>8.5E-06</MaxAcceleration>
+        <MaxDeceleration>8.5E-06</MaxDeceleration>
+        <MaxJerk>0</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>0</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </Slow>
+      <Creep>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>210.0e-6</MaxVelocity>
+        <MaxAcceleration>5.681e-6</MaxAcceleration>
+        <MaxDeceleration>5.681e-6</MaxDeceleration>
+        <MaxJerk>0</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>0</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </Creep>
+      <VialApproach>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>5e-3</MaxVelocity>
+        <MaxAcceleration>3.5e-6</MaxAcceleration>
+        <MaxDeceleration>3.5e-6</MaxDeceleration>
+        <MaxJerk>0</MaxJerk>
+        <PositionErrorWindow>50e-3</PositionErrorWindow>
+        <InPositionWindow>3e-3</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </VialApproach>
+      <ApplyCap>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>2e-3</MaxVelocity>
+        <MaxAcceleration>8.5E-06</MaxAcceleration>
+        <MaxDeceleration>1.0</MaxDeceleration>
+        <MaxJerk>0</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>0</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </ApplyCap>
+      <Home>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>2e-3</MaxVelocity>
+        <MaxAcceleration>8.5E-06</MaxAcceleration>
+        <MaxDeceleration>1.0</MaxDeceleration>
+        <MaxJerk>0</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>0</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </Home>
+    </TrajectoryControlParameters>
+    <Moves>
+      <TestPositive>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>1e-3</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit Units="Amps">0.900</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.900</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </TestPositive>
+      <TestNegative>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>-1e-3</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit Units="Amps">0.900</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.900</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </TestNegative>
+      <MoveToPositiveExtentAndLatch>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>8.0</Target>
+        <MaxForceLimit Units="Amps">0.778</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.778</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Home</TrajectoryControlParameters>
+      </MoveToPositiveExtentAndLatch>
+      <MoveToNegativeExtentAndLatch>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>-8.0</Target>
+        <MaxForceLimit Units="Amps">0.778</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.778</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Home</TrajectoryControlParameters>
+      </MoveToNegativeExtentAndLatch>
+      <MoveToHomeError>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>8.0</Target>
+        <MaxForceLimit Units="Amps">0.778</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.778</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Slow</TrajectoryControlParameters>
+      </MoveToHomeError>
+      <MoveToHomeComplete>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>4.544</Target>
+        <MaxForceLimit Units="Amps">0.900</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.900</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </MoveToHomeComplete>
+      <MoveToCapFeedGate>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit Units="Amps">0.900</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.900</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </MoveToCapFeedGate>
+      <ReleaseCap>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit Units="Amps">0.900</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.900</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Creep</TrajectoryControlParameters>
+      </ReleaseCap>
+      <MoveToCapPickUp>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit Units="Amps">0.900</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.386</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Slow</TrajectoryControlParameters>
+      </MoveToCapPickUp>
+      <MoveToErrorRecovery>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>2.130e-3</Target>
+        <Duration>4000</Duration>
+        <MaxForceLimit Units="Amps">0.778</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.778</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Slow</TrajectoryControlParameters>
+      </MoveToErrorRecovery>
+      <MoveToVialInsertion>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit Units="Amps">0.900</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.386</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </MoveToVialInsertion>
+      <MoveToCapApproach>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit Units="Amps">0.900</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.900</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </MoveToCapApproach>
+      <MoveToVialApproach>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit Units="Amps">0.235</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.235</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>VialApproach</TrajectoryControlParameters>
+      </MoveToVialApproach>
+      <ApplyCap>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit Units="Amps">0.553</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.553</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>ApplyCap</TrajectoryControlParameters>
+      </ApplyCap>
+      <MoveToVialExtract>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit Units="Amps">0.900</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.235</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </MoveToVialExtract>
+      <MoveToStartUp>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>6.5</Target>
+        <MaxForceLimit Units="Amps">0.900</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.900</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </MoveToStartUp>
+      <MeasureForce>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>1.00</Target>
+        <MaxForceLimit Units="Amps">0.900</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.900</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Slow</TrajectoryControlParameters>
+      </MeasureForce>
+      <TestForObstruction>
+        <!--Move toward the stage but do not touch the stage with the suction cup. Provides 0.080" clearance per R. Sink.-->
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0.250</Target>
+        <MaxForceLimit Units="Amps">0.778</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.778</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Slow</TrajectoryControlParameters>
+      </TestForObstruction>
+    </Moves>
+  </CapperElevatorMotor>
+</CapperElevatorDevices>

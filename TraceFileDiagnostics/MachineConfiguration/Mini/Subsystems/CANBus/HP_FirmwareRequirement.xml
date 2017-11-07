@@ -1,0 +1,7 @@
+<HP_FirmwareRequirement>
+  <MinimumFirmwareVersion>5.00</MinimumFirmwareVersion>
+  <SRecordFile>..\..\..\ReleasedFirmware\ServoHP_V5_00.elf.S</SRecordFile>
+  <RequiredProtocolVersion>4</RequiredProtocolVersion>
+  <FirstFirmwareVersionWithProtocol>4</FirstFirmwareVersionWithProtocol>
+  <FirmwareAutoUpdate>True</FirmwareAutoUpdate>
+</HP_FirmwareRequirement>

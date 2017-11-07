@@ -1,0 +1,9 @@
+﻿<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="urn:MiniConfiguration-schema"
+            elementFormDefault="qualified"
+            targetNamespace="urn:MiniConfiguration-schema">
+  
+  <xsd:element name="MiniConfiguration" type="MiniConfigurationType" />
+  <xsd:complexType name="MiniConfigurationType">
+  </xsd:complexType>
+</xsd:schema>

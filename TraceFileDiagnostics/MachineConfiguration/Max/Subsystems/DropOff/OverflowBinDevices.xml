@@ -1,0 +1,39 @@
+<DropOffOverflowBinDevices>
+  <DropOffOverflowBinNode>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANOpenNode</Type>
+    <Id>63</Id>
+    <HeartbeatTime>1000</HeartbeatTime>
+    <HeartbeatTimeoutTolerance>1000</HeartbeatTimeoutTolerance>
+    <SDORetryLimit>2</SDORetryLimit>
+    <SDOResponseTimeout>1000</SDOResponseTimeout>
+    <CANBusInterface>ServoCANBusInterface</CANBusInterface>
+    <Filename>..\CANBus\LP_FirmwareRequirement.xml</Filename>
+  </DropOffOverflowBinNode>
+  <!--AnalogInputs-->
+  <DropOffOverflowBinFullSensor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>DropOffOverflowBinNode</Node>
+    <IONumber>23</IONumber>
+    <IOCountsPerUnit Units="Percent">327.68</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>15</ActiveThreshold>
+    <InactiveThreshold>19</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <ReadActiveValueDelay>250</ReadActiveValueDelay>
+    <ReadInactiveValueDelay>250</ReadInactiveValueDelay>
+  </DropOffOverflowBinFullSensor>
+  <DropOffOverflowBinPresenceSensor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIODigitalInput</Type>
+    <Configuration>DigitalInputPullUp</Configuration>
+    <Node>DropOffOverflowBinNode</Node>
+    <IONumber>5</IONumber>
+    <IOCountsPerUnit>1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>0</ActiveThreshold>
+    <InactiveThreshold>1</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </DropOffOverflowBinPresenceSensor>
+</DropOffOverflowBinDevices>

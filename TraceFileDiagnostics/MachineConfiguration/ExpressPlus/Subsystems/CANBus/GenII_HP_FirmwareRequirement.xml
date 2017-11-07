@@ -1,0 +1,7 @@
+﻿<GenII_HP_FirmwareRequirement>
+  <MinimumFirmwareVersion>5.15</MinimumFirmwareVersion>
+  <SRecordFile>..\..\..\ReleasedFirmware\ServoHP_V5_15.elf.S</SRecordFile>
+  <RequiredProtocolVersion>5</RequiredProtocolVersion>
+  <FirstFirmwareVersionWithProtocol>5</FirstFirmwareVersionWithProtocol>
+  <FirmwareAutoUpdate>True</FirmwareAutoUpdate>
+</GenII_HP_FirmwareRequirement>

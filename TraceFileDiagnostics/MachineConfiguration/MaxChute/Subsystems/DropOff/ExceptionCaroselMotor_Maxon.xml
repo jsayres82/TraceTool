@@ -1,0 +1,21 @@
+<ExceptionCaroselMotor_Maxon>
+  <InvertDirection>False</InvertDirection>
+  <Filename>../Motors/MaxonMotor.xml</Filename>
+  <PositionCountsPerUnit Units="Degrees">_ExceptionCarouselPositionScaleFactor_</PositionCountsPerUnit>
+  <CurrentUnitsPerForceUnit Units="Amps/Amps">1</CurrentUnitsPerForceUnit>
+  <CurrentUnitsZeroOffset>0</CurrentUnitsZeroOffset>
+  <PositionControlParameters>
+    <Default>
+      <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorPositionControlParameters</Type>
+      <ProportionalGain>60000</ProportionalGain>
+      <DerivativeGain>1000000</DerivativeGain>
+      <DerivativeSampleCount>1</DerivativeSampleCount>
+      <IntegralGain>0</IntegralGain>
+      <IntegrationSummationLimit>0</IntegrationSummationLimit>
+      <IntegrationContributionLimit>0</IntegrationContributionLimit>
+      <VelocityFeedForward>0</VelocityFeedForward>
+      <AccelerationFeedForward>0</AccelerationFeedForward>
+      <GravityFeedForward>0</GravityFeedForward>
+    </Default>
+  </PositionControlParameters>
+</ExceptionCaroselMotor_Maxon>

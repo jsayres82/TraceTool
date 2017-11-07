@@ -1,0 +1,209 @@
+<CellDevices>
+  <CellEPRNode>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANOpenNode</Type>
+    <Id>50</Id>
+    <HeartbeatTime>1000</HeartbeatTime>
+    <HeartbeatTimeoutTolerance>1000</HeartbeatTimeoutTolerance>
+    <SDORetryLimit>2</SDORetryLimit>
+    <SDOResponseTimeout>1000</SDOResponseTimeout>
+    <CANBusInterface>ServoCANBusInterface</CANBusInterface>
+    <Filename>..\CANBus\LP_FirmwareRequirement.xml</Filename>
+  </CellEPRNode>
+  <CellDRMNode>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANOpenNode</Type>
+    <Id>51</Id>
+    <HeartbeatTime>1000</HeartbeatTime>
+    <HeartbeatTimeoutTolerance>1000</HeartbeatTimeoutTolerance>
+    <SDORetryLimit>2</SDORetryLimit>
+    <SDOResponseTimeout>1000</SDOResponseTimeout>
+    <CANBusInterface>ServoCANBusInterface</CANBusInterface>
+    <Filename>..\CANBus\LP_FirmwareRequirement.xml</Filename>
+  </CellDRMNode>
+  <CellEPROutput>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogOutput</Type>
+    <Configuration>AnalogOutput</Configuration>
+    <Node>CellEPRNode</Node>
+    <IONumber>2</IONumber>
+    <IOCountsPerUnit Units="PSI" Range="0..70">468.1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>1</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>0</MinimumValue>
+    <MaximumValue>55</MaximumValue>
+  </CellEPROutput>
+  <CellEPRInput>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>CellEPRNode</Node>
+    <IONumber>22</IONumber>
+    <IOCountsPerUnit Units="PSI" Range="0..70">109.5388524</IOCountsPerUnit>
+    <IOCountZeroOffset>18370</IOCountZeroOffset>
+    <ActiveThreshold>10</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </CellEPRInput>
+  <CellAmbientTemperature>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOFilteredAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>CellEPRNode</Node>
+    <IONumber>23</IONumber>
+    <IOCountsPerUnit Units="Degrees F">55.165</IOCountsPerUnit>
+    <IOCountZeroOffset>3200</IOCountZeroOffset>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>-Infinity</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <FilterUpdateRate>1</FilterUpdateRate>
+    <FilterBumpSize>.2</FilterBumpSize>
+    <DataSamplingStyle>Periodic</DataSamplingStyle>
+    <DataSamplingPeriod>1000</DataSamplingPeriod>
+  </CellAmbientTemperature>
+  <CellAmbientHumidity>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>CellEPRNode</Node>
+    <IONumber>24</IONumber>
+    <IOCountsPerUnit Units="Percent Rh" Range="0..100">307.82</IOCountsPerUnit>
+    <IOCountZeroOffset>7943</IOCountZeroOffset>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>-Infinity</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <DataSamplingStyle>Periodic</DataSamplingStyle>
+    <DataSamplingPeriod>60000</DataSamplingPeriod>
+  </CellAmbientHumidity>
+  <CellTankPressure>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOFilteredAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>CellDRMNode</Node>
+    <IONumber>6</IONumber>
+    <IOCountsPerUnit Units="PSI" Range="0..145">54.78453501</IOCountsPerUnit>
+    <IOCountZeroOffset>18370</IOCountZeroOffset>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>-Infinity</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <FilterUpdateRate>10</FilterUpdateRate>
+    <FilterBumpSize>.02</FilterBumpSize>
+    <DataSamplingStyle>Periodic</DataSamplingStyle>
+    <DataSamplingPeriod>10000</DataSamplingPeriod>
+  </CellTankPressure>
+  <CellTankHumidity>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>CellDRMNode</Node>
+    <IONumber>23</IONumber>
+    <IOCountsPerUnit Units="Percent Rh" Range="0..100">307.82</IOCountsPerUnit>
+    <IOCountZeroOffset>7943</IOCountZeroOffset>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>-Infinity</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <DataSamplingStyle>Periodic</DataSamplingStyle>
+    <DataSamplingPeriod>60000</DataSamplingPeriod>
+  </CellTankHumidity>
+  <CellCompressorTemperature>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOFilteredAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>CellDRMNode</Node>
+    <IONumber>8</IONumber>
+    <IOCountsPerUnit Units="Degrees F">55.165</IOCountsPerUnit>
+    <IOCountZeroOffset>3200</IOCountZeroOffset>
+    <ActiveThreshold>176</ActiveThreshold>
+    <InactiveThreshold>158</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <FilterUpdateRate>1</FilterUpdateRate>
+    <FilterBumpSize>.2</FilterBumpSize>
+    <DataSamplingStyle>Periodic</DataSamplingStyle>
+    <DataSamplingPeriod>1000</DataSamplingPeriod>
+  </CellCompressorTemperature>
+  <CellCompressorAverageTemperature>
+    <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">MovingAverageNumericIO</Type>
+    <IOCountsPerUnit Units="Degrees F">1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>140</ActiveThreshold>
+    <InactiveThreshold>122</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <SamplePeriod>5000</SamplePeriod>
+    <TotalSampleTime>180000</TotalSampleTime>
+    <ParentIO>CellCompressorTemperature</ParentIO>
+    <DataSamplingStyle>Periodic</DataSamplingStyle>
+    <DataSamplingPeriod>10000</DataSamplingPeriod>
+  </CellCompressorAverageTemperature>
+  <CellCompressorCoolingFanInput>
+    <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">MovingAverageNumericIO</Type>
+    <IOCountsPerUnit Units="Degrees F">1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>90</ActiveThreshold>             <!-- Full power temperature -->
+    <InactiveThreshold>85</InactiveThreshold>         <!-- Full power temperature - hysteresis -->
+    <MinimumValue>20</MinimumValue>                   <!-- X intercept of transfer function -->
+    <MaximumValue>140</MaximumValue>                  <!-- X value at maximum Y -->
+    <SamplePeriod>1000</SamplePeriod>
+    <TotalSampleTime>6000</TotalSampleTime>
+    <ParentIO>CellCompressorTemperature</ParentIO>
+    <DataSamplingStyle>OnUpdate</DataSamplingStyle>
+  </CellCompressorCoolingFanInput>
+  <CellCompressorCoolingFanOutput>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogOutput</Type>
+    <Configuration>AnalogOutput</Configuration>
+    <Node>CellDRMNode</Node>
+    <IONumber>1</IONumber>
+    <IOCountsPerUnit Units="Volts">1365.291</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>24</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>0</MinimumValue>
+    <MaximumValue>24</MaximumValue>
+  </CellCompressorCoolingFanOutput>
+  <MiniElectronicsCoolingFanInput>
+    <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">MovingAverageNumericIO</Type>
+    <IOCountsPerUnit Units="Degrees F">1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>105</ActiveThreshold>            <!-- Full power temperature -->
+    <InactiveThreshold>103</InactiveThreshold>        <!-- Full power temperature - hysteresis -->
+    <MinimumValue>57.5</MinimumValue>                 <!-- X intercept of transfer function -->
+    <MaximumValue>117.5</MaximumValue>                <!-- X value at maximum Y -->
+    <SamplePeriod>1000</SamplePeriod>
+    <TotalSampleTime>6000</TotalSampleTime>
+    <ParentIO>CellAmbientTemperature</ParentIO>
+    <DataSamplingStyle>OnUpdate</DataSamplingStyle>
+  </MiniElectronicsCoolingFanInput>
+  <MiniElectronicsCoolingFanOutput>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogOutput</Type>
+    <Configuration>AnalogOutput</Configuration>
+    <Node>CellEPRNode</Node>
+    <IONumber>1</IONumber>
+    <IOCountsPerUnit Units="Volts">1365.291</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>24</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>0</MinimumValue>
+    <MaximumValue>24</MaximumValue>
+  </MiniElectronicsCoolingFanOutput>
+  <CellNetworkSerialPort>
+    <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">SerialPortInterface</Type>
+    <PortNameList>
+      <PortName>COM4</PortName>
+      <PortName>COM2</PortName>
+    </PortNameList>
+    <BaudRate>38400</BaudRate>
+    <DataBits>8</DataBits>
+    <Parity>None</Parity>
+    <StopBits>1</StopBits>
+    <ReadToByte>03</ReadToByte>
+    <Encoding>IBM437</Encoding>
+    <ReadTimeout>1000</ReadTimeout>
+  </CellNetworkSerialPort>
+  <CellNetworkInterface>
+    <Type assembly="_BreakawayAssembly_" namespace="_BreakawayNamespace_">CellNetworkInterface</Type>
+    <SerialPortInterface>CellNetworkSerialPort</SerialPortInterface>
+    <NetworkId>1</NetworkId>
+    <ResponseTimeout>1100</ResponseTimeout>
+    <MaxRetryCount>3</MaxRetryCount>
+    <MaxCommandsPending>1000</MaxCommandsPending>
+  </CellNetworkInterface>
+
+</CellDevices>

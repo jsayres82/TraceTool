@@ -1,0 +1,33 @@
+<SystemProcessManager>
+  <System>
+    <Type>SystemProcessManager</Type>
+    <ConfigurationParameters>
+      <Subsystem>
+        <ShouldLockCapperDoor>True</ShouldLockCapperDoor>
+        <ShouldLockLabelerDrawer>True</ShouldLockLabelerDrawer>
+        <FillProcessType>SystemFillProcess</FillProcessType>
+        <MaxTraceLogEntries>5000</MaxTraceLogEntries>
+        <MaxTraceFiles>100</MaxTraceFiles>
+      </Subsystem>
+      <SystemHomeProcess>
+        <Timeout>120000</Timeout>
+      </SystemHomeProcess>
+      <SystemParkProcess>
+        <Timeout>60000</Timeout>
+      </SystemParkProcess>
+      <SystemCalibrateProcess>
+        <Timeout>-1</Timeout>
+      </SystemCalibrateProcess>
+      <SystemFillProcess>
+        <Timeout>0</Timeout>
+      </SystemFillProcess>
+      <SystemFillSelectProcess>
+        <Timeout>0</Timeout>
+        <PollPeriod>1000</PollPeriod>
+      </SystemFillSelectProcess>
+      <SystemAddFillRequestProcess>
+        <Timeout>0</Timeout>
+      </SystemAddFillRequestProcess>
+    </ConfigurationParameters>
+  </System>
+</SystemProcessManager>

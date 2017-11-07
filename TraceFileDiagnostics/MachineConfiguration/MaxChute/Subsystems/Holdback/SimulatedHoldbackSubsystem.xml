@@ -1,0 +1,28 @@
+<HoldbackSubsystem>
+  <HoldbackManager>
+    <Type assembly="_MaxChuteAssembly_" namespace="_MaxChuteNamespace_">HoldbackManager</Type>
+    <ConfigurationParameters>
+      <Subsystem>
+        <IsSimulation>True</IsSimulation>
+        <OverrideVialSensor>False</OverrideVialSensor>
+        <VialDropTime>1000</VialDropTime>
+        <HoldbackLocation>X1</HoldbackLocation>
+      </Subsystem>
+      <HoldbackOpenTestProcess>
+        <Timeout>1000</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+      </HoldbackOpenTestProcess>
+      <HoldbackCloseTestProcess>
+        <Timeout>1000</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+      </HoldbackCloseTestProcess>
+      <HoldbackReleaseTestProcess>
+        <Timeout>5000</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+      </HoldbackReleaseTestProcess>
+      <HoldbackManagerNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </HoldbackManagerNumericIOHealthTestProcess>
+    </ConfigurationParameters>
+  </HoldbackManager>
+</HoldbackSubsystem>

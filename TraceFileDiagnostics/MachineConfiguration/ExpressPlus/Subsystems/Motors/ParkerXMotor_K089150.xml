@@ -1,0 +1,51 @@
+<ParkerXMotor_K089150>
+   <PWMCountsPerUnit Units="Percent">6</PWMCountsPerUnit>
+   <CurrentCountsPerUnit Units="Amps">2424.8</CurrentCountsPerUnit>
+   <CurrentControlParameters>
+      <Default>
+         <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorCurrentControlParameters</Type>
+         <ProportionalGain>13000</ProportionalGain>
+         <DerivativeGain>1000</DerivativeGain>
+         <DerivativeSampleCount>3</DerivativeSampleCount>
+         <IntegralGain>2000</IntegralGain>
+         <IntegrationSummationLimit>0</IntegrationSummationLimit>
+         <IntegrationContributionLimit>0</IntegrationContributionLimit>
+         <ContinuousCurrentLimit>3.0</ContinuousCurrentLimit>
+         <ContinuousCurrentTime>16000</ContinuousCurrentTime>
+      </Default>
+   </CurrentControlParameters>
+   <MotorTemperatureSensorInstalled>FALSE</MotorTemperatureSensorInstalled>
+   <CommutationType>EncoderDetent</CommutationType>
+   <CommutationOffset>0</CommutationOffset>
+   <SteppingPWM>14</SteppingPWM>
+   <LockingSettlingPWM>19</LockingSettlingPWM>
+   <LockingRampIncrementPWM>1</LockingRampIncrementPWM>
+   <LockingRampIncrementTime>20</LockingRampIncrementTime>
+   <LockingSettlingTime>400</LockingSettlingTime>
+   <SteppingTime>75</SteppingTime>
+   <MinimumFreedom>400</MinimumFreedom>
+   <CommutationHysteresis>3</CommutationHysteresis>
+   <SectorSizeList>
+      <!--12-pole motor = 6 electricalCyclesPerMechnicalRevolution -->
+      <!--4000 countsPerMechnicalRevolution/6 electricalCyclesPerMechnicalRevolution = 666.67 countsPerElectricalCycle-->
+      <!--666.67 countsPerElectricalCycle/6 sectorsPerElectricalCycle = 111.11 countsPerSector-->
+      <SectorSize>111</SectorSize>
+      <SectorSize>111</SectorSize>
+      <SectorSize>111</SectorSize>
+      <SectorSize>111</SectorSize>
+      <SectorSize>112</SectorSize>
+      <SectorSize>111</SectorSize>
+      <SectorSize>111</SectorSize>
+      <SectorSize>111</SectorSize>
+      <SectorSize>111</SectorSize>
+      <SectorSize>111</SectorSize>
+      <SectorSize>111</SectorSize>
+      <SectorSize>111</SectorSize>
+      <SectorSize>111</SectorSize>
+      <SectorSize>112</SectorSize>
+      <SectorSize>111</SectorSize>
+      <SectorSize>111</SectorSize>
+      <SectorSize>111</SectorSize>
+      <SectorSize>111</SectorSize>
+   </SectorSizeList>
+</ParkerXMotor_K089150>

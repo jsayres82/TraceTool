@@ -1,0 +1,10 @@
+<BreakawayConfiguration>
+  <Filename>SystemConfigurationItems.xml</Filename>
+  <Filename>Namespaces.xml</Filename>
+  <Filename>System\TraceManager.xml</Filename>
+  <Filename>System\PersistentDataManager.xml</Filename>
+  <Filename>System\SimulatedMiniSystemManager.xml</Filename>
+  <Filename>Subsystems\Cell\SimulatedCellSubsystem.xml</Filename>
+  <Filename>Subsystems\Chute\SimulatedChuteSubsystem.xml</Filename>
+  <Filename>System\SimulatedPollingManager.xml</Filename>
+</BreakawayConfiguration>

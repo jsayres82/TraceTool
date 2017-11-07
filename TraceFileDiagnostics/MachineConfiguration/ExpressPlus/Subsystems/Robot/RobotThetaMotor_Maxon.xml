@@ -1,0 +1,33 @@
+<RobotThetaMotor>
+  <InvertDirection>True</InvertDirection>
+  <Filename>../Motors/MaxonMotor.xml</Filename>
+  <PositionCountsPerUnit Units="Degrees">32.14</PositionCountsPerUnit>
+  <CurrentUnitsPerForceUnit Units="Amps/Amps">1</CurrentUnitsPerForceUnit>
+  <CurrentUnitsZeroOffset>0</CurrentUnitsZeroOffset>
+  <PositionControlParameters>
+    <Default>
+      <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorPositionControlParameters</Type>
+      <ProportionalGain>200000</ProportionalGain>
+      <DerivativeGain>2000000</DerivativeGain>
+      <DerivativeSampleCount>1</DerivativeSampleCount>
+      <IntegralGain>7500</IntegralGain>
+      <IntegrationSummationLimit>0</IntegrationSummationLimit>
+      <IntegrationContributionLimit>750000</IntegrationContributionLimit>
+      <VelocityFeedForward>0</VelocityFeedForward>
+      <AccelerationFeedForward>0</AccelerationFeedForward>
+      <GravityFeedForward>0</GravityFeedForward>
+    </Default>
+    <Gentle>
+      <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorPositionControlParameters</Type>
+      <ProportionalGain>300000</ProportionalGain>
+      <DerivativeGain>2500000</DerivativeGain>
+      <DerivativeSampleCount>1</DerivativeSampleCount>
+      <IntegralGain>7500</IntegralGain>
+      <IntegrationSummationLimit>0</IntegrationSummationLimit>
+      <IntegrationContributionLimit>750000</IntegrationContributionLimit>
+      <VelocityFeedForward>0</VelocityFeedForward>
+      <AccelerationFeedForward>0</AccelerationFeedForward>
+      <GravityFeedForward>0</GravityFeedForward>
+    </Gentle>
+  </PositionControlParameters>
+</RobotThetaMotor>

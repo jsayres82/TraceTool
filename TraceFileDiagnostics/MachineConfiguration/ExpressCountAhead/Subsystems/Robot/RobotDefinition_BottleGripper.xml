@@ -1,0 +1,12 @@
+<RobotDefinition_BottleGripper>
+  <VariablesDefinitions>
+    <RobotGeometryDatabase>RobotGeometryDatabase_BottleGripper.xml</RobotGeometryDatabase>
+    <RobotKinematicsGripperType>RobotBottleGripper</RobotKinematicsGripperType>
+    <PuckGripLocation_PT30>0.625</PuckGripLocation_PT30>
+    <GripperOpenTarget>0.75</GripperOpenTarget>         <!--Target position for gripper open moves-->
+    <GripperOpenWideTarget>1.0</GripperOpenWideTarget>  <!--Target position for gripper open wide moves-->
+    <HomeGripperMinTravel>1.07</HomeGripperMinTravel>   <!--Minimum acceptable travel during homing-->
+    <HomeGripperMaxTravel>1.50</HomeGripperMaxTravel>   <!--Maximum acceptable travel during homing-->
+    <DockingZOffset>-0.400</DockingZOffset>              <!--Amount to push into nozzle-->
+  </VariablesDefinitions>
+</RobotDefinition_BottleGripper>

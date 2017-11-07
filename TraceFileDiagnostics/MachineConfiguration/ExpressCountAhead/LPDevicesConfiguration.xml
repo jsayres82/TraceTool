@@ -1,0 +1,12 @@
+<BreakawayConfiguration>
+  <Filename>Subsystems\CANBus\CANBusInterface.xml</Filename>
+  <Filename>Subsystems\Capper\CapperDevices.xml</Filename>
+  <Filename>Subsystems\LeftCapFeeder\LeftCapFeederDevices.xml</Filename>
+  <Filename>Subsystems\RightCapFeeder\RightCapFeederDevices.xml</Filename>
+  <Filename>Subsystems\Cell\CellDevices.xml</Filename>
+  <Filename>Subsystems\Labeler\LabelerDevices.xml</Filename>
+  <Filename>Subsystems\LeftVialFeeder\LeftVialFeederDevices.xml</Filename>
+  <Filename>Subsystems\RightVialFeeder\RightVialFeederDevices.xml</Filename>
+  <Filename>Subsystems\Robot\RobotThetaDevices.xml</Filename>
+  <Filename>Subsystems\Robot\RobotGripperDevices.xml</Filename>
+</BreakawayConfiguration>

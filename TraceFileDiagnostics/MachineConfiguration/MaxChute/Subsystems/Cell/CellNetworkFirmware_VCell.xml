@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CellNetworkFirmwareManager>
+  <CellNetworkFirmware>
+    <BoardType>CellBoard</BoardType>
+    <ProtocolVersion>5.00</ProtocolVersion>
+    <SupportedHardware>
+      <HardwareRevision>1</HardwareRevision>
+      <FirmwarePartNumber>405-0000</FirmwarePartNumber>
+      <FirmwareRevision>0.68</FirmwareRevision>
+      <SRecordFile>..\..\..\ReleasedFirmware\VCell_Program_405-0000_0_68.abs.s19</SRecordFile>
+    </SupportedHardware>
+  </CellNetworkFirmware>
+  <CellNetworkFirmware>
+    <BoardType>ConnectorBoard</BoardType>
+    <ProtocolVersion>1.00</ProtocolVersion>
+    <SupportedHardware>
+      <HardwareRevision>1</HardwareRevision>
+      <FirmwarePartNumber>405-0007</FirmwarePartNumber>
+      <FirmwareRevision>1.01</FirmwareRevision>
+      <SRecordFile>..\..\..\ReleasedFirmware\Cell_PreBeta_Connector_Program_405-0007_1_1.abs.s19</SRecordFile>
+    </SupportedHardware>
+    <SupportedHardware>
+      <HardwareRevision>2</HardwareRevision>
+      <FirmwarePartNumber>405-0037</FirmwarePartNumber>
+      <FirmwareRevision>2.03</FirmwareRevision>
+      <SRecordFile>..\..\..\ReleasedFirmware\Cell_Beta_Connector_Program_405-0037_2_3.abs.s19</SRecordFile>
+    </SupportedHardware>
+  </CellNetworkFirmware>
+  <CellNetworkFirmware>
+    <BoardType>NetworkBoard</BoardType>
+    <ProtocolVersion>1.00</ProtocolVersion>
+    <SupportedHardware>
+      <HardwareRevision>1</HardwareRevision>
+      <FirmwarePartNumber>405-0021</FirmwarePartNumber>
+      <FirmwareRevision>1.00</FirmwareRevision>
+      <SRecordFile>..\..\..\ReleasedFirmware\Cell_Network_Program_405-0021_1_0.abs.s19</SRecordFile>
+    </SupportedHardware>
+  </CellNetworkFirmware>
+</CellNetworkFirmwareManager>

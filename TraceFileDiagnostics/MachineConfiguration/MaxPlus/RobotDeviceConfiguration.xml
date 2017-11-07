@@ -1,0 +1,4 @@
+<RobotDeviceConfiguration>
+  <Filename>Subsystems\CANBus\CANBusInterface.xml</Filename>
+  <Filename>Subsystems\Robot\RobotDevices.xml</Filename>
+</RobotDeviceConfiguration>

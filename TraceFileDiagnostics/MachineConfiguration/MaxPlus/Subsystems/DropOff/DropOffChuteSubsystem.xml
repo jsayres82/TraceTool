@@ -1,0 +1,22 @@
+<DropOffChuteSubsystem>
+  <Filename>DropOffChuteDevices.xml</Filename>
+  <DropOffChute>
+    <Type assembly="_ExpressMXAssembly_" namespace="_ExpressMXNamespace_">DropOffChuteManager</Type>
+    <ConfigurationParameters>
+      <Subsystem>
+        <!--
+        <OverflowBinName>Overflow</OverflowBinName>
+        <OverrideOverflowIO>False</OverrideOverflowIO>
+        <BinAbsentTime>60000</BinAbsentTime>
+        -->
+        <DropOffChuteName>Chute</DropOffChuteName>
+        <OverrideChuteIO>False</OverrideChuteIO>
+        <ChuteEmptyDelay>5000</ChuteEmptyDelay>
+        <ChuteFullTimeout>30000</ChuteFullTimeout>
+      </Subsystem>
+      <DropOffChuteNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </DropOffChuteNumericIOHealthTestProcess>
+    </ConfigurationParameters>
+  </DropOffChute>
+</DropOffChuteSubsystem>

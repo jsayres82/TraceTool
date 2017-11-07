@@ -1,0 +1,17 @@
+<CameraSubsystem>
+  <Filename>CameraDevices.xml</Filename>
+  <Camera>
+    <Type assembly="_MaxChuteAssembly_" namespace="_MaxChuteNamespace_">MaxChuteCameraManager</Type>
+    <ConfigurationParameters>
+      <Subsystem>
+        <CameraSettingsPath>C:\Program Files\Parata Systems\Breakaway\MachineConfiguration\Subsystems\Camera\</CameraSettingsPath>
+        <DefaultCameraSettings>DefaultSettings</DefaultCameraSettings>
+        <DefaultImageFile>ImageNotAvailable.jpg</DefaultImageFile>
+        <SimulationImageFile>SimulatedImage.jpg</SimulationImageFile>
+      </Subsystem>
+      <CameraNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </CameraNumericIOHealthTestProcess>
+    </ConfigurationParameters>
+  </Camera>
+</CameraSubsystem>

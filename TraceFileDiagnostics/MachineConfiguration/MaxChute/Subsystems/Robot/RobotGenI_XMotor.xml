@@ -1,0 +1,33 @@
+<RobotGenI_XMotor>
+  <InvertDirection>False</InvertDirection>
+  <Filename>../Motors/ParkerXMotor_K089150.xml</Filename>
+  <PositionCountsPerUnit Units="Inches">1451.43</PositionCountsPerUnit>
+  <CurrentUnitsPerForceUnit Units="Amps/Amps">1</CurrentUnitsPerForceUnit>
+  <CurrentUnitsZeroOffset>0</CurrentUnitsZeroOffset>
+  <PositionControlParameters>
+    <Default>
+      <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorPositionControlParameters</Type>
+      <ProportionalGain>55000</ProportionalGain>
+      <DerivativeGain>800000</DerivativeGain>
+      <DerivativeSampleCount>7</DerivativeSampleCount>
+      <IntegralGain>300</IntegralGain>
+      <IntegrationSummationLimit>40000</IntegrationSummationLimit>
+      <IntegrationContributionLimit>0</IntegrationContributionLimit>
+      <VelocityFeedForward>0</VelocityFeedForward>
+      <AccelerationFeedForward>17500</AccelerationFeedForward>
+      <GravityFeedForward>0</GravityFeedForward>
+    </Default>
+    <Gentle>
+      <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorPositionControlParameters</Type>
+      <ProportionalGain>55000</ProportionalGain>
+      <DerivativeGain>800000</DerivativeGain>
+      <DerivativeSampleCount>7</DerivativeSampleCount>
+      <IntegralGain>0</IntegralGain>
+      <IntegrationSummationLimit>0</IntegrationSummationLimit>
+      <IntegrationContributionLimit>0</IntegrationContributionLimit>
+      <VelocityFeedForward>0</VelocityFeedForward>
+      <AccelerationFeedForward>0</AccelerationFeedForward>
+      <GravityFeedForward>0</GravityFeedForward>
+    </Gentle>
+  </PositionControlParameters>
+</RobotGenI_XMotor>

@@ -1,0 +1,33 @@
+<DropOffSubsystem>
+  <ExceptionFile>
+    <Filename>ExceptionCarouselSubsystem.xml</Filename>
+  </ExceptionFile>
+  <OverflowFile>
+    <Filename>OverflowBinSubsystem.xml</Filename>
+  </OverflowFile>
+  <BinArrayFile>
+    <Filename>BinArraySubsystem.xml</Filename>
+  </BinArrayFile>
+  <DropOff>
+    <Type assembly="_MaxAssembly_" namespace="_MaxNamespace_">DropOffManager</Type>
+    <ConfigurationParameters>
+      <Subsystem />
+      <DropOffChooseLocationProcess>
+        <Timeout>0</Timeout>
+        <SetStatusDelayTime>30000</SetStatusDelayTime>
+        <PollSensorTime>5000</PollSensorTime>
+      </DropOffChooseLocationProcess>
+      <DropOffPollSensorsProcess>
+        <Timeout>0</Timeout>
+        <PollSensorTime>200</PollSensorTime>
+      </DropOffPollSensorsProcess>
+      <DropOffNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </DropOffNumericIOHealthTestProcess>
+      <DropOffHomeProcess>
+        <Timeout>60000</Timeout>
+        <ShouldHomeExceptionCarousel>True</ShouldHomeExceptionCarousel>
+      </DropOffHomeProcess>
+    </ConfigurationParameters>
+  </DropOff>
+</DropOffSubsystem>

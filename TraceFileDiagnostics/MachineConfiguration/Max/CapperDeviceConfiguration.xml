@@ -1,0 +1,4 @@
+<CapperDeviceConfiguration>
+  <Filename>Subsystems\CANBus\CANBusInterface.xml</Filename>
+  <Filename>Subsystems\Capper\CapperDevices.xml</Filename>
+</CapperDeviceConfiguration>

@@ -1,0 +1,29 @@
+<FillRequests>
+  <FillRequest>
+    <Quantity>0</Quantity>
+    <DrugCode>000000001</DrugCode>
+    <Pressure>30</Pressure>
+    <Label Notes="The image file should exist in the assembly execution directory">sampleBitmapNoBars.bmp</Label>
+    <FillRequestOptions Values="None, NoCapping, NoLabeling, NoDropOffSensing, NoCounting">None</FillRequestOptions>
+    <CameraSettings>medium</CameraSettings>
+    <VialTypes>
+      <VialType>_RightVialType_</VialType>
+      <VialType>_LeftVialType_</VialType>
+    </VialTypes>
+    <Cells>
+      <Cell>
+        <CellSerialNumber>5506869158</CellSerialNumber>
+        <AllowedCellLocation></AllowedCellLocation>
+      </Cell>
+    </Cells>
+    <DropOffLocations>
+     <DropOff>Chute</DropOff>
+    </DropOffLocations>
+    <ExceptionDropOffLocations>
+      <DropOff>C1</DropOff>
+    </ExceptionDropOffLocations>
+    <SpillableDropOffLocations>
+      <DropOff>C1</DropOff>
+    </SpillableDropOffLocations>
+  </FillRequest>
+</FillRequests>

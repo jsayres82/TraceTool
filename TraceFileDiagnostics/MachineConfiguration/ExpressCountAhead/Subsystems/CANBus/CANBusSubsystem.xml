@@ -1,0 +1,42 @@
+<CANBusSubsystem>
+  <CANBus>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANBusManager</Type>
+    <ConfigurationParameters>
+      <Subsystem>
+        <CANBusInterface>ServoCANBusInterface</CANBusInterface>
+      </Subsystem>
+      <CANBusNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </CANBusNumericIOHealthTestProcess>
+      <CANBusUpdateFirmwareProcess>
+        <Timeout>0</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+      </CANBusUpdateFirmwareProcess>
+      <CANBusManualUpdateFirmwareProcess>
+        <Timeout>0</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+        <InitializationTimeout>10000</InitializationTimeout>
+      </CANBusManualUpdateFirmwareProcess>
+      <CANBusHealthTestProcess>
+        <Timeout>0</Timeout>
+        <InitializationTimeout>10000</InitializationTimeout>
+      </CANBusHealthTestProcess>
+      <CANBusStressTestProcess>
+        <Timeout>0</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+        <InitializationTimeout>10000</InitializationTimeout>
+        <TestSDOObjectIndex>4120</TestSDOObjectIndex>
+        <TestSDOObjectSubIndex>1</TestSDOObjectSubIndex>
+        <StatusUpdateTimer>100</StatusUpdateTimer>
+        <BeepFrequency>1000</BeepFrequency>
+        <BeepDuration>100</BeepDuration>
+        <BeepOnError>True</BeepOnError>
+      </CANBusStressTestProcess>
+      <CANBusTagNodeProcess>
+        <Timeout>0</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+        <WaitForTaggedNodeTimeout>5000</WaitForTaggedNodeTimeout>
+      </CANBusTagNodeProcess>
+    </ConfigurationParameters>
+  </CANBus>
+</CANBusSubsystem>

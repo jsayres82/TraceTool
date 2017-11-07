@@ -1,0 +1,5 @@
+﻿<CapperGenISubsystem>
+  <VariablesDefinitions>
+    <ShouldTestForObstructionVariable>False</ShouldTestForObstructionVariable>
+  </VariablesDefinitions>
+</CapperGenISubsystem>

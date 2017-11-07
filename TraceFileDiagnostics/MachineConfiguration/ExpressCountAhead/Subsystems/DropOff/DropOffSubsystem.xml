@@ -1,0 +1,27 @@
+<DropOffSubsystem>
+  <ExceptionFile>
+    <Filename>DropOffSubsystem_DropOffLocationConfigOption_.xml</Filename>
+  </ExceptionFile>
+  <DropOff>
+    <Type assembly="_ExpressCAAssembly_" namespace="_ExpressCANamespace_">ExpcaDropOffManager</Type>
+    <ConfigurationParameters>
+      <Subsystem />
+      <DropOffChooseLocationProcess>
+        <Timeout>0</Timeout>
+        <SetStatusDelayTime>30000</SetStatusDelayTime>
+        <PollSensorTime>5000</PollSensorTime>
+      </DropOffChooseLocationProcess>
+      <DropOffPollSensorsProcess>
+        <Timeout>0</Timeout>
+        <PollSensorTime>200</PollSensorTime>
+      </DropOffPollSensorsProcess>
+      <DropOffNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </DropOffNumericIOHealthTestProcess>
+      <DropOffHomeProcess>
+        <Timeout>60000</Timeout>
+        <ShouldHomeExceptionCarousel>True</ShouldHomeExceptionCarousel>
+      </DropOffHomeProcess>
+    </ConfigurationParameters>
+  </DropOff>
+</DropOffSubsystem>

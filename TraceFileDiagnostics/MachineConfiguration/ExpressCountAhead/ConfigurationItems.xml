@@ -1,0 +1,6 @@
+<ConfigurationItems>
+  <Hood Options="Installed,NotInstalled">NotInstalled</Hood>
+  <RobotType Options="GenI,GenII">GenII</RobotType>
+  <RobotGripperType Options="TriStateBottle,RexamBottle,Vial">Vial</RobotGripperType>
+  <DropOffLocationConfigOption Options="Diverter_5.00,Diverter_6.00">Diverter_5.00</DropOffLocationConfigOption>
+</ConfigurationItems>

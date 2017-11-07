@@ -1,0 +1,206 @@
+<RobotGripperDevices>
+  <RobotGripperNode>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANOpenNode</Type>
+    <Id>13</Id>
+    <HeartbeatTime>1000</HeartbeatTime>
+    <HeartbeatTimeoutTolerance>1000</HeartbeatTimeoutTolerance>
+    <SDORetryLimit>2</SDORetryLimit>
+    <SDOResponseTimeout>1000</SDOResponseTimeout>
+    <CANBusInterface>ServoCANBusInterface</CANBusInterface>
+    <Filename>..\CANBus\LP_FirmwareRequirement.xml</Filename>
+  </RobotGripperNode>
+  <RobotGripperSensor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIODigitalInput</Type>
+    <Configuration>DigitalInputNoPullUp</Configuration>
+    <Node>RobotGripperNode</Node>
+    <IONumber>18</IONumber>
+    <IOCountsPerUnit>1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>0</ActiveThreshold>
+    <InactiveThreshold>1</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </RobotGripperSensor>
+  <RobotGripperMotor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOServoMotor</Type>
+    <Node>RobotGripperNode</Node>
+    <Filename>RobotGripperMotor_Maxon.xml</Filename>
+    <MaxAbsolutePositionMoveTarget>1.6</MaxAbsolutePositionMoveTarget>
+    <MinAbsolutePositionMoveTarget>-0.1</MinAbsolutePositionMoveTarget>
+    <MaxRelativePositionMoveTarget>Infinity</MaxRelativePositionMoveTarget>
+    <InitializationTimeout>10000</InitializationTimeout>
+    <TrajectoryControlParameters>
+      <Default>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>8.33E-03</MaxVelocity>
+        <MaxAcceleration>2.778e-4</MaxAcceleration>
+        <MaxDeceleration>2.778e-4</MaxDeceleration>
+        <MaxJerk>0.2</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>0</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </Default>
+      <Open>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>0.00833</MaxVelocity>
+        <MaxAcceleration>2.778e-4</MaxAcceleration>
+        <MaxDeceleration>2.778e-4</MaxDeceleration>
+        <MaxJerk>0.2</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>0.05</InPositionWindow>
+        <InPositionTime>50</InPositionTime>
+      </Open>
+      <LightTouch>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>2.778e-3</MaxVelocity>
+        <MaxAcceleration>2.778e-4</MaxAcceleration>
+        <MaxDeceleration>2.778e-4</MaxDeceleration>
+        <MaxJerk>0.2</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>0</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </LightTouch>
+    </TrajectoryControlParameters>
+    <Moves>
+      <TestPositive>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>1</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit Units="Amps">0.107</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.107</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </TestPositive>
+      <TestNegative>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>-1</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit Units="Amps">0.107</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.107</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </TestNegative>
+      <Default>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit Units="Amps">0.321</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.321</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </Default>
+      <MoveToPositiveExtentAndLatch>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>0.0028</Target>
+        <Duration>1500</Duration>
+        <MaxForceLimit Units="Amps">0.107</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.107</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>LightTouch</TrajectoryControlParameters>
+      </MoveToPositiveExtentAndLatch>
+      <MoveToNegativeExtentAndLatch>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>-0.0028</Target>
+        <Duration>3000</Duration>
+        <MaxForceLimit Units="Amps">0.107</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.107</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>LightTouch</TrajectoryControlParameters>
+      </MoveToNegativeExtentAndLatch>
+      <MoveToHomeComplete>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit Units="Amps">0.107</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.107</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>LightTouch</TrajectoryControlParameters>
+      </MoveToHomeComplete>
+      <MoveToHomeError>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit Units="Amps">0.107</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.107</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>LightTouch</TrajectoryControlParameters>
+      </MoveToHomeError>
+      <OpenWide>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>_GripperOpenWideTarget_</Target>
+        <MaxForceLimit Units="Amps">0.150</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.150</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </OpenWide>
+      <Open>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>_GripperOpenTarget_</Target>
+        <MaxForceLimit Units="Amps">0.150</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.150</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Open</TrajectoryControlParameters>
+      </Open>
+      <Close>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit Units="Amps">0.150</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.150</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>LightTouch</TrajectoryControlParameters>
+      </Close>
+      <DockToCell>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit Units="Amps">0.150</MaxForceLimit>
+        <MinForceLimit Units="Amps">-1.338</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </DockToCell>
+      <DockToHopper>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit Units="Amps">0.150</MaxForceLimit>
+        <MinForceLimit Units="Amps">-1.338</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </DockToHopper>
+	  <KungFuGrip>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit Units="Amps">0.150</MaxForceLimit>
+        <MinForceLimit Units="Amps">-1.338</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </KungFuGrip>
+      <Loosen>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>0.2</Target>
+        <MaxForceLimit Units="Amps">0.107</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.107</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </Loosen>
+      <CloseBlind>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>-1.6</Target>
+        <MaxForceLimit Units="Amps">0.150</MaxForceLimit>
+        <MinForceLimit Units="Amps">-0.150</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>LightTouch</TrajectoryControlParameters>
+      </CloseBlind>
+    </Moves>
+  </RobotGripperMotor>
+</RobotGripperDevices>

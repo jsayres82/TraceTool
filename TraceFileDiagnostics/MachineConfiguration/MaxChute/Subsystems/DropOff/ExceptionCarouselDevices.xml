@@ -1,0 +1,253 @@
+<ExceptionCarouselDevices>
+  <ExceptionCarouselNode>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANOpenNode</Type>
+    <Id>62</Id>
+    <HeartbeatTime>1000</HeartbeatTime>
+    <HeartbeatTimeoutTolerance>1000</HeartbeatTimeoutTolerance>
+    <SDORetryLimit>2</SDORetryLimit>
+    <SDOResponseTimeout>1000</SDOResponseTimeout>
+    <CANBusInterface>ServoCANBusInterface</CANBusInterface>
+    <Filename>..\CANBus\LP_FirmwareRequirement.xml</Filename>
+  </ExceptionCarouselNode>
+  <ExceptionCarouselHomeSensor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIODigitalInput</Type>
+    <Configuration>DigitalInputNoPullUp</Configuration>
+    <Node>ExceptionCarouselNode</Node>
+    <IONumber>18</IONumber>
+    <IOCountsPerUnit>1</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>0</ActiveThreshold>
+    <InactiveThreshold>1</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </ExceptionCarouselHomeSensor>
+  <ExceptionCarouselAbsoluteErrorInput>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>ExceptionCarouselNode</Node>
+    <IONumber>28</IONumber>
+    <IOCountsPerUnit>_ExceptionCarouselPositionScaleFactor_</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>Infinity</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </ExceptionCarouselAbsoluteErrorInput>
+  <ExceptionCarouselErrorInput>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>ExceptionCarouselNode</Node>
+    <IONumber>27</IONumber>
+    <IOCountsPerUnit>_ExceptionCarouselPositionScaleFactor_</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>Infinity</ActiveThreshold>
+    <InactiveThreshold>Infinity</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+  </ExceptionCarouselErrorInput>
+  <ExceptionCarouselVialSensor1>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>ExceptionCarouselNode</Node>
+    <IONumber>23</IONumber>
+    <IOCountsPerUnit Units="Percent">327.68</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>12.5</ActiveThreshold>
+    <InactiveThreshold>15</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <ReadActiveValueDelay>250</ReadActiveValueDelay>
+    <ReadInactiveValueDelay>250</ReadInactiveValueDelay>
+  </ExceptionCarouselVialSensor1>
+  <ExceptionCarouselVialSensor2>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogInput</Type>
+    <Configuration>AnalogInput</Configuration>
+    <Node>ExceptionCarouselNode</Node>
+    <IONumber>24</IONumber>
+    <IOCountsPerUnit Units="Percent">327.68</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>12.5</ActiveThreshold>
+    <InactiveThreshold>15</InactiveThreshold>
+    <MinimumValue>-Infinity</MinimumValue>
+    <MaximumValue>Infinity</MaximumValue>
+    <ReadActiveValueDelay>250</ReadActiveValueDelay>
+    <ReadInactiveValueDelay>250</ReadInactiveValueDelay>
+  </ExceptionCarouselVialSensor2>
+  <ExceptionCarouselMotor>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOServoMotor</Type>
+    <Node>ExceptionCarouselNode</Node>
+    <Filename>ExceptionCaroselMotor_Maxon.xml</Filename>
+    <MaxAbsolutePositionMoveTarget>Infinity</MaxAbsolutePositionMoveTarget>
+    <MinAbsolutePositionMoveTarget>-Infinity</MinAbsolutePositionMoveTarget>
+    <MaxRelativePositionMoveTarget>Infinity</MaxRelativePositionMoveTarget>
+    <InitializationTimeout>10000</InitializationTimeout>
+    <TrajectoryControlParameters>
+      <Default>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>120e-3</MaxVelocity>
+        <MaxAcceleration>1.20e-3</MaxAcceleration>
+        <MaxDeceleration>1.20e-3</MaxDeceleration>
+        <MaxJerk>Infinity</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>0</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </Default>
+      <Idle>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>60e-3</MaxVelocity>
+        <MaxAcceleration>1e-3</MaxAcceleration>
+        <MaxDeceleration>1e-3</MaxDeceleration>
+        <MaxJerk>Infinity</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>0</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </Idle>
+      <Deliver>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>60e-3</MaxVelocity>
+        <MaxAcceleration>1e-3</MaxAcceleration>
+        <MaxDeceleration>1e-3</MaxDeceleration>
+        <MaxJerk>Infinity</MaxJerk>
+        <PositionErrorWindow>0</PositionErrorWindow>
+        <InPositionWindow>0</InPositionWindow>
+        <InPositionTime>0</InPositionTime>
+      </Deliver>
+      <Home>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>30e-3</MaxVelocity>
+        <MaxAcceleration>1e-3</MaxAcceleration>
+        <MaxDeceleration>1e-3</MaxDeceleration>
+        <MaxJerk>Infinity</MaxJerk>
+        <PositionErrorWindow>5</PositionErrorWindow>
+        <InPositionWindow>1</InPositionWindow>
+        <InPositionTime>10</InPositionTime>
+      </Home>
+      <HomeCreep>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorTrajectoryControlParameters</Type>
+        <MaxVelocity>10e-3</MaxVelocity>
+        <MaxAcceleration>1e-3</MaxAcceleration>
+        <MaxDeceleration>1e-3</MaxDeceleration>
+        <MaxJerk>Infinity</MaxJerk>
+        <PositionErrorWindow>5</PositionErrorWindow>
+        <InPositionWindow>1</InPositionWindow>
+        <InPositionTime>10</InPositionTime>
+      </HomeCreep>
+    </TrajectoryControlParameters>
+    <Moves>
+      <TestPositive>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>1e-3</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit>5.0</MaxForceLimit>
+        <MinForceLimit>-5.0</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </TestPositive>
+      <TestNegative>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>-1e-3</Target>
+        <Duration>1000</Duration>
+        <MaxForceLimit>5.0</MaxForceLimit>
+        <MinForceLimit>-5.0</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </TestNegative>
+      <Default>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit>5.0</MaxForceLimit>
+        <MinForceLimit>-5.0</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </Default>
+      <Idle>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorVelocityMove</Type>
+        <Target>0</Target>
+        <Duration>0</Duration>
+        <MaxForceLimit>1</MaxForceLimit>
+        <MinForceLimit>-1</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Idle</TrajectoryControlParameters>
+      </Idle>
+      <Deliver>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit>1</MaxForceLimit>
+        <MinForceLimit>-1</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Deliver</TrajectoryControlParameters>
+      </Deliver>
+      <ExceptionCarouselHomingProcess-MoveToStartup>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit>0.6</MaxForceLimit>
+        <MinForceLimit>-0.6</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Home</TrajectoryControlParameters>
+      </ExceptionCarouselHomingProcess-MoveToStartup>
+      <ExceptionCarouselHomingProcess-MoveToSensorFast>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>360</Target>
+        <MaxForceLimit>0.6</MaxForceLimit>
+        <MinForceLimit>-0.6</MinForceLimit>
+        <StopOnInput TriggerType="ActiveLevel">ExceptionCarouselHomeSensor</StopOnInput>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Home</TrajectoryControlParameters>
+      </ExceptionCarouselHomingProcess-MoveToSensorFast>
+      <ExceptionCarouselHomingProcess-MoveOffSensor>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>-5</Target>
+        <MaxForceLimit>0.6</MaxForceLimit>
+        <MinForceLimit>-0.6</MinForceLimit>
+        <StopOnInput TriggerType="InactiveLevel">ExceptionCarouselHomeSensor</StopOnInput>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Home</TrajectoryControlParameters>
+      </ExceptionCarouselHomingProcess-MoveOffSensor>
+      <ExceptionCarouselHomingProcess-MoveToSensorApproach>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>-2</Target>
+        <MaxForceLimit>0.6</MaxForceLimit>
+        <MinForceLimit>-0.6</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Home</TrajectoryControlParameters>
+      </ExceptionCarouselHomingProcess-MoveToSensorApproach>
+      <ExceptionCarouselHomingProcess-MoveToSensorAndLatch>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>10</Target>
+        <MaxForceLimit>0.6</MaxForceLimit>
+        <MinForceLimit>-0.6</MinForceLimit>
+        <StopOnInput TriggerType="ActiveLevel">ExceptionCarouselHomeSensor</StopOnInput>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>HomeCreep</TrajectoryControlParameters>
+      </ExceptionCarouselHomingProcess-MoveToSensorAndLatch>
+      <ExceptionCarouselHomingProcess-Complete>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorAbsolutePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit>0.6</MaxForceLimit>
+        <MinForceLimit>-0.6</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Home</TrajectoryControlParameters>
+      </ExceptionCarouselHomingProcess-Complete>
+      <Locked>
+        <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorRelativePositionMove</Type>
+        <Target>0</Target>
+        <MaxForceLimit>Infinity</MaxForceLimit>
+        <MinForceLimit>-Infinity</MinForceLimit>
+        <CurrentControlParameters>Default</CurrentControlParameters>
+        <PositionControlParameters>Default</PositionControlParameters>
+        <TrajectoryControlParameters>Default</TrajectoryControlParameters>
+      </Locked>
+    </Moves>
+  </ExceptionCarouselMotor>
+</ExceptionCarouselDevices>

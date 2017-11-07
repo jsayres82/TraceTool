@@ -1,0 +1,17 @@
+<PuckShelfDropOffSubsystem>
+  <VariablesDefinitions>
+    <PuckAndVialHeight>6.00</PuckAndVialHeight>
+  </VariablesDefinitions>
+  <PuckShelfDropOff>
+    <Type assembly="_ExpressCAAssembly_" namespace="_ExpressCANamespace_">PuckShelfManager</Type>
+    <ConfigurationParameters>
+      <Subsystem>
+        <DropOffLocation>P1</DropOffLocation>
+        <DropOffLocation>P2</DropOffLocation>
+      </Subsystem>
+      <PuckShelfDropOffNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </PuckShelfDropOffNumericIOHealthTestProcess>
+  </ConfigurationParameters>
+  </PuckShelfDropOff>
+</PuckShelfDropOffSubsystem>

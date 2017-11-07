@@ -1,0 +1,8 @@
+<DropOffDevices>
+  <ExceptionFile>
+    <Filename>ExceptionCarouselDevices.xml</Filename>
+  </ExceptionFile>
+  <ChuteFile>
+   <Filename>DropOffChuteDevices.xml</Filename>
+  </ChuteFile>
+</DropOffDevices>

@@ -1,0 +1,33 @@
+﻿<RobotGenII_ZMotor>
+  <InvertDirection>False</InvertDirection>
+  <Filename>../Motors/TeknicZMotor_M2331S.xml</Filename>
+  <PositionCountsPerUnit Units="Inches">1195.294118</PositionCountsPerUnit>
+  <CurrentUnitsPerForceUnit Units="Amps/Amps">1</CurrentUnitsPerForceUnit>
+  <CurrentUnitsZeroOffset>0</CurrentUnitsZeroOffset>
+  <PositionControlParameters>
+    <Default>
+      <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorPositionControlParameters</Type>
+      <ProportionalGain>70000</ProportionalGain>
+      <DerivativeGain>500000</DerivativeGain>
+      <DerivativeSampleCount>4</DerivativeSampleCount>
+      <IntegralGain>900</IntegralGain>
+      <IntegrationSummationLimit>7000</IntegrationSummationLimit>
+      <IntegrationContributionLimit>0</IntegrationContributionLimit>
+      <VelocityFeedForward>0</VelocityFeedForward>
+      <AccelerationFeedForward>0</AccelerationFeedForward>
+      <GravityFeedForward Units="Amps">1.2</GravityFeedForward>
+    </Default>
+    <GravityOnly>
+      <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">ServoMotorPositionControlParameters</Type>
+      <ProportionalGain>0</ProportionalGain>
+      <DerivativeGain>0</DerivativeGain>
+      <DerivativeSampleCount>5</DerivativeSampleCount>
+      <IntegralGain>0</IntegralGain>
+      <IntegrationSummationLimit>0</IntegrationSummationLimit>
+      <IntegrationContributionLimit>0</IntegrationContributionLimit>
+      <VelocityFeedForward>0</VelocityFeedForward>
+      <AccelerationFeedForward>0</AccelerationFeedForward>
+      <GravityFeedForward Units="Amps">1.2</GravityFeedForward>
+    </GravityOnly>
+  </PositionControlParameters>
+</RobotGenII_ZMotor>

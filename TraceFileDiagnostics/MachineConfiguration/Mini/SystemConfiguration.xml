@@ -1,0 +1,12 @@
+<MiniSystemConfiguration>
+  <Filename>SystemConfigurationItems.xml</Filename>
+  <Filename>Namespaces.xml</Filename>
+  <Filename>System\TraceManager.xml</Filename>
+  <Filename>System\PersistentDataManager.xml</Filename>
+  <Filename>Subsystems\CANBus\CANBusInterface.xml</Filename>
+  <Filename>System\MiniSystemManager.xml</Filename>
+  <Filename>Subsystems\Cell\CellSubsystem.xml</Filename>
+  <Filename>Subsystems\Chute\ChuteSubsystem.xml</Filename>
+  <Filename>Subsystems\CANBus\CANBusSubsystem.xml</Filename>
+  <Filename>System\PollingManager.xml</Filename>
+</MiniSystemConfiguration>

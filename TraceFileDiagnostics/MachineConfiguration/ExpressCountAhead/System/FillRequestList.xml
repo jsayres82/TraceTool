@@ -1,0 +1,54 @@
+<FillRequests>
+  <FillRequest>
+    <Quantity>5</Quantity>
+    <DrugCode>000000001</DrugCode>
+    <Pressure>30</Pressure>
+    <Label Notes="The image file should exist in the assembly execution directory">sampleBitmapNoBars.bmp</Label>
+    <FillRequestOptions Values="None, NoCapping, NoLabeling, NoDropOffSensing, NoCounting">None</FillRequestOptions>
+    <CameraSettings></CameraSettings>
+    <VialTypes>
+      <VialType>TriState_PM40</VialType>
+    </VialTypes>
+    <Cells>
+      <Cell>
+        <CellSerialNumber>5506869157</CellSerialNumber>
+        <AllowedCellLocation></AllowedCellLocation>
+      </Cell>
+    </Cells>
+    <DropOffLocations>
+      <DropOff>P1</DropOff>
+    </DropOffLocations>
+    <ExceptionDropOffLocations>
+      <DropOff>P1</DropOff>
+    </ExceptionDropOffLocations>
+    <SpillableDropOffLocations>
+      <DropOff>P1</DropOff>
+    </SpillableDropOffLocations>
+  </FillRequest>
+  <FillRequest>
+    <Quantity>5</Quantity>
+    <DrugCode>000000001</DrugCode>
+    <Pressure>30</Pressure>
+    <Label Notes="The image file should exist in the assembly execution directory">sampleBitmapNoBars.bmp</Label>
+    <FillRequestOptions Values="None, NoCapping, NoLabeling, NoDropOffSensing, NoCounting">None</FillRequestOptions>
+    <CameraSettings></CameraSettings>
+    <VialTypes>
+      <VialType>TriState_PM60</VialType>
+    </VialTypes>
+    <Cells>
+      <Cell>
+        <CellSerialNumber>5506869157</CellSerialNumber>
+        <AllowedCellLocation></AllowedCellLocation>
+      </Cell>
+    </Cells>
+    <DropOffLocations>
+      <DropOff>P2</DropOff>
+    </DropOffLocations>
+    <ExceptionDropOffLocations>
+      <DropOff>P2</DropOff>
+    </ExceptionDropOffLocations>
+    <SpillableDropOffLocations>
+      <DropOff>P2</DropOff>
+    </SpillableDropOffLocations>
+  </FillRequest>
+</FillRequests>

@@ -1,0 +1,28 @@
+<ConfigurationItems>
+  <LeftVialType
+    Options="KERR13,KERR16,KERR30,KERR40,PT13,PT16,PT30,PT40,TriState_PRX13,TriState_PRX16,TriState_PRX30,TriState_PRX40,RC13,RC16,RC20,RC30,RC40"
+    >KERR30</LeftVialType>
+  <RightVialType
+    Options="KERR13,KERR16,KERR30,KERR40,PT13,PT16,PT30,PT40,TriState_PRX13,TriState_PRX16,TriState_PRX30,TriState_PRX40,RC13,RC16,RC20,RC30,RC40"
+    >KERR13</RightVialType>
+  <Hood
+    Options="Installed,NotInstalled"
+    >NotInstalled</Hood>
+  <CapperType
+    Options="GenI,GenII"
+    >GenI</CapperType>
+  <RobotType
+    Options="GenI,GenII"
+    >GenII</RobotType>
+  <!--To make this a variable rather than a configuration item, 
+      remove this and uncomment the CellType variable from SystemConfigurationItems.xml-->
+  <CellType
+    Options="HPAC,VCell"
+    >HPAC</CellType>
+  <CellCapacity
+    Options="228,189,114"
+  >228</CellCapacity>
+  <RobotOptimization
+    Options="MaximumSpeed,Balanced,MinimumSound"
+    >MaximumSpeed</RobotOptimization>
+</ConfigurationItems>

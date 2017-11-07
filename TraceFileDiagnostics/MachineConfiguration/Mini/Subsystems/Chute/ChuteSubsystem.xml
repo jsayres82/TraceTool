@@ -1,0 +1,26 @@
+<ChuteSubsystem>
+  <ChuteManager>
+    <Type assembly="_MiniAssembly_" namespace="_MiniNamespace_">ChuteManager</Type>
+    <ConfigurationParameters>
+      <Subsystem>
+        <LocateTimeout>15000</LocateTimeout>
+        <UserDormantTime>500</UserDormantTime>
+        <LockCompleteTime>500</LockCompleteTime>
+        <AutoLock>True</AutoLock>
+      </Subsystem>
+      <ChuteManagerNumericIOHealthTestProcess>
+        <Timeout>0</Timeout>
+      </ChuteManagerNumericIOHealthTestProcess>
+      <ChuteTestProcess>
+        <Timeout>375000</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+        <RowTimeout>90000</RowTimeout>
+      </ChuteTestProcess>
+      <ChuteCleaningTestProcess>
+        <Timeout>375000</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+        <CleaningTimeout>10000</CleaningTimeout>
+      </ChuteCleaningTestProcess>
+    </ConfigurationParameters>
+  </ChuteManager>
+</ChuteSubsystem>

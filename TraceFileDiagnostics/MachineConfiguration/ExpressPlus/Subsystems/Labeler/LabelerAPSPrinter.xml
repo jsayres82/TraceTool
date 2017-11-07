@@ -1,0 +1,21 @@
+<LabelerAPSPrinter>
+  <LabelerPrintEngine>
+    <Type assembly="_MaxAssembly_" namespace="_MaxNamespace_">APSPrinter</Type>
+    <AlignAtPixel Type="Int32">0</AlignAtPixel>
+    <AutomaticThreshold Type="bool">true</AutomaticThreshold>
+    <BrightnessThreshold Type="Byte">127</BrightnessThreshold>
+    <FitToLength Type="bool">false</FitToLength>
+    <LengthMargin Type="Int32">100</LengthMargin>
+    <LabelOffset Type="Int32">0</LabelOffset>
+    <PrintTimeout Type="Int32">5000</PrintTimeout>
+    <StepDuration Type="Int32">950</StepDuration>
+    <StrobeTime Type="Int32">308</StrobeTime>
+    <HeadModel Type="string">ZQAP1</HeadModel>
+    <StepSizeMm Type="Double">0.0825</StepSizeMm>
+    <WaitForPrintingMs Type="Int32">0</WaitForPrintingMs>
+    <ExpectedLabelLength Type="Int32">1200</ExpectedLabelLength>
+    <ExpectedLengthTolerance Type="Int32">150</ExpectedLengthTolerance>
+    <WebReversalDistance Type="Int8">0</WebReversalDistance>
+    <HeadToSensorDist Type="Int16">570</HeadToSensorDist>
+  </LabelerPrintEngine>
+</LabelerAPSPrinter>

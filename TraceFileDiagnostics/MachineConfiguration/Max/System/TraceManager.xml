@@ -1,0 +1,9 @@
+<TraceManager>
+  <Trace>
+    <Type assembly="_ControlsAssembly_" namespace="_ControlsNamespace_">TraceManager</Type>
+    <ConfigurationParameters>
+      <MaxTraceLogEntries>5000</MaxTraceLogEntries>
+      <MaxTraceFiles>100</MaxTraceFiles>
+    </ConfigurationParameters>
+  </Trace>
+</TraceManager>

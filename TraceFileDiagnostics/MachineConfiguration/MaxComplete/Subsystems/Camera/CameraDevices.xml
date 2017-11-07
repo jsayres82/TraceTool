@@ -1,0 +1,14 @@
+<CameraDevices>
+  <CameraLampOutput>
+    <Type assembly="_CANBusAssembly_" namespace="_CANBusNamespace_">CANSIOAnalogOutput</Type>
+    <Configuration>AnalogOutput</Configuration>
+    <Node>ExceptionCarouselNode</Node>
+    <IONumber>1</IONumber>
+    <IOCountsPerUnit Units="Volts">327.67</IOCountsPerUnit>
+    <IOCountZeroOffset>0</IOCountZeroOffset>
+    <ActiveThreshold>100</ActiveThreshold>
+    <InactiveThreshold>0</InactiveThreshold>
+    <MinimumValue>0</MinimumValue>
+    <MaximumValue>100</MaximumValue>
+  </CameraLampOutput>
+</CameraDevices>

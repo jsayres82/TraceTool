@@ -1,0 +1,7 @@
+<DO_FirmwareRequirement>
+  <MinimumFirmwareVersion>2.02</MinimumFirmwareVersion>
+  <SRecordFile>..\..\..\ReleasedFirmware\DropOffBins_V2_02.elf.S</SRecordFile>
+  <RequiredProtocolVersion>1</RequiredProtocolVersion>
+  <FirstFirmwareVersionWithProtocol>2</FirstFirmwareVersionWithProtocol>
+  <FirmwareAutoUpdate>True</FirmwareAutoUpdate>
+</DO_FirmwareRequirement>

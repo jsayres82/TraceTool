@@ -1,0 +1,46 @@
+<RightVialFeederSubsystem>
+  <RightVialFeeder>
+    <Type assembly="_MaxAssembly_" namespace="_MaxNamespace_">SimulatedVialFeeder</Type>
+    <ConfigurationParameters>
+      <Subsystem>
+        <VialType>_RightVialType_</VialType>
+      </Subsystem>
+      <RightVialFeederHealthTestProcess>
+        <Timeout>30000</Timeout>
+        <ControlsProcessType>Diagnostic</ControlsProcessType>
+        <TimeBetweenActions>1000</TimeBetweenActions>
+        <Error>
+          <ErrorCode>
+            <ErrorName>NoError</ErrorName>
+            <ErrorType
+              assembly="Parata.Controls.Enumerations.Core"
+              namespace="Parata.Controls.Enumerations.ErrorCodes">ControlsExtensibleErrorCode</ErrorType>
+          </ErrorCode>
+        </Error>
+        <!--<Error>
+          <ErrorCode>
+            <ErrorName>VialFeederMotorHealthTestError</ErrorName>
+            <ErrorType
+              assembly="Parata.Controls.Enumerations.VialFeeder"
+              namespace="Parata.Controls.Enumerations.ErrorCodes">VialFeederErrorCode</ErrorType>
+          </ErrorCode>
+          <ErrorStatus>
+            <ErrorCode>
+              <ErrorName>VialFeederMotorError</ErrorName>
+              <ErrorType
+                assembly="Parata.Controls.Enumerations.VialFeeder"
+                namespace="Parata.Controls.Enumerations.ErrorCodes">VialFeederErrorCode</ErrorType>
+            </ErrorCode>
+            <ErrorStatus>
+              <ErrorCode>
+                <ErrorName>FollowingError</ErrorName>
+                <ErrorType
+                  assembly="Parata.Controls.Enumerations.Core"
+                  namespace="Parata.Controls.Enumerations.ErrorCodes">DeviceErrorCode</ErrorType>
+              </ErrorCode>
+            </ErrorStatus>
+          </ErrorStatus>-->
+      </RightVialFeederHealthTestProcess>
+    </ConfigurationParameters>
+  </RightVialFeeder>
+</RightVialFeederSubsystem>
