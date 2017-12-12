@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;
-using ServiceTool.TraceTypes;
+using TraceFileReader.TraceTypes;
 
 
-namespace ServiceTool.PlotTypes
+namespace TraceFileReader.PlotTypes
 {
     public class DataPlotBase
     {        

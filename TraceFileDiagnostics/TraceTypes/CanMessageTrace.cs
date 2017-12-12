@@ -11,7 +11,7 @@ using UInt8 = System.Byte;
 using Int8 = System.SByte;
 using System.Globalization;
 
-namespace ServiceTool.TraceTypes
+namespace TraceFileReader.TraceTypes
 {
     class CanMessageTrace : Trace
     {
@@ -531,14 +531,14 @@ namespace ServiceTool.TraceTypes
 
         #endregion Members
         
-        public CanMessageTrace(Form1 parentForm)
-            : base(parentForm)
+        public CanMessageTrace()
+            : base()
         {
 
         }
 
-        public CanMessageTrace(XPathNavigator trace, Form1 parentForm)
-            : base(trace, parentForm)
+        public CanMessageTrace(XPathNavigator trace)
+            : base(trace)
         {
             base.DerivedType = this.GetType();
             TagAndData.Add("Direction", this.TraceType);

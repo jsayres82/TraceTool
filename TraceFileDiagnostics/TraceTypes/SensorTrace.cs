@@ -7,9 +7,9 @@ using System.Xml.XPath;
 using System.Collections;
 using NorthStateFramework;
 using OxyPlot;
-using ServiceTool.EnumTypes;
+using TraceFileReader.EnumTypes;
 
-namespace ServiceTool.TraceTypes
+namespace TraceFileReader.TraceTypes
 {
     public class SensorTrace : Trace, IDataPointProvider
     {
@@ -31,14 +31,14 @@ namespace ServiceTool.TraceTypes
         public SensorStateType SensorState { get { return sensorState; } set { sensorState = value; } }
         public DataPoint DataPoint { get { return dataPoint; } set { dataPoint = value; } }
     
-        public SensorTrace(Form1 parentForm)
-            : base(parentForm)
+        public SensorTrace()
+            : base()
         {
 
         }
 
-        public SensorTrace(XPathNavigator trace, Form1 parentForm)
-            : base(trace, parentForm)
+        public SensorTrace(XPathNavigator trace)
+            : base(trace)
         {
             base.DerivedType = this.GetType();
             sensorName = TagAndData[NSFTraceTags.nameTag];

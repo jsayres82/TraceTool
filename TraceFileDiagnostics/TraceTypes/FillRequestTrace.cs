@@ -8,7 +8,7 @@ using System.Collections;
 using NorthStateFramework;
 using System.Windows.Forms;
 
-namespace ServiceTool.TraceTypes
+namespace TraceFileReader.TraceTypes
 {
     class FillRequestTrace : Trace
     {
@@ -18,14 +18,14 @@ namespace ServiceTool.TraceTypes
         public bool FillRequestComplete { get { return fillRequestComplete; } set { fillRequestComplete = value; } }
         public string RequestType { get { return requestType; } set { requestType = value; } }
 
-        public FillRequestTrace(Form1 parentForm)
-            : base(parentForm)
+        public FillRequestTrace()
+            : base()
         {
             fillRequestComplete = false;
         }
 
-        public FillRequestTrace(XPathNavigator trace, Form1 parentForm)
-            : base(trace, parentForm)
+        public FillRequestTrace(XPathNavigator trace)
+            : base(trace)
         {
             List<string> statusValues = new List<string>();
 
@@ -82,7 +82,7 @@ namespace ServiceTool.TraceTypes
                 item.SubItems[0].Text = traceTimeStamp.ToString();
             else
             {
-                nT = parent.TimeSyncDate.AddMilliseconds(traceTimeStamp - parent.TimeSyncMilliSec);
+                nT = TraceFileData.TimeSyncDate.AddMilliseconds(traceTimeStamp - TraceFileData.TimeSyncMilliSec);
                 subItem.Text = nT.ToShortDateString();
                 item.SubItems[0].Text = nT.ToShortDateString();
                 item.SubItems[1].Text = nT.ToString("hh:mm:ss.fff");

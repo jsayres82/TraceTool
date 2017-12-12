@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
+﻿using System.Diagnostics;
 using TimeBeam.Timing;
 
-namespace ServiceTool {
+namespace TraceFileReader {
   /// <summary>
   /// An example of a clock that can be used with TimeBeam.
   /// </summary>

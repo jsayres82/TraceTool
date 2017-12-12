@@ -7,10 +7,10 @@ using System.Xml.XPath;
 using System.Collections;
 using NorthStateFramework;
 using OxyPlot;
-using ServiceTool.EnumTypes;
+using TraceFileReader.EnumTypes;
 using System.Windows.Forms;
 
-namespace ServiceTool.TraceTypes
+namespace TraceFileReader.TraceTypes
 {
     //TODO: Fix the target position of relative moves so the can be plotted.
     //TODO: Break down motor events so that things like ServoOn an Target reached can be graphed
@@ -45,14 +45,14 @@ namespace ServiceTool.TraceTypes
         public DataPoint DataPoint { get { return dataPoint; } set { dataPoint = value; } }
         
 
-        public MotorTrace(Form1 parentForm)
-            : base(parentForm)
+        public MotorTrace()
+            : base()
         {
             
         }
 
-        public MotorTrace(XPathNavigator trace, Form1 parentForm)
-            : base(trace, parentForm)
+        public MotorTrace(XPathNavigator trace)
+            : base(trace)
         {
             base.DerivedType = this.GetType();
             if(TagAndData.ContainsKey(NSFTraceTags.objectTag))
@@ -100,7 +100,7 @@ namespace ServiceTool.TraceTypes
                 item.SubItems[0].Text = traceTimeStamp.ToString();
             else
             {
-                nT = parent.TimeSyncDate.AddMilliseconds(traceTimeStamp - parent.TimeSyncMilliSec);
+                nT = TraceFileData.TimeSyncDate.AddMilliseconds(traceTimeStamp - TraceFileData.TimeSyncMilliSec);
                 subItem.Text = nT.ToShortDateString();
                 item.SubItems[0].Text = nT.ToShortDateString();
                 item.SubItems[1].Text = nT.ToString("hh:mm:ss.fff");

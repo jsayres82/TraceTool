@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.XPath;
 
-namespace ServiceTool.TraceTypes
+namespace TraceFileReader.TraceTypes
 {
     class StateMachineTrace : Trace
     {
 
-        public StateMachineTrace(XPathNavigator trace, Form1 parentForm)
-            : base(trace, parentForm)
+        public StateMachineTrace(XPathNavigator trace)
+            : base(trace)
         {
         }
 

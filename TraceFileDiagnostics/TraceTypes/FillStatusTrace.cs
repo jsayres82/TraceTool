@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 using System.Xml.XPath;
 using System.Collections;
 
-namespace ServiceTool.TraceTypes
+namespace TraceFileReader.TraceTypes
 {
     class FillStatusTrace : Trace
     {
-        public FillStatusTrace(Form1 parentForm)
-            : base(parentForm)
+        public FillStatusTrace()
+            : base()
         {
         }
 
-        public FillStatusTrace(XPathNavigator trace, Form1 parentForm)
-            : base(trace, parentForm)
+        public FillStatusTrace(XPathNavigator trace)
+            : base(trace)
         {
             List<string> statusValues = new List<string>();
 

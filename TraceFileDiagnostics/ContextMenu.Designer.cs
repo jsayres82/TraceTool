@@ -1,4 +1,4 @@
-﻿namespace ServiceTool
+﻿namespace TraceFileReader
 {
     partial class ContextMenu
     {

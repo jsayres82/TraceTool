@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ServiceTool
+namespace TraceFileReader
 {
     public partial class ContextMenu : UserControl
     {

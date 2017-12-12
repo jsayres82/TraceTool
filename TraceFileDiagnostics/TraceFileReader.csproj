@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{623E6720-DE04-43EE-BDF9-E2A4CE03B85E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TraceFileReader</RootNamespace>
+    <AssemblyName>TraceFileReader</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Controls.CANBus, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Controls.CANBus.dll</HintPath>
+    </Reference>
+    <Reference Include="Controls.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Controls.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNet-Component-Scilab">
+      <HintPath>..\Libraries\DotNet-Component-Scilab.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NorthStateFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\NorthStateFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot, Version=2.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.WindowsForms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=245eacd6b5d2d338, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\OxyPlot.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Controls.Enumerations, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Controls.Enumerations.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Controls.Enumerations.Camera, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Controls.Enumerations.Camera.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Controls.Enumerations.CANBus, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Controls.Enumerations.CANBus.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Controls.Enumerations.Capper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Controls.Enumerations.Capper.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Controls.Enumerations.CellNetwork, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Controls.Enumerations.CellNetwork.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Controls.Enumerations.Chute, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Controls.Enumerations.Chute.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Controls.Enumerations.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Controls.Enumerations.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Controls.Enumerations.DropOffBin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Controls.Enumerations.DropOffBin.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Controls.Enumerations.Hood, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Controls.Enumerations.Hood.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Controls.Enumerations.Hopper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Controls.Enumerations.Hopper.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Controls.Enumerations.Labeler, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Controls.Enumerations.Labeler.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Controls.Enumerations.Robot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Controls.Enumerations.Robot.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Controls.Enumerations.StagingDevice, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Controls.Enumerations.StagingDevice.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Controls.Enumerations.System, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Controls.Enumerations.System.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Controls.Enumerations.VialFeeder, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Controls.Enumerations.VialFeeder.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Enumerations, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Enumerations.dll</HintPath>
+    </Reference>
+    <Reference Include="Parata.Factory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Parata.Factory.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TimeBeam, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\TimeBeam.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContextMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContextMenu.Designer.cs">
+      <DependentUpon>ContextMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlotTypes\DataPlotBase.cs" />
+    <Compile Include="EnumTypes.cs" />
+    <Compile Include="TraceFactory.cs" />
+    <Compile Include="TraceFileData.cs" />
+    <Compile Include="TraceTags.cs" />
+    <Compile Include="TraceTypes\CanMessageTrace.cs" />
+    <Compile Include="TraceTypes\CellNetworkMessageTrace.cs" />
+    <Compile Include="TraceTypes\FillRequestTrace.cs" />
+    <Compile Include="TraceTypes\FillStatusTrace.cs" />
+    <Compile Include="TraceFileReaderUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraceFileReaderUI.Designer.cs">
+      <DependentUpon>TraceFileReaderUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewColumnSorter.cs" />
+    <Compile Include="TraceTypes\MotorTrace.cs" />
+    <Compile Include="PopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupForm.Designer.cs">
+      <DependentUpon>PopupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TraceTypes\SensorTrace.cs" />
+    <Compile Include="TraceTypes\StateMachineTrace.cs" />
+    <Compile Include="TimeBeamClock.cs" />
+    <Compile Include="TraceTypes\Trace.cs" />
+    <Compile Include="TraceTrack.cs" />
+    <Compile Include="TraceTrackItem.cs" />
+    <Compile Include="WaitCursor.cs" />
+    <EmbeddedResource Include="ContextMenu.resx">
+      <DependentUpon>ContextMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraceFileReaderUI.resx">
+      <DependentUpon>TraceFileReaderUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupForm.resx">
+      <DependentUpon>PopupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SciLabScripts\anim_block_rotate.sce" />
+    <None Include="SciLabScripts\anim_block_translate.sce" />
+    <None Include="SciLabScripts\anim_cylinder_translate.sce" />
+    <None Include="SciLabScripts\Euler2R.sci" />
+    <None Include="SciLabScripts\GeoPatMakeBlock.sci" />
+    <None Include="SciLabScripts\GeoPatMakeCylinder.sci" />
+    <None Include="SciLabScripts\GeoPatMakeCylinderBottom.sci" />
+    <None Include="SciLabScripts\GeoPatMakeCylinderSides.sci" />
+    <None Include="SciLabScripts\GeoVerMakeBlock.sci" />
+    <None Include="SciLabScripts\GeoVerMakeCylinder.sci" />
+    <None Include="SciLabScripts\make_block.sce" />
+    <None Include="SciLabScripts\make_block.sci" />
+    <None Include="SciLabScripts\make_block_general.sce" />
+    <None Include="SciLabScripts\make_block_special.sce" />
+    <None Include="SciLabScripts\make_cylinder_general.sce" />
+    <None Include="SciLabScripts\make_cylinder_general.sci" />
+    <None Include="SciLabScripts\make_cylinder_special.sce" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

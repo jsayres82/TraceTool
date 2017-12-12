@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ServiceTool
+namespace TraceFileReader
 {
     /// <summary>
     /// This class is an implementation of the 'IComparer' interface.

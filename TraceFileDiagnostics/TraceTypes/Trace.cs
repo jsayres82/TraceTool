@@ -10,7 +10,7 @@ using NorthStateFramework;
 using System.Windows.Forms;
 using OxyPlot;
 
-namespace ServiceTool.TraceTypes
+namespace TraceFileReader.TraceTypes
 {
     public class Trace : IDataPointProvider
     {
@@ -22,7 +22,6 @@ namespace ServiceTool.TraceTypes
         private DateTime time;
         private Dictionary<string, string> tagAndData = new Dictionary<string, string>();
         
-        protected Form1 parent;
         protected int traceTimeStamp;
 
         public int TimeScalar { get { return timeScalar; } }
@@ -34,17 +33,15 @@ namespace ServiceTool.TraceTypes
         public int OffSetTime { get { return traceTimeStampOffset; } set { traceTimeStampOffset = value; } }
         public int ConcurrentValue { get { return concurrentValue; } set { concurrentValue = value; } }
 
-        public Trace(Form1 parentForm)
+        public Trace()
         {
             derivedType = this.GetType();
-            parent = parentForm;
             traceType = string.Empty;
             traceTimeStamp = 0;
         }
 
-        public Trace(XPathNavigator trace, Form1 parentForm)
+        public Trace(XPathNavigator trace)
         {
-            parent = parentForm;
             trace.MoveToFirstChild();
             setTraceTime(trace);
 
@@ -115,7 +112,7 @@ namespace ServiceTool.TraceTypes
                 item.SubItems[0].Text = traceTimeStamp.ToString();
             else
             {
-                nT = parent.TimeSyncDate.AddMilliseconds(traceTimeStamp - parent.TimeSyncMilliSec);
+                nT = TraceFileData.TimeSyncDate.AddMilliseconds(traceTimeStamp - TraceFileData.TimeSyncMilliSec);
                 subItem.Text = nT.ToShortDateString();
                 item.SubItems[0].Text = nT.ToShortDateString();
                 item.SubItems[1].Text = nT.ToString("hh:mm:ss.fff");

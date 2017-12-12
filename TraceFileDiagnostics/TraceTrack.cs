@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using TimeBeam;
 using NorthStateFramework;
-using ServiceTool.TraceTypes;
+using TraceFileReader.TraceTypes;
 
 
-namespace ServiceTool
+namespace TraceFileReader
 {
     public class TraceTrack : IMultiPartTimelineTrack
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ServiceTool
+namespace TraceFileReader
 {
     static class Program
     {
@@ -23,7 +23,7 @@ namespace ServiceTool
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(traceFile));
+            Application.Run(new TraceFileReaderUI(traceFile));
         }
     }
 }

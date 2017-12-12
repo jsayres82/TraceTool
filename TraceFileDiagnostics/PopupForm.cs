@@ -11,10 +11,10 @@ using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;
 using OxyPlot.WindowsForms;
-using ServiceTool.TraceTypes;
-using ServiceTool.EnumTypes;
+using TraceFileReader.TraceTypes;
+using TraceFileReader.EnumTypes;
 
-namespace ServiceTool
+namespace TraceFileReader
 {
     public partial class PopupForm : Form
     {
@@ -25,7 +25,7 @@ namespace ServiceTool
         private const string sensorString = "Sensor";
 
         public System.Windows.Forms.Form MyParent;
-        public Form1 ParentF1;
+        public TraceFileReaderUI ParentF1;
 
         public List<string> gbSelectChoices = new List<string>();
         public List<string> gbSelectNameChoices = new List<string>();
@@ -42,11 +42,11 @@ namespace ServiceTool
 
         private PlotModel model = new PlotModel() { Title = "Trace Data", LegendSymbolLength = 24 };
 
-        public PopupForm(Form1 parent)
+        public PopupForm(TraceFileReaderUI parent)
         {
             InitializeComponent();
 
-            Form1 f1 = (Form1)this.MyParent;
+            TraceFileReaderUI f1 = (TraceFileReaderUI)this.MyParent;
             ParentF1 = parent;
 
             gbSelectChoices.Add(motorString);
@@ -58,7 +58,7 @@ namespace ServiceTool
                 categoryItemChoices.Add(s, new List<string>());
             }
 
-            foreach (KeyValuePair<string, List<MotorTrace>> kvp in ParentF1.MotorTraceDic)
+            foreach (KeyValuePair<string, List<MotorTrace>> kvp in TraceFileData.MotorTraceDic)
             {
                 categoryItemChoices[motorString].Add(kvp.Key);
                 tD.Add(kvp.Key, new List<Trace>());
@@ -70,7 +70,7 @@ namespace ServiceTool
             }
 
 
-            foreach (KeyValuePair<string, List<SensorTrace>> kvp in ParentF1.SensorTraceDic)
+            foreach (KeyValuePair<string, List<SensorTrace>> kvp in TraceFileData.SensorTraceDic)
             {
                 categoryItemChoices[sensorString].Add(kvp.Key);
                 tD.Add(kvp.Key, new List<Trace>());

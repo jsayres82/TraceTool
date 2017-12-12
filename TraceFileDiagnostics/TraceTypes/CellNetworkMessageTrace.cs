@@ -13,7 +13,7 @@ using System.Globalization;
 using System.Windows.Forms;
 using Parata.Controls.Enumerations.ErrorCodes;
 
-namespace ServiceTool.TraceTypes
+namespace TraceFileReader.TraceTypes
 {
     class CellNetworkMessageTrace : Trace
     {
@@ -652,14 +652,14 @@ namespace ServiceTool.TraceTypes
         #endregion Members
 
         #region Constructors
-        public CellNetworkMessageTrace(Form1 parentForm)
-            : base(parentForm)
+        public CellNetworkMessageTrace()
+            : base()
         {
 
         }
 
-        public CellNetworkMessageTrace(XPathNavigator trace, Form1 parentForm)
-            : base(trace, parentForm)
+        public CellNetworkMessageTrace(XPathNavigator trace)
+            : base(trace)
         {
             base.DerivedType = this.GetType();
            
@@ -1602,7 +1602,7 @@ namespace ServiceTool.TraceTypes
                 item.SubItems[0].Text = traceTimeStamp.ToString();
             else
             {
-                nT = parent.TimeSyncDate.AddMilliseconds(traceTimeStamp - parent.TimeSyncMilliSec);
+                nT = TraceFileData.TimeSyncDate.AddMilliseconds(traceTimeStamp - TraceFileData.TimeSyncMilliSec);
                 subItem.Text = nT.ToShortDateString();
                 item.SubItems[0].Text = nT.ToShortDateString();
                 item.SubItems[1].Text = nT.ToString("hh:mm:ss.fff");
