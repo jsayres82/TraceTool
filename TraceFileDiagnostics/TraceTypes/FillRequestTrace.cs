@@ -43,7 +43,8 @@ namespace TraceFileReader.TraceTypes
         public bool AddStatusSection(XPathNavigator trace)
         {
             string name =trace.Value;
-
+            if (name.Equals("AllowedCellLocation"))
+                name = "CellLocation";
             if (trace.Value == "SpillableDropOffLocation")
                 fillRequestComplete = true;
             trace.MoveToNext();
@@ -68,14 +69,28 @@ namespace TraceFileReader.TraceTypes
             ListViewItem item = new ListViewItem();
             ListViewItem.ListViewSubItem subItem = new ListViewItem.ListViewSubItem();
             ListView.ColumnHeaderCollection lvCol = lv.Columns;
+            int requestTypeColumn = 0;
 
             while (item.SubItems.Count < lvCol.Count)
                 item.SubItems.Add("");
 
             if (!lv.Columns.ContainsKey("Request Type"))
             {
-                lv.Columns.Add("Request Type", "Request Type");
-                item.SubItems.Add("");
+                if(!lv.Columns.ContainsKey("StatusCode"))
+                {
+                    lv.Columns.Add("Request Type", "Request Type");
+                    item.SubItems.Add("");
+                    requestTypeColumn = lv.Columns.IndexOfKey("Request Type");
+                }
+                else
+                {
+                    requestTypeColumn = lv.Columns.IndexOfKey("StatusCode");
+                    item.SubItems.Add("");
+                }
+            }
+            else
+            {
+                requestTypeColumn = lv.Columns.IndexOfKey("Request Type");
             }
 
             if (lvCol[0].Text == "TimeStamp")
@@ -88,7 +103,7 @@ namespace TraceFileReader.TraceTypes
                 item.SubItems[1].Text = nT.ToString("hh:mm:ss.fff");
             }
 
-            item.SubItems[2].Text = requestType;
+            item.SubItems[requestTypeColumn].Text = requestType;
 
             foreach (KeyValuePair<string, string> d in TagAndData)
             {

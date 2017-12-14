@@ -174,15 +174,18 @@ namespace TraceFileReader
             this.lvTraceDetails.Sort();
             using (new WaitCursor())
             {
-                foreach (Trace t in traceData.TraceList[lbTraceTypes.SelectedItem.ToString()])
+                foreach (var item in lbTraceTypes.SelectedItems)
                 {
-                    t.AddListViewItem(lvTraceDetails);
-                    if (!cbTraceFilter.Items.Contains(t.TagAndData.First().Value))
-                        cbTraceFilter.Items.Add(t.TagAndData.First().Value);
-                }
+                    foreach (Trace t in traceData.TraceList[item.ToString()])
+                    {
+                        t.AddListViewItem(lvTraceDetails);
+                        if (!cbTraceFilter.Items.Contains(t.TagAndData.First().Value))
+                            cbTraceFilter.Items.Add(t.TagAndData.First().Value);
+                    }
 
-                UpdateListViewItemSubItems(lvTraceDetails);
-                AdjustListViewColumnWidth(lvTraceDetails);
+                    UpdateListViewItemSubItems(lvTraceDetails);
+                    AdjustListViewColumnWidth(lvTraceDetails);
+                }
             }
 
         }

@@ -268,6 +268,7 @@
             this.lbTraceTypes.FormattingEnabled = true;
             this.lbTraceTypes.Location = new System.Drawing.Point(748, 16);
             this.lbTraceTypes.Name = "lbTraceTypes";
+            this.lbTraceTypes.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.lbTraceTypes.Size = new System.Drawing.Size(125, 181);
             this.lbTraceTypes.TabIndex = 2;
             this.lbTraceTypes.SelectedIndexChanged += new System.EventHandler(this.lbTraceTypes_SelectedIndexChanged);
