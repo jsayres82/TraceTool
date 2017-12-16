@@ -144,6 +144,22 @@ namespace TimeBeam
         /// </summary>
         private Color _backgroundColor = Color.Black;
 
+        /// <summary>
+        ///   The font for track item text and labels.
+        /// </summary>
+        [Description("The font for track item text and labels.")]
+        [Category("Drawing")]
+        public Font TimelineFont
+        {
+            get { return _timelineFont; }
+            set { _timelineFont = value; }
+        }
+
+        private Font _timelineFont = new Font("Arial", 10);
+
+        public int MaxFontSize = 16;
+        public int MinFontSize = 4;
+
         internal PointF RenderingOffset
         {
             get { return _renderingOffset; }
@@ -187,6 +203,11 @@ namespace TimeBeam
         ///   The tracks currently placed on the timeline.
         /// </summary>
         private readonly List<IMultiPartTimelineTrack> _tracks = new List<IMultiPartTimelineTrack>();
+
+        /// <summary>
+        ///   The tracks currently hidden on the timeline.
+        /// </summary>
+        private readonly List<IMultiPartTimelineTrack> _hiddenTracks = new List<IMultiPartTimelineTrack>();
 
         /// <summary>
         ///   The tracks currently placed on the timeline.
@@ -325,8 +346,78 @@ namespace TimeBeam
             // Set up the font to use to draw the track labels
             float emHeightForLabel = EmHeightForLabel("WM_g^~", TrackHeight);
             _labelFont = new Font(DefaultFont.FontFamily, emHeightForLabel - 2);
+            InitializeTrackLabelContextMenu();
         }
         #endregion
+
+        /// <summary>
+        ///   Add a track to the timeline.
+        /// </summary>
+        /// <param name="track">The track to add.</param>
+        public void InitializeTrackLabelContextMenu()
+        {
+            hideTrackMenuItem.MouseDown += new MouseEventHandler(OnHideTrackClicked);
+            showAllMenuItem.MouseDown += new MouseEventHandler(OnShowAllMenuItems);
+            fitAllTracksMenuItem.MouseDown += new MouseEventHandler(OnFitAllTracksClicked);
+        }
+
+        private void OnFitAllTracksClicked(object sender, MouseEventArgs e)
+        {
+            float amount = -120 / 300f;
+            Rectangle trackAreaBounds = GetTrackAreaBounds();
+
+            // If Ctrl is down as well, we're zooming horizontally.
+            _renderingScale.X += amount;
+            // Don't zoom below 1%
+            _renderingScale.X = Math.Min(0.01f, _renderingScale.X);
+
+            // We now also need to move the rendering offset so that the center of focus stays at the mouse cursor.
+            _renderingOffset.X -= trackAreaBounds.Width * ((0 - trackAreaBounds.X) / (float)trackAreaBounds.Width) * amount;
+            _renderingOffset.X = Math.Min(0, _renderingOffset.X);
+
+            // Update scrollbar position.
+            //ScrollbarH.Value = (int)(-_renderingOffset.X);
+
+            //// If Ctrl isn't  down, we're zooming vertically.
+            //_renderingScale.Y += -120 / 600f;
+            //// Don't zoom below 1%
+            //_renderingScale.Y = Math.Max(0.01f, _renderingScale.Y);
+
+            //// We now also need to move the rendering offset so that the center of focus stays at the mouse cursor.
+            //_renderingOffset.Y -= trackAreaBounds.Height * ((0 - trackAreaBounds.Y) / (float)trackAreaBounds.Height) * amount;
+            //_renderingOffset.Y = Math.Min(0, _renderingOffset.Y);
+
+            //// Update scrollbar position.
+            //ScrollbarV.Value = (int)(-_renderingOffset.Y);
+
+            RecalculateScrollbarBounds();
+        }
+
+        private void OnShowAllMenuItems(object sender, MouseEventArgs e)
+        {
+            foreach (IMultiPartTimelineTrack track in _hiddenTracks)
+                AddTrack(track);
+
+            _hiddenTracks.Clear();
+        }
+
+        private void OnHideTrackClicked(object sender, MouseEventArgs e)
+        {
+            HideTrack(hideTrackMenuItem.Tag as IMultiPartTimelineTrack);
+        }
+
+
+        /// <summary>
+        ///   Add a track to the timeline.
+        /// </summary>
+        /// <param name="track">The track to add.</param>
+        public void HideTrack(IMultiPartTimelineTrack track)
+        {
+            _hiddenTracks.Add(track);
+            _tracks.Remove(track);
+            RecalculateScrollbarBounds();
+            Invalidate();
+        }
 
         /// <summary>
         ///   Add a track to the timeline.
@@ -371,6 +462,7 @@ namespace TimeBeam
                 ScrollbarV.Max = (int)((_tracks.Count * (TrackHeight + TrackSpacing)) * _renderingScale.Y);
             else
                 ScrollbarV.Max = int.MaxValue;
+
             if (!((_tracks.Max(t => t.TrackElements.Any() ? t.TrackElements.Max(te => te.End) : 0) * _renderingScale.X) >= int.MaxValue))
                 ScrollbarH.Max = (int)(_tracks.Max(t => t.TrackElements.Any() ? t.TrackElements.Max(te => te.End) : 0) * _renderingScale.X);
             else
@@ -637,6 +729,8 @@ namespace TimeBeam
                 {
                     continue;
                 }
+                // The extent of the track, including the border
+                RectangleF trackExtent2 = BoundsHelper.GetTrackExtents(track, this);
 
                 // The index of this track (or the one it's a substitute for).
                 int trackIndex = TrackIndexForTrack(track);
@@ -667,7 +761,66 @@ namespace TimeBeam
                 trackExtent.Height -= TrackBorderSize;
                 trackExtent.Width -= TrackBorderSize;
 
-                graphics.DrawRectangle(new Pen(borderColor, TrackBorderSize), trackExtent.X, trackExtent.Y, trackExtent.Width, trackExtent.Height);
+                StringFormat strFormat = new StringFormat();
+                RectangleF trackRect = new RectangleF(trackExtent.X, trackExtent.Y, trackExtent.Width, trackExtent.Height);
+                _timelineFont = getAdjustedFont(graphics, track.Name, Convert.ToInt32(trackExtent.Height), true);
+                if (trackRect.Width > trackAreaBounds.Width)
+                {
+                    if (trackExtent.Left < trackAreaBounds.Left)
+                    {
+                        if(trackExtent.Right > trackAreaBounds.Right)
+                        {
+                            strFormat.Alignment = StringAlignment.Center;
+                            graphics.DrawString(track.Name, _timelineFont, new SolidBrush(Color.White), new Rectangle(trackAreaBounds.X, trackRect.ToRectangle().Y, trackAreaBounds.Width, trackRect.ToRectangle().Height), strFormat);
+                        }
+                        else
+                        {
+                            strFormat.Alignment = StringAlignment.Far;
+                            graphics.DrawString(track.Name, _timelineFont, new SolidBrush(Color.White), trackRect, strFormat);
+                        }
+                    }
+                    else if(trackExtent.Right > trackAreaBounds.Right)
+                    {
+                        strFormat.Alignment = StringAlignment.Near;
+                        graphics.DrawString(track.Name, _timelineFont, new SolidBrush(Color.White), trackRect, strFormat);
+                    }
+                }
+                else
+                {
+                    strFormat.Alignment = StringAlignment.Center;
+                    graphics.DrawString(track.Name, _timelineFont, new SolidBrush(Color.White), trackRect, strFormat);
+                }
+                graphics.DrawRectangle(new Pen(borderColor, TrackBorderSize), trackRect.ToRectangle());                
+            }
+        } 
+
+        private Font getAdjustedFont(Graphics GraphicRef, string GraphicString, int ContainerHeight, bool SmallestOnFail)
+        {
+            Font testFont = null;
+            // We utilize MeasureString which we get via a control instance           
+            for (int AdjustedSize = MaxFontSize; AdjustedSize >= MinFontSize; AdjustedSize--)
+            {
+                testFont = new Font(_timelineFont.Name, AdjustedSize, _timelineFont.Style);
+
+                // Test the string with the new size
+                SizeF AdjustedSizeNew = GraphicRef.MeasureString(GraphicString, testFont);
+
+                if (ContainerHeight > Convert.ToInt32(AdjustedSizeNew.Height))
+                {
+                    // Goo fontd, return it
+                    return testFont;
+                }
+            }
+
+            // If you get here there was no fontsize that worked
+            // return MinimumSize or Original?
+            if (SmallestOnFail)
+            {
+                return testFont;
+            }
+            else
+            {
+                return _timelineFont;
             }
         }
 
@@ -1212,7 +1365,6 @@ namespace TimeBeam
         protected override void OnMouseDown(MouseEventArgs e)
         {
             base.OnMouseDown(e);
-
             this.Focus();
 
             // Store the current mouse position.
@@ -1293,7 +1445,36 @@ namespace TimeBeam
                 _panOrigin = location;
                 _renderingOffsetBeforePan = _renderingOffset;
             }
+            else if((e.Button & MouseButtons.Right) != 0)
+            {
+                if (e.X <= TrackLabelWidth)
+                {
+                    int index =TrackLabelHitTest(location);
+                    if (index >= 0)
+                    {
+                        hideTrackMenuItem.Enabled = true;
+                        hideTrackMenuItem.Tag = _tracks[index];
+                    }
+                    else
+                        hideTrackMenuItem.Enabled = false;
 
+                    if (_hiddenTracks.Count > 0)
+                        showAllMenuItem.Enabled = true;
+                    else
+                        showAllMenuItem.Enabled = false;
+
+                    var relativeClickedPosition = e.Location;
+                    var screenClickedPosition = this.PointToScreen(relativeClickedPosition);
+
+                    contextMenuStripTrackLabels.Show(screenClickedPosition);
+                }
+                else
+                {
+                    var relativeClickedPosition = e.Location;
+                    var screenClickedPosition = this.PointToScreen(relativeClickedPosition);
+                    contextMenuStripTimeline.Show(screenClickedPosition);
+                }
+            }
             Invalidate();
         }
 
@@ -1592,5 +1773,6 @@ namespace TimeBeam
             Invalidate();
         }
         #endregion
+        
     }
 }
